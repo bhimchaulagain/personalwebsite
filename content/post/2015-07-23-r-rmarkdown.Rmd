@@ -1,37 +1,63 @@
 ---
-title: "Hello R Markdown"
-author: "Frida Gomam"
-date: 2015-07-23T21:13:14-05:00
+title: "Area Under Disease Gradient (AUDG) Calculation"
+author: "Bhim Chaulagain"
+date: 2020-07-08T21:13:14-05:00
 categories: ["R"]
-tags: ["R Markdown", "plot", "regression"]
+tags: ["dplyr", "ggplot", "tidyverse"]
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE)
 ```
 
-# R Markdown
+Disease gradient information provides the spatial distribution of the epidemics at distance from the focus. If you are interested in learning how to calculate the area under the disease gradient curve to make comparison of several scenarios or treatments, this would be a good resource.
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+I am using [Steven Worthington](https://gist.github.com/stevenworthington/)'s ipak function to install and load several packages in R.
 
-You can embed an R code chunk like this:
+```{r}
+ipak <- function(pkg){
+    new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
+    if (length(new.pkg)) 
+        install.packages(new.pkg, dependencies = TRUE)
+    sapply(pkg, require, character.only = TRUE)
+}
 
-```{r cars}
-summary(cars)
-fit <- lm(dist ~ speed, data = cars)
-fit
+# usage
+packages <- c("tidyverse", "readxl", "agricolae", "ggpubr", "ggpubr", "magrittr", "reshape", "knitr")
+ipak(packages)
+
+data <- read_excel("field observation.xlsx") %>% 
+        as.data.frame()
+head(data, 10)
+audpc_data <- data %>% 
+  melt(id=c("Distance", "Treatments")) %>%
+  group_by(Treatments, variable) %>% 
+  summarize(AUDPC = audpc(value, Distance))
+
+audpc_data %>% 
+  spread(variable, AUDPC) %>% 
+  arrange(Treatments) %>%       
+  kable() 
+
+plot_graph <- ggplot(audpc_data, aes(Treatments, AUDPC))+
+  geom_boxplot(aes(fill=factor(Treatments))) +
+  ggtitle("AUDPC")+
+  xlab("Treatment Applied")+
+  ylab("Area Under Disease Gradient")+
+  theme_bw(base_size = 14)+
+  theme(aspect.ratio=1.25,plot.title = element_text(hjust = 0.5), 
+        panel.grid=element_blank())+
+  scale_fill_manual(name="Treatments", 
+                    breaks = c("T1", "T2", 
+                               "T3", "T4", "T5",
+                               "T6", "T7"),
+                    labels=c("T1=Inoculated control", "T2=CP culling at 3 days", "T3=CP cull 'ring' x 3","T4=CP cull at 1 day","T5=FP of CP at 3 days","T6=CP cull + FP of non-CP","T7=FP of entire plot at 3 days"),
+                    values=c("#999999","#E69F00","#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00"))
+
+
+plot_graph
+
+ggsave(filename = "Boxplot.png", width = , height = , units = "in",
+       dpi = 600, limitsize = TRUE)
 ```
 
-# Including Plots
-
-You can also embed plots. See Figure \@ref(fig:pie) for example:
-
-```{r pie, fig.cap='A fancy pie chart.', tidy=FALSE}
-par(mar = c(0, 1, 0, 1))
-pie(
-  c(280, 60, 20),
-  c('Sky', 'Sunny side of pyramid', 'Shady side of pyramid'),
-  col = c('#0292D8', '#F7EA39', '#C4B632'),
-  init.angle = -50, border = NA
-)
-```

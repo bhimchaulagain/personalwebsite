@@ -2,7 +2,7 @@
 # A Projects section created with the Portfolio widget.
 widget = "portfolio"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
-active = false  # Activate this widget? true/false
+active = true  # Activate this widget? true/false
 weight = 65  # Order that this section will appear.
 
 title = "Projects"
@@ -21,23 +21,22 @@ subtitle = ""
   # Default filter index (e.g. 0 corresponds to the first `[[filter_button]]` instance below).
   filter_default = 0
   
-  [[content.filter_button]]
-    name = "All"
-    tag = "*"
-  
-  [[content.filter_button]]
-    name = "MS Project"
-    tag = "MS Project"
-  
-  [[content.filter_button]]
-    name = "PhD Project"
-    tag = "PhD Project"
-  
-  [[content.filter_button]]
-    name = "Post Doc Project"
-    tag = "Post Doc Project"
-    
-  
+  # [[content.filter_button]]
+  #   name = "All"
+  #   tag = "*"
+  # 
+  #  [[content.filter_button]]
+  #   name = "Ecology and Evolution"
+  #   tag = ".EEID"
+  # 
+  # [[content.filter_button]]
+  #   name = "Predictive Modelling"
+  #   tag = ".SR"
+  # 
+  #   
+  # [[content.filter_button]]
+  #   name = "Epidemiology and Management"
+  #   tag = ".WSR"
 
 [design]
   # Choose how many columns the section has. Valid values: 1 or 2.
@@ -47,7 +46,7 @@ subtitle = ""
   #   1 = List
   #   3 = Card
   #   5 = Showcase
-  view = 3
+  view = 1
 
   # For Showcase view, flip alternate rows?
   flip_alt_rows = false

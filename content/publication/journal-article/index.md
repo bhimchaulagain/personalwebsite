@@ -24,7 +24,7 @@ publishDate: "2019"
 #slides: example
 #summary: 
 tags:
-- Source Themes
+#- Source Themes
 title: Comparison of progress of brown rust and orange rust and conditions conducive for severe epidemic development during the sugarcane crop season in Florida
 #url_code: ""
 #url_dataset: ""
@@ -36,12 +36,3 @@ title: Comparison of progress of brown rust and orange rust and conditions condu
 #url_video: ""
 ---
 
-#{{% alert note %}}
-#Click the *Cite* button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-#{{% /alert %}}
-
-#{{% alert note %}}
-#Click the *Slides* button above to demo Academic's Markdown slides feature.
-#{{% /alert %}}
-
-Supplementary notes can be added here, including [code and math](https://sourcethemes.com/academic/docs/writing-markdown-latex/).

@@ -76,13 +76,13 @@
 
   
   
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono&display=swap">
   
 
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.c6741b2c00e0d2f5ee688dce9b47c9ce.css">
+  <link rel="stylesheet" href="/css/academic.min.f3b1949004aa5f8f26f501a5f0766319.css">
 
   
 
@@ -116,7 +116,7 @@
   <meta property="og:description" content="Post Doctoral Scholar"><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2015-07-23T21:13:14-05:00">
+  <meta property="og:updated_time" content="2020-07-08T21:13:14-05:00">
   
 
   
@@ -240,6 +240,35 @@
         
 
         <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
           <a class="nav-link " href="/#publications"><span>Publications</span></a>
         </li>
 
@@ -269,7 +298,29 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/#skills"><span>Skills</span></a>
+          <a class="nav-link " href="/#posts"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/files/cv.pdf"><span>Resume</span></a>
         </li>
 
         
@@ -299,28 +350,6 @@
 
         <li class="nav-item">
           <a class="nav-link " href="/#contact"><span>Contact</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/files/cv.pdf"><span>CV</span></a>
         </li>
 
         
@@ -390,12 +419,33 @@
   
   
   <div>
-    <h2><a href="/post/2015-07-23-r-rmarkdown/">Hello R Markdown</a></h2>
+    <h2><a href="/post/2015-07-23-r-rmarkdown/">Area Under Disease Gradient (AUDG) Calculation</a></h2>
     <div class="article-style">
       
-      R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.
+      Disease gradient information provides the spatial distribution of the epidemics at distance from the focus. If you are interested in learning how to calculate the area under the disease gradient curve to make comparison of several scenarios or treatments, this would be a good resource.
+I am using Steven Worthington’s ipak function to install and load several packages in R.
+ipak &lt;- function(pkg){new.pkg &lt;- pkg[!(pkg %in% installed.packages()[, &quot;Package&quot;])]if (length(new.
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/post/2020-08-23-r-rmarkdown/">Weather based predictors for predictive modeling</a></h2>
+    <div class="article-style">
+      
+      I would like to share some of the weather predictors that I calculated for predictive modeling of sugarcane rusts from weather data. I have also created several complex weather variables during my research work but I am going to share some with averages/sums of hourly, weekly, monthly, and also specific time in a day. I will share the ways to calculate more complex weather variables in separate posts.
+library(readxl)## Warning: package &#39;readxl&#39; was built under R version 3.
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/post/2019-01-23-r-rmarkdown/">Leaf wetness duration (LWD) estimation using CART method</a></h2>
+    <div class="article-style">
+      
+      Are you a plant disease epidemiologist? If yes, you probably need to calculate leaf wetness duration using empirical methods. One way to estimate leaf wetness duration is with classification and regression tree method (CART). Learn how to calculate in R!
+Let’s generate the dummy weather data and work through it. You can find the equation and procedure of CART method of leaf wetness estimation in this link: https://doi.org/10.1094/PDIS.2002.86.2.179
+Average_temperature &lt;- sample(2:25, 20, replace=TRUE)Dew_Point_Depression &lt;- sample(0.
       
     </div>
   </div>
@@ -520,7 +570,7 @@ summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
   
 
   <p class="powered-by">
-    
+    B. Chaulagain 2020 &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for

@@ -23,7 +23,7 @@ publishDate: "2017"
 #slides: example
 #summary: 
 tags:
-- Source Themes
+#- Source Themes
 title: Effect of two-component cultivar mixtures on development of wheat yellow rust disease in the field and greenhouse in the Nepal Himalayas
 #url_code: ""
 #url_dataset: ""
@@ -35,12 +35,3 @@ title: Effect of two-component cultivar mixtures on development of wheat yellow 
 #url_video: ""
 ---
 
-#{{% alert note %}}
-#Click the *Cite* button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-#{{% /alert %}}
-
-#{{% alert note %}}
-#Click the *Slides* button above to demo Academic's Markdown slides feature.
-#{{% /alert %}}
-
-#Supplementary notes can be added here, including [code and math](https://sourcethemes.com/academic/docs/writing-markdown-latex/).

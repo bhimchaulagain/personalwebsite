@@ -9,7 +9,7 @@ day_night = true
 
 # Font style.
 #   Choose from `default`, `classic`, or `playfair`.
-font = "classic"
+font = ""
 
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
 description = ""
@@ -58,13 +58,14 @@ address = "Department of Botany and Plant Pathology, 2082 Cordley Hall, Corvalli
 office_hours = """"""
 
 # Enter an optional link for booking appointments (e.g. calendly.com).
-appointment_url = "https://calendly.com"
+#appointment_url = "https://calendly.com"
 
 # Contact links
 #   Set to `[]` to disable, or comment out unwanted lines with a hash `#`.
 contact_links = [
-  {icon = "twitter", icon_pack = "fab", name = "Follow me", link = "https://twitter.com/bhim_chaulagain"},
-  {icon = "researchgate", icon_pack = "ai", name = "Follow me", link = "https://www.researchgate.net/profile/Bhim_Chaulagain2"},
+  {icon = "twitter", icon_pack = "fab", name = "Follow me I want to follow you", link = "https://twitter.com/bhim_chaulagain"},
+  {icon = "linkedin", icon_pack = "fab", name = "Let's get connected", link = "https://www.linkedin.com/in/bhimchaulagain/"},
+  #{icon = "researchgate", icon_pack = "ai", name = "Follow me", link = "https://www.researchgate.net/profile/Bhim_Chaulagain2"},
   #{icon = "keybase", icon_pack = "fab", name = "Chat on Keybase", link = "https://keybase.io/"},
   #{icon = "comments", icon_pack = "fas", name = "Discuss on Forum", link = "https://discourse.gohugo.io"},
   # {icon = "telegram", icon_pack = "fab", name = "Telegram Me", link = "https://telegram.me/@Telegram"},
@@ -122,7 +123,7 @@ section_pager = false
 docs_section_pager = true  # Display pager in Docs layout (e.g. tutorials)?
 
 # Enable in-built social sharing buttons? (true/false)
-sharing = true
+sharing = false
 
 # Configuration of publication pages.
 [publications]

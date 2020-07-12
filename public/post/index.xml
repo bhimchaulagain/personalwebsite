@@ -6,291 +6,448 @@
     <description>Recent content in Posts on Bhim Chaulagain</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <copyright>B. Chaulagain {year}</copyright>
+    <lastBuildDate>Wed, 08 Jul 2020 21:13:14 -0500</lastBuildDate>
     
 	    <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Display Jupyter Notebooks with Academic</title>
-      <link>/post/jupyter/</link>
-      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/jupyter/</guid>
-      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; IPython.core.display &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; Image
-Image(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;./academic_0_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Welcome to Academic!&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;Welcome to Academic!
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;install-python-and-jupyter&#34;&gt;Install Python and Jupyter&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.anaconda.com/distribution/#download-section&#34;&gt;Install Anaconda&lt;/a&gt; which includes Python 3 and Jupyter notebook.&lt;/p&gt;
-&lt;p&gt;Otherwise, for advanced users, install Jupyter notebook with &lt;code&gt;pip3 install jupyter&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;create-a-new-blog-post-as-usualhttpssourcethemescomacademicdocsmanaging-contentcreate-a-blog-post&#34;&gt;Create a new blog post &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-a-blog-post&#34;&gt;as usual&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Run the following commands in your Terminal, substituting &lt;code&gt;&amp;lt;MY_WEBSITE_FOLDER&amp;gt;&lt;/code&gt; and &lt;code&gt;my-post&lt;/code&gt; with the file path to your Academic website folder and a name for your blog post (without spaces), respectively:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;cd &amp;lt;MY_WEBSITE_FOLDER&amp;gt;
-hugo new  --kind post post/my-post
-cd &amp;lt;MY_WEBSITE_FOLDER&amp;gt;/content/post/my-post/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;create-or-upload-a-jupyter-notebook&#34;&gt;Create or upload a Jupyter notebook&lt;/h2&gt;
-&lt;p&gt;Run the following command to start Jupyter within your new blog post folder. Then create a new Jupyter notebook (&lt;em&gt;New &amp;gt; Python Notebook&lt;/em&gt;) or upload a notebook.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;jupyter notebook
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;convert-notebook-to-markdown&#34;&gt;Convert notebook to Markdown&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;jupyter nbconvert Untitled.ipynb --to markdown --NbConvertApp.output_files_dir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;.
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# Copy the contents of Untitled.md and append it to index.md:&lt;/span&gt;
-cat Untitled.md | tee -a index.md
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# Remove the temporary file:&lt;/span&gt;
-rm Untitled.md
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;edit-your-post-metadata&#34;&gt;Edit your post metadata&lt;/h2&gt;
-&lt;p&gt;Open &lt;code&gt;index.md&lt;/code&gt; in your text editor and edit the title etc. in the &lt;a href=&#34;https://sourcethemes.com/academic/docs/front-matter/&#34;&gt;front matter&lt;/a&gt; according to your preference.&lt;/p&gt;
-&lt;p&gt;To set a &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#featured-image&#34;&gt;featured image&lt;/a&gt;, place an image named &lt;code&gt;featured&lt;/code&gt; into your post&#39;s folder.&lt;/p&gt;
-&lt;p&gt;For other tips, such as using math, see the guide on &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;writing content with Academic&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Academic: the website builder for Hugo</title>
-      <link>/post/getting-started/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/post/getting-started/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Create a free website with Academic using Markdown, Jupyter, or RStudio. Choose a beautiful color theme and build anything with the Page Builder - over 40 &lt;em&gt;widgets&lt;/em&gt;, &lt;em&gt;themes&lt;/em&gt;, and &lt;em&gt;language packs&lt;/em&gt; included!&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://academic-demo.netlify.com/&#34;&gt;Check out the latest &lt;strong&gt;demo&lt;/strong&gt;&lt;/a&gt; of what you&#39;ll get in less than 10 minutes, or &lt;a href=&#34;https://sourcethemes.com/academic/#expo&#34;&gt;view the &lt;strong&gt;showcase&lt;/strong&gt;&lt;/a&gt; of personal, project, and business sites.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#install&#34;&gt;&lt;strong&gt;Setup Academic&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/get-started/&#34;&gt;&lt;strong&gt;Get Started&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34;&gt;View the documentation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://discuss.gohugo.io/&#34;&gt;Ask a question&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/gcushen/hugo-academic/issues&#34;&gt;Request a feature or report a bug&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Updating? View the &lt;a href=&#34;https://sourcethemes.com/academic/docs/update/&#34;&gt;Update Guide&lt;/a&gt; and &lt;a href=&#34;https://sourcethemes.com/academic/updates/&#34;&gt;Release Notes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Support development of Academic:
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://paypal.me/cushen&#34;&gt;Donate a coffee&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.patreon.com/cushen&#34;&gt;Become a backer on Patreon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.redbubble.com/people/neutreno/works/34387919-academic&#34;&gt;Decorate your laptop or journal with an Academic sticker&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://academic.threadless.com/&#34;&gt;Wear the T-shirt&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/gcushen/hugo-academic/&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/academic.png&#34; alt=&#34;Screenshot&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Key features:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Page builder&lt;/strong&gt; - Create &lt;em&gt;anything&lt;/em&gt; with &lt;a href=&#34;https://sourcethemes.com/academic/docs/page-builder/&#34;&gt;&lt;strong&gt;widgets&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;&lt;strong&gt;elements&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Edit any type of content&lt;/strong&gt; - Blog posts, publications, talks, slides, projects, and more!&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Create content&lt;/strong&gt; in &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/a&gt;, &lt;a href=&#34;https://sourcethemes.com/academic/docs/jupyter/&#34;&gt;&lt;strong&gt;Jupyter&lt;/strong&gt;&lt;/a&gt;, or &lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-rstudio&#34;&gt;&lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Plugin System&lt;/strong&gt; - Fully customizable &lt;a href=&#34;https://sourcethemes.com/academic/themes/&#34;&gt;&lt;strong&gt;color&lt;/strong&gt; and &lt;strong&gt;font themes&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Display Code and Math&lt;/strong&gt; - Code highlighting and &lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34;&gt;LaTeX math&lt;/a&gt; supported&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Integrations&lt;/strong&gt; - &lt;a href=&#34;https://analytics.google.com&#34;&gt;Google Analytics&lt;/a&gt;, &lt;a href=&#34;https://disqus.com&#34;&gt;Disqus commenting&lt;/a&gt;, Maps, Contact Forms, and more!&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Beautiful Site&lt;/strong&gt; - Simple and refreshing one page design&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Industry-Leading SEO&lt;/strong&gt; - Help get your website found on search engines and social media&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Media Galleries&lt;/strong&gt; - Display your images and videos with captions in a customizable gallery&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Mobile Friendly&lt;/strong&gt; - Look amazing on every screen with a mobile friendly version of your site&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Multi-language&lt;/strong&gt; - 15+ language packs including English, 中文, and Português&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Multi-user&lt;/strong&gt; - Each author gets their own profile page&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Privacy Pack&lt;/strong&gt; - Assists with GDPR&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Stand Out&lt;/strong&gt; - Bring your site to life with animation, parallax backgrounds, and scroll effects&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;One-Click Deployment&lt;/strong&gt; - No servers. No databases. Only files.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;color-themes&#34;&gt;Color Themes&lt;/h2&gt;
-&lt;p&gt;Academic comes with &lt;strong&gt;day (light) and night (dark) mode&lt;/strong&gt; built-in. Click the sun/moon icon in the top right of the &lt;a href=&#34;https://academic-demo.netlify.com/&#34;&gt;Demo&lt;/a&gt; to see it in action!&lt;/p&gt;
-&lt;p&gt;Choose a stunning color and font theme for your site. Themes are fully customizable and include:&lt;/p&gt;
-
-
-
-
-
-
-
-
-  
-  
-
-
-&lt;div class=&#34;gallery&#34;&gt;
-
-  
-  
-  
-  
-    
-    
-    
-    
-    
-      
-        
-      
-    
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-1950s.png&#34; data-caption=&#34;1950s&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-1950s_huaf5482f8cea0c5a703a328640e3b7509_21614_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
-  &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-      
-        
-      
-    
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-apogee.png&#34; data-caption=&#34;Apogee&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-apogee_hu4b45d99db97150df01464c393bfd17d4_24119_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
-  &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-      
-        
-      
-    
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-coffee-playfair.png&#34; data-caption=&#34;Coffee theme with Playfair font&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-coffee-playfair_hu446a8f670cc5622adcc77b97ba95f6c5_22462_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
-  &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-      
-        
-      
-    
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-dark.png&#34; data-caption=&#34;Dark&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-dark_hu1e8601ecc47f58eada7743fdcd709d3d_21456_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
-  &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-      
-        
-      
-    
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-default.png&#34; data-caption=&#34;Default&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-default_huba6228b7bdf30e2f03f12ea91b2cba0d_21751_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
-  &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-      
-        
-      
-    
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-forest.png&#34; data-caption=&#34;Forest&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-forest_hu4f093a1c683134431456584193ea41ee_21797_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
-  &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-      
-        
-      
-    
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-ocean.png&#34; data-caption=&#34;Ocean&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-ocean_hu14831ccafc2219f30a7a096fa7617e01_21760_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
-  &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-      
-        
-      
-    
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-strawberry.png&#34; data-caption=&#34;Strawberry&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-strawberry_hu36b0b347fcca08bd39e2df22dcedbdfb_39532_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
-  &lt;/a&gt;
-  
-
-  
-&lt;/div&gt;
-&lt;h2 id=&#34;ecosystem&#34;&gt;Ecosystem&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/sourcethemes/academic-admin&#34;&gt;Academic Admin&lt;/a&gt;:&lt;/strong&gt; An admin tool to import publications from BibTeX or import assets for an offline site&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/sourcethemes/academic-scripts&#34;&gt;Academic Scripts&lt;/a&gt;:&lt;/strong&gt; Scripts to help migrate content to new versions of Academic&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
-&lt;p&gt;You can choose from one of the following four methods to install:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-web-browser&#34;&gt;&lt;strong&gt;one-click install using your web browser (recommended)&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-git&#34;&gt;install on your computer using &lt;strong&gt;Git&lt;/strong&gt; with the Command Prompt/Terminal app&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-zip&#34;&gt;install on your computer by downloading the &lt;strong&gt;ZIP files&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-rstudio&#34;&gt;install on your computer with &lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Then &lt;a href=&#34;https://sourcethemes.com/academic/docs/get-started/&#34;&gt;personalize and deploy your new site&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;updating&#34;&gt;Updating&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/update/&#34;&gt;View the Update Guide&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Feel free to &lt;em&gt;star&lt;/em&gt; the project on &lt;a href=&#34;https://github.com/gcushen/hugo-academic/&#34;&gt;Github&lt;/a&gt; to help keep track of &lt;a href=&#34;https://sourcethemes.com/academic/updates&#34;&gt;updates&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
-&lt;p&gt;Copyright 2016-present &lt;a href=&#34;https://georgecushen.com&#34;&gt;George Cushen&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Released under the &lt;a href=&#34;https://github.com/gcushen/hugo-academic/blob/master/LICENSE.md&#34;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Hello R Markdown</title>
+      <title>Area Under Disease Gradient (AUDG) Calculation</title>
       <link>/post/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <pubDate>Wed, 08 Jul 2020 21:13:14 -0500</pubDate>
       
       <guid>/post/2015-07-23-r-rmarkdown/</guid>
       <description>
 
 
-&lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;R Markdown&lt;/h1&gt;
-&lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;You can embed an R code chunk like this:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(cars)
-##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
-fit &amp;lt;- lm(dist ~ speed, data = cars)
-fit
+&lt;p&gt;Disease gradient information provides the spatial distribution of the epidemics at distance from the focus. If you are interested in learning how to calculate the area under the disease gradient curve to make comparison of several scenarios or treatments, this would be a good resource.&lt;/p&gt;
+&lt;p&gt;I am using &lt;a href=&#34;https://gist.github.com/stevenworthington/&#34;&gt;Steven Worthington&lt;/a&gt;’s ipak function to install and load several packages in R.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ipak &amp;lt;- function(pkg){
+    new.pkg &amp;lt;- pkg[!(pkg %in% installed.packages()[, &amp;quot;Package&amp;quot;])]
+    if (length(new.pkg)) 
+        install.packages(new.pkg, dependencies = TRUE)
+    sapply(pkg, require, character.only = TRUE)
+}
+
+# usage
+packages &amp;lt;- c(&amp;quot;tidyverse&amp;quot;, &amp;quot;readxl&amp;quot;, &amp;quot;agricolae&amp;quot;, &amp;quot;ggpubr&amp;quot;, &amp;quot;ggpubr&amp;quot;, &amp;quot;magrittr&amp;quot;, &amp;quot;reshape&amp;quot;, &amp;quot;knitr&amp;quot;)
+ipak(packages)
+## Loading required package: tidyverse
+## Warning: package &amp;#39;tidyverse&amp;#39; was built under R version 3.6.3
+## -- Attaching packages ----------------------------------------------------- tidyverse 1.3.0 --
+## v ggplot2 3.3.2     v purrr   0.3.4
+## v tibble  3.0.1     v dplyr   1.0.0
+## v tidyr   1.1.0     v stringr 1.4.0
+## v readr   1.3.1     v forcats 0.5.0
+## Warning: package &amp;#39;ggplot2&amp;#39; was built under R version 3.6.3
+## Warning: package &amp;#39;tibble&amp;#39; was built under R version 3.6.3
+## Warning: package &amp;#39;tidyr&amp;#39; was built under R version 3.6.3
+## Warning: package &amp;#39;readr&amp;#39; was built under R version 3.6.3
+## Warning: package &amp;#39;purrr&amp;#39; was built under R version 3.6.3
+## Warning: package &amp;#39;dplyr&amp;#39; was built under R version 3.6.3
+## Warning: package &amp;#39;stringr&amp;#39; was built under R version 3.6.3
+## Warning: package &amp;#39;forcats&amp;#39; was built under R version 3.6.3
+## -- Conflicts -------------------------------------------------------- tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+## Loading required package: readxl
+## Warning: package &amp;#39;readxl&amp;#39; was built under R version 3.6.3
+## Loading required package: agricolae
+## Warning: package &amp;#39;agricolae&amp;#39; was built under R version 3.6.3
+## Loading required package: ggpubr
+## Warning: package &amp;#39;ggpubr&amp;#39; was built under R version 3.6.3
+## Loading required package: magrittr
+## Warning: package &amp;#39;magrittr&amp;#39; was built under R version 3.6.3
 ## 
-## Call:
-## lm(formula = dist ~ speed, data = cars)
+## Attaching package: &amp;#39;magrittr&amp;#39;
+## The following object is masked from &amp;#39;package:purrr&amp;#39;:
 ## 
-## Coefficients:
-## (Intercept)        speed  
-##     -17.579        3.932&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;including-plots&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Including Plots&lt;/h1&gt;
-&lt;p&gt;You can also embed plots. See Figure &lt;a href=&#34;#fig:pie&#34;&gt;1&lt;/a&gt; for example:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar = c(0, 1, 0, 1))
-pie(
-  c(280, 60, 20),
-  c(&amp;#39;Sky&amp;#39;, &amp;#39;Sunny side of pyramid&amp;#39;, &amp;#39;Shady side of pyramid&amp;#39;),
-  col = c(&amp;#39;#0292D8&amp;#39;, &amp;#39;#F7EA39&amp;#39;, &amp;#39;#C4B632&amp;#39;),
-  init.angle = -50, border = NA
-)&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;
-Figure 1: A fancy pie chart.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+##     set_names
+## The following object is masked from &amp;#39;package:tidyr&amp;#39;:
+## 
+##     extract
+## Loading required package: reshape
+## Warning: package &amp;#39;reshape&amp;#39; was built under R version 3.6.3
+## 
+## Attaching package: &amp;#39;reshape&amp;#39;
+## The following object is masked from &amp;#39;package:dplyr&amp;#39;:
+## 
+##     rename
+## The following objects are masked from &amp;#39;package:tidyr&amp;#39;:
+## 
+##     expand, smiths
+## Loading required package: knitr
+## Warning: package &amp;#39;knitr&amp;#39; was built under R version 3.6.3
+## tidyverse    readxl agricolae    ggpubr    ggpubr  magrittr   reshape     knitr 
+##      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE
+
+data &amp;lt;- read_excel(&amp;quot;field observation.xlsx&amp;quot;) %&amp;gt;% 
+        as.data.frame()
+head(data, 10)
+##    Distance Treatments     R1      R2    R3    R4
+## 1        10         T4  0.375  0.0125  1.75  1.75
+## 2        15         T4  0.750  0.0175  1.25  2.50
+## 3        20         T4  2.500  1.2500  2.50  3.75
+## 4        25         T4  2.750  2.5000  3.75  6.25
+## 5        30         T4  2.500  5.0000  3.50 12.50
+## 6        35         T4  3.500  6.2500  4.25 15.00
+## 7        40         T4  3.000 12.5000  7.50 17.50
+## 8        45         T4  5.500 17.5000  6.25 27.50
+## 9        50         T4 10.000 27.5000 12.50 30.00
+## 10       55         T4 10.000 30.0000 14.00 18.00
+audpc_data &amp;lt;- data %&amp;gt;% 
+  melt(id=c(&amp;quot;Distance&amp;quot;, &amp;quot;Treatments&amp;quot;)) %&amp;gt;%
+  group_by(Treatments, variable) %&amp;gt;% 
+  summarize(AUDPC = audpc(value, Distance))
+## `summarise()` regrouping output by &amp;#39;Treatments&amp;#39; (override with `.groups` argument)
+
+audpc_data %&amp;gt;% 
+  spread(variable, AUDPC) %&amp;gt;% 
+  arrange(Treatments) %&amp;gt;%       
+  kable() &lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;Treatments&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;R1&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;R2&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;R3&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;R4&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;T1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;526.39750&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1200.5000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;870.7500&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2288.125&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;T2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;24.03125&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;526.2663&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;31.0325&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1110.938&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;T3&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;69.95000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;486.1637&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;247.7063&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1790.225&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;T4&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;363.34375&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;894.3062&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;388.7125&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1078.750&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;T6&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0100&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;T7&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00250&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
+plot_graph &amp;lt;- ggplot(audpc_data, aes(Treatments, AUDPC))+
+  geom_boxplot(aes(fill=factor(Treatments))) +
+  ggtitle(&amp;quot;AUDPC&amp;quot;)+
+  xlab(&amp;quot;Treatment Applied&amp;quot;)+
+  ylab(&amp;quot;Area Under Disease Gradient&amp;quot;)+
+  theme_bw(base_size = 14)+
+  theme(aspect.ratio=1.25,plot.title = element_text(hjust = 0.5), 
+        panel.grid=element_blank())+
+  scale_fill_manual(name=&amp;quot;Treatments&amp;quot;, 
+                    breaks = c(&amp;quot;T1&amp;quot;, &amp;quot;T2&amp;quot;, 
+                               &amp;quot;T3&amp;quot;, &amp;quot;T4&amp;quot;, &amp;quot;T5&amp;quot;,
+                               &amp;quot;T6&amp;quot;, &amp;quot;T7&amp;quot;),
+                    labels=c(&amp;quot;T1=Inoculated control&amp;quot;, &amp;quot;T2=CP culling at 3 days&amp;quot;, &amp;quot;T3=CP cull &amp;#39;ring&amp;#39; x 3&amp;quot;,&amp;quot;T4=CP cull at 1 day&amp;quot;,&amp;quot;T5=FP of CP at 3 days&amp;quot;,&amp;quot;T6=CP cull + FP of non-CP&amp;quot;,&amp;quot;T7=FP of entire plot at 3 days&amp;quot;),
+                    values=c(&amp;quot;#999999&amp;quot;,&amp;quot;#E69F00&amp;quot;,&amp;quot;#56B4E9&amp;quot;, &amp;quot;#009E73&amp;quot;, &amp;quot;#F0E442&amp;quot;, &amp;quot;#0072B2&amp;quot;, &amp;quot;#D55E00&amp;quot;))
+
+
+plot_graph&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
+ggsave(filename = &amp;quot;Boxplot.png&amp;quot;, width = , height = , units = &amp;quot;in&amp;quot;,
+       dpi = 600, limitsize = TRUE)
+## Saving 7 x 5 in image&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Weather based predictors for predictive modeling</title>
+      <link>/post/2020-08-23-r-rmarkdown/</link>
+      <pubDate>Wed, 08 Jul 2020 21:13:14 -0500</pubDate>
+      
+      <guid>/post/2020-08-23-r-rmarkdown/</guid>
+      <description>
+
+
+&lt;p&gt;I would like to share some of the weather predictors that I calculated for predictive modeling of sugarcane rusts from weather data. I have also created several complex weather variables during my research work but I am going to share some with averages/sums of hourly, weekly, monthly, and also specific time in a day. I will share the ways to calculate more complex weather variables in separate posts.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(readxl)
+## Warning: package &amp;#39;readxl&amp;#39; was built under R version 3.6.3
+library(lubridate)
+## Warning: package &amp;#39;lubridate&amp;#39; was built under R version 3.6.3
+## 
+## Attaching package: &amp;#39;lubridate&amp;#39;
+## The following objects are masked from &amp;#39;package:base&amp;#39;:
+## 
+##     date, intersect, setdiff, union
+library(plyr)
+## Warning: package &amp;#39;plyr&amp;#39; was built under R version 3.6.3
+
+Wdata &amp;lt;- read_excel(&amp;quot;weatherdata.xlsx&amp;quot;)
+head (Wdata, 10)
+## # A tibble: 10 x 11
+##    Period              `2m T avg (F)` `2m T min (F)` `2m T max (F)`
+##    &amp;lt;dttm&amp;gt;                       &amp;lt;dbl&amp;gt;          &amp;lt;dbl&amp;gt;          &amp;lt;dbl&amp;gt;
+##  1 2013-11-15 00:00:00           57.9           57.5           58.1
+##  2 2013-11-15 01:00:00           57.9           57.2           58.6
+##  3 2013-11-15 02:00:00           58.8           58.2           59.4
+##  4 2013-11-15 03:00:00           59.0           58.8           59.2
+##  5 2013-11-15 04:00:00           58.8           58.7           58.9
+##  6 2013-11-15 05:00:00           59.6           59.2           59.8
+##  7 2013-11-15 06:00:00           59.8           59.4           60.1
+##  8 2013-11-15 07:00:00           61.4           60.3           62.6
+##  9 2013-11-15 08:00:00           66.6           64.3           68.8
+## 10 2013-11-15 09:00:00           72.9           70.6           74.7
+## # ... with 7 more variables: `RelHum avg 2m (pct)` &amp;lt;dbl&amp;gt;, `2m Rain tot
+## #   (in)` &amp;lt;dbl&amp;gt;, `2m Rain max over 15min(in)` &amp;lt;dbl&amp;gt;, `10m Wind avg
+## #   (mph)` &amp;lt;dbl&amp;gt;, `10m Wind min (mph)` &amp;lt;dbl&amp;gt;, `10m Wind max (mph)` &amp;lt;dbl&amp;gt;, `N (#
+## #   obs)` &amp;lt;dbl&amp;gt;
+str(Wdata)
+## tibble [9,888 x 11] (S3: tbl_df/tbl/data.frame)
+##  $ Period                    : POSIXct[1:9888], format: &amp;quot;2013-11-15 00:00:00&amp;quot; &amp;quot;2013-11-15 01:00:00&amp;quot; ...
+##  $ 2m T avg (F)              : num [1:9888] 57.9 57.9 58.8 59 58.8 ...
+##  $ 2m T min (F)              : num [1:9888] 57.5 57.2 58.1 58.8 58.7 ...
+##  $ 2m T max (F)              : num [1:9888] 58.1 58.6 59.4 59.2 58.9 ...
+##  $ RelHum avg 2m (pct)       : num [1:9888] 93 93 92 92 93 94 94 95 92 82 ...
+##  $ 2m Rain tot (in)          : num [1:9888] 0 0 0 0 0 0 0 0 0 0 ...
+##  $ 2m Rain max over 15min(in): num [1:9888] 0 0 0 0 0 0 0 0 0 0 ...
+##  $ 10m Wind avg (mph)        : num [1:9888] 4.49 4.29 4.78 4.77 4.43 4.98 4.46 3.62 4.23 9.29 ...
+##  $ 10m Wind min (mph)        : num [1:9888] 2.43 1.8 2.57 2.8 2.57 3.07 2.53 1.87 1.57 3.33 ...
+##  $ 10m Wind max (mph)        : num [1:9888] 6.63 6.73 6.9 7.23 6.5 7.57 7.9 5.97 6.6 22.8 ...
+##  $ N (# obs)                 : num [1:9888] 4 4 4 4 4 4 4 4 4 4 ...
+Wdata$Period &amp;lt;- as.POSIXct(Wdata$Period, format = &amp;quot;%m/%d/%Y %H: %M: %S&amp;quot;)
+str(Wdata)
+## tibble [9,888 x 11] (S3: tbl_df/tbl/data.frame)
+##  $ Period                    : POSIXct[1:9888], format: &amp;quot;2013-11-15 00:00:00&amp;quot; &amp;quot;2013-11-15 01:00:00&amp;quot; ...
+##  $ 2m T avg (F)              : num [1:9888] 57.9 57.9 58.8 59 58.8 ...
+##  $ 2m T min (F)              : num [1:9888] 57.5 57.2 58.1 58.8 58.7 ...
+##  $ 2m T max (F)              : num [1:9888] 58.1 58.6 59.4 59.2 58.9 ...
+##  $ RelHum avg 2m (pct)       : num [1:9888] 93 93 92 92 93 94 94 95 92 82 ...
+##  $ 2m Rain tot (in)          : num [1:9888] 0 0 0 0 0 0 0 0 0 0 ...
+##  $ 2m Rain max over 15min(in): num [1:9888] 0 0 0 0 0 0 0 0 0 0 ...
+##  $ 10m Wind avg (mph)        : num [1:9888] 4.49 4.29 4.78 4.77 4.43 4.98 4.46 3.62 4.23 9.29 ...
+##  $ 10m Wind min (mph)        : num [1:9888] 2.43 1.8 2.57 2.8 2.57 3.07 2.53 1.87 1.57 3.33 ...
+##  $ 10m Wind max (mph)        : num [1:9888] 6.63 6.73 6.9 7.23 6.5 7.57 7.9 5.97 6.6 22.8 ...
+##  $ N (# obs)                 : num [1:9888] 4 4 4 4 4 4 4 4 4 4 ...
+
+#Create Multiple groups to split the data into Days, Weeks and Month
+
+Wdata$days &amp;lt;- floor_date(Wdata$Period, &amp;quot;day&amp;quot;)
+Wdata$weeks &amp;lt;- floor_date(Wdata$Period, &amp;#39;week&amp;#39;)
+Wdata$month &amp;lt;- floor_date(Wdata$Period, &amp;#39;month&amp;#39;)
+Wdata$hours &amp;lt;- floor_date(Wdata$Period, &amp;#39;hours&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Lets calculate the weekly average of the temperature. You can use same process for other weather variables just by changing the column name and sums by changing the function name.&lt;/p&gt;
+&lt;p&gt;Weekly average of temperature!&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;WeeklyAvg_temp &amp;lt;- aggregate(Wdata$`2m T avg (F)`, by = list(Wdata$weeks), FUN = mean)
+
+WeeklyAvg_temp
+##       Group.1        x
+## 1  2013-11-10 69.47396
+## 2  2013-11-17 73.15399
+## 3  2013-11-24 67.51911
+## 4  2013-12-01 67.79571
+## 5  2013-12-08 69.79107
+## 6  2013-12-15 65.81786
+## 7  2013-12-22 70.21244
+## 8  2013-12-29 67.44357
+## 9  2014-01-05 65.80673
+## 10 2014-01-12 58.73036
+## 11 2014-01-19 55.52095
+## 12 2014-01-26 65.00202
+## 13 2014-02-02 71.07030
+## 14 2014-02-09 63.95810
+## 15 2014-02-16 66.72917
+## 16 2014-02-23 68.80214
+## 17 2014-03-02 67.49810
+## 18 2014-03-09 66.84065
+## 19 2014-03-16 71.14958
+## 20 2014-03-23 67.81946
+## 21 2014-03-30 68.41476
+## 22 2014-04-06 70.89054
+## 23 2014-04-13 74.03732
+## 24 2014-04-20 71.31018
+## 25 2014-04-27 76.57851
+## 26 2014-05-04 74.32536
+## 27 2014-05-11 74.98089
+## 28 2014-05-18 74.17655
+## 29 2014-05-25 76.97202
+## 30 2014-06-01 76.78679
+## 31 2014-06-08 76.08429
+## 32 2014-06-15 75.66089
+## 33 2014-06-22 80.04083
+## 34 2014-06-29 79.54649
+## 35 2014-07-06 77.83143
+## 36 2014-07-13 78.92655
+## 37 2014-07-20 80.19125
+## 38 2014-07-27 81.04583
+## 39 2014-08-03 79.61185
+## 40 2014-08-10 79.95744
+## 41 2014-08-17 81.61702
+## 42 2014-08-24 80.66464
+## 43 2014-08-31 78.17417
+## 44 2014-09-07 77.50595
+## 45 2014-09-14 77.10208
+## 46 2014-09-21 76.86661
+## 47 2014-09-28 79.28756
+## 48 2014-10-05 75.39542
+## 49 2014-10-12 74.09589
+## 50 2014-10-19 72.61161
+## 51 2014-10-26 69.34804
+## 52 2014-11-02 66.65696
+## 53 2014-11-09 66.46226
+## 54 2014-11-16 67.26988
+## 55 2014-11-23 67.53137
+## 56 2014-11-30 69.39036
+## 57 2014-12-07 58.09333
+## 58 2014-12-14 60.08720
+## 59 2014-12-21 70.62952
+## 60 2014-12-28 71.70760&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Lets calculate the weekly average of the temperature from(6 AM-9 PM) of each day.&lt;/p&gt;
+&lt;p&gt;Use lubridate package for subsetting the data which contains the values from 6 AM to 9 PM.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;T6AMTo9PM &amp;lt;- subset(Wdata, hour(hours) &amp;gt;= 6 &amp;amp; hour(hours) &amp;lt;= 21 &amp;amp; days &amp;gt;= &amp;#39;2014-01-01&amp;#39; &amp;amp; days &amp;lt;= &amp;#39;2014-12-31&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After subsetting, lets calculate for temperature variable!&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;T6AMTo9PM_WeeklyAvg_temp &amp;lt;- aggregate(T6AMTo9PM$`2m T avg (F)`, by = list(T6AMTo9PM$weeks), FUN = mean)
+T6AMTo9PM_WeeklyAvg_temp
+##       Group.1        x
+## 1  2013-12-29 64.83667
+## 2  2014-01-05 67.94321
+## 3  2014-01-12 60.91509
+## 4  2014-01-19 59.00554
+## 5  2014-01-26 67.92598
+## 6  2014-02-02 73.42321
+## 7  2014-02-09 67.48607
+## 8  2014-02-16 71.45955
+## 9  2014-02-23 71.54554
+## 10 2014-03-02 70.96393
+## 11 2014-03-09 70.59089
+## 12 2014-03-16 74.68250
+## 13 2014-03-23 70.24589
+## 14 2014-03-30 72.48982
+## 15 2014-04-06 74.66982
+## 16 2014-04-13 76.28152
+## 17 2014-04-20 74.86929
+## 18 2014-04-27 79.91045
+## 19 2014-05-04 78.54688
+## 20 2014-05-11 77.67696
+## 21 2014-05-18 78.65795
+## 22 2014-05-25 80.31634
+## 23 2014-06-01 80.14795
+## 24 2014-06-08 79.31384
+## 25 2014-06-15 78.04286
+## 26 2014-06-22 83.38902
+## 27 2014-06-29 82.04607
+## 28 2014-07-06 80.34714
+## 29 2014-07-13 81.29125
+## 30 2014-07-20 82.94768
+## 31 2014-07-27 83.83795
+## 32 2014-08-03 81.99170
+## 33 2014-08-10 82.77527
+## 34 2014-08-17 84.94571
+## 35 2014-08-24 83.89491
+## 36 2014-08-31 80.63357
+## 37 2014-09-07 79.72955
+## 38 2014-09-14 79.52652
+## 39 2014-09-21 78.80696
+## 40 2014-09-28 82.26545
+## 41 2014-10-05 78.44259
+## 42 2014-10-12 77.62929
+## 43 2014-10-19 75.41018
+## 44 2014-10-26 73.29625
+## 45 2014-11-02 70.26107
+## 46 2014-11-09 69.15714
+## 47 2014-11-16 69.24893
+## 48 2014-11-23 69.61714
+## 49 2014-11-30 72.46089
+## 50 2014-12-07 60.26027
+## 51 2014-12-14 64.50598
+## 52 2014-12-21 73.04393
+## 53 2014-12-28 74.35500&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Leaf wetness duration (LWD) estimation using CART method</title>
+      <link>/post/2019-01-23-r-rmarkdown/</link>
+      <pubDate>Tue, 08 Jan 2019 21:13:14 -0500</pubDate>
+      
+      <guid>/post/2019-01-23-r-rmarkdown/</guid>
+      <description>
+
+
+&lt;p&gt;Are you a plant disease epidemiologist? If yes, you probably need to calculate leaf wetness duration using empirical methods. One way to estimate leaf wetness duration is with classification and regression tree method (CART). Learn how to calculate in R!&lt;/p&gt;
+&lt;p&gt;Let’s generate the dummy weather data and work through it. You can find the equation and procedure of CART method of leaf wetness estimation in this link: &lt;a href=&#34;https://doi.org/10.1094/PDIS.2002.86.2.179&#34; class=&#34;uri&#34;&gt;https://doi.org/10.1094/PDIS.2002.86.2.179&lt;/a&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Average_temperature &amp;lt;- sample(2:25, 20, replace=TRUE)
+Dew_Point_Depression &amp;lt;- sample(0.5:5, 20, replace=TRUE)
+Relative_Humidity &amp;lt;- sample(55:99, 20, replace=TRUE)
+Windspeed &amp;lt;- sample(1.5:6, 20, replace=TRUE)
+
+data &amp;lt;- data.frame(Average_temperature, Dew_Point_Depression, Relative_Humidity, Windspeed)
+
+names(data)[1:4] &amp;lt;- c(&amp;#39;tair&amp;#39;, &amp;#39;dpd&amp;#39;, &amp;#39;rh&amp;#39;, &amp;#39;wspeed&amp;#39;) 
+
+head(data, 10)
+##    tair dpd rh wspeed
+## 1    24 2.5 58    1.5
+## 2     6 1.5 96    5.5
+## 3    13 3.5 67    3.5
+## 4    23 0.5 64    3.5
+## 5     2 2.5 61    5.5
+## 6    15 3.5 55    5.5
+## 7    11 2.5 98    5.5
+## 8    24 1.5 65    2.5
+## 9     3 4.5 81    2.5
+## 10    4 1.5 58    5.5
+
+#Use equations for CART method of leaf wetness estimation
+wetdry &amp;lt;- numeric(dim(data)[1])
+for (i in 1:length(wetdry)) {
+  c1 &amp;lt;- 1.6064 * sqrt(data$tair[i]) + 0.0036 * data$tair[i]^2 + 
+    0.1531 * data$rh[i] - 0.4599 * data$wspeed[i] * data$dpd[i] - 0.0035 * data$tair[i] * data$rh[i]
+  c2 &amp;lt;- 0.7921 * sqrt(data$tair[i]) + 0.0046 * data$rh[i] - 2.3889 * data$wspeed[i] - 
+    0.0390 * data$tair[i] * data$wspeed[i] + 1.0613 * data$wspeed[i] * data$dpd[i]
+  
+  if (data$dpd[i] &amp;gt;= 3.7) {
+    wetdry[i] &amp;lt;- &amp;#39;D&amp;#39;
+  } else if (data$wspeed[i] &amp;lt; 2.5 &amp;amp; c1 &amp;gt; 14.4674) {
+    wetdry[i] &amp;lt;- &amp;#39;W&amp;#39;
+  } else if (data$wspeed[i] &amp;lt; 2.5 &amp;amp; c1 &amp;lt;= 14.4674) {
+    wetdry[i] &amp;lt;- &amp;#39;D&amp;#39;
+  } else if (data$rh[i] &amp;gt;= 87.8 &amp;amp; c2 &amp;gt; 37.0) {
+    wetdry[i] &amp;lt;- &amp;#39;W&amp;#39;
+  } else {
+    wetdry[i] &amp;lt;- &amp;#39;D&amp;#39;
+  }
+}
+
+wetdry
+##  [1] &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;W&amp;quot; &amp;quot;W&amp;quot;
+## [20] &amp;quot;D&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

@@ -1,0 +1,56 @@
+---
+title: "Weather based predictors for predictive modeling"
+author: "Bhim Chaulagain"
+date: 2020-07-08T21:13:14-05:00
+categories: ["R"]
+tags: ["weather variables", "lubridate", "dplyr"]
+---
+
+I would like to share some of the weather predictors that I calculated for predictive modeling of sugarcane rusts from weather data. I have also created several complex weather variables during my research work but I am going to share some with averages/sums of hourly, weekly, monthly, and also specific time in a day. I will share the ways to calculate more complex weather variables in separate posts. 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
+
+```{r}
+library(readxl)
+library(lubridate)
+library(plyr)
+
+Wdata <- read_excel("weatherdata.xlsx")
+head (Wdata, 10)
+str(Wdata)
+Wdata$Period <- as.POSIXct(Wdata$Period, format = "%m/%d/%Y %H: %M: %S")
+str(Wdata)
+
+#Create Multiple groups to split the data into Days, Weeks and Month
+
+Wdata$days <- floor_date(Wdata$Period, "day")
+Wdata$weeks <- floor_date(Wdata$Period, 'week')
+Wdata$month <- floor_date(Wdata$Period, 'month')
+Wdata$hours <- floor_date(Wdata$Period, 'hours')
+```
+
+Lets calculate the weekly average of the temperature. You can use same process for other weather variables just by changing the column name and sums by changing the function name.
+
+Weekly average of temperature!
+
+```{r}
+WeeklyAvg_temp <- aggregate(Wdata$`2m T avg (F)`, by = list(Wdata$weeks), FUN = mean)
+
+WeeklyAvg_temp
+```
+Lets calculate the weekly average of the temperature from(6 AM-9 PM) of each day.
+
+Use lubridate package for subsetting the data which contains the values from 6 AM to 9 PM. 
+```{r}
+T6AMTo9PM <- subset(Wdata, hour(hours) >= 6 & hour(hours) <= 21 & days >= '2014-01-01' & days <= '2014-12-31')
+
+```
+After subsetting, lets calculate for temperature variable!
+
+```{r}
+T6AMTo9PM_WeeklyAvg_temp <- aggregate(T6AMTo9PM$`2m T avg (F)`, by = list(T6AMTo9PM$weeks), FUN = mean)
+T6AMTo9PM_WeeklyAvg_temp
+```

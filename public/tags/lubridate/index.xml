@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>lubridate on Bhim Chaulagain</title>
+    <link>/tags/lubridate/</link>
+    <description>Recent content in lubridate on Bhim Chaulagain</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>B. Chaulagain {year}</copyright>
+    <lastBuildDate>Wed, 08 Jul 2020 21:13:14 -0500</lastBuildDate>
+    
+	    <atom:link href="/tags/lubridate/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Weather based predictors for predictive modeling</title>
+      <link>/post/2020-08-23-r-rmarkdown/</link>
+      <pubDate>Wed, 08 Jul 2020 21:13:14 -0500</pubDate>
+      
+      <guid>/post/2020-08-23-r-rmarkdown/</guid>
+      <description>
+
+
+&lt;p&gt;I would like to share some of the weather predictors that I calculated for predictive modeling of sugarcane rusts from weather data. I have also created several complex weather variables during my research work but I am going to share some with averages/sums of hourly, weekly, monthly, and also specific time in a day. I will share the ways to calculate more complex weather variables in separate posts.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(readxl)
+## Warning: package &amp;#39;readxl&amp;#39; was built under R version 3.6.3
+library(lubridate)
+## Warning: package &amp;#39;lubridate&amp;#39; was built under R version 3.6.3
+## 
+## Attaching package: &amp;#39;lubridate&amp;#39;
+## The following objects are masked from &amp;#39;package:base&amp;#39;:
+## 
+##     date, intersect, setdiff, union
+library(plyr)
+## Warning: package &amp;#39;plyr&amp;#39; was built under R version 3.6.3
+
+Wdata &amp;lt;- read_excel(&amp;quot;weatherdata.xlsx&amp;quot;)
+head (Wdata, 10)
+## # A tibble: 10 x 11
+##    Period              `2m T avg (F)` `2m T min (F)` `2m T max (F)`
+##    &amp;lt;dttm&amp;gt;                       &amp;lt;dbl&amp;gt;          &amp;lt;dbl&amp;gt;          &amp;lt;dbl&amp;gt;
+##  1 2013-11-15 00:00:00           57.9           57.5           58.1
+##  2 2013-11-15 01:00:00           57.9           57.2           58.6
+##  3 2013-11-15 02:00:00           58.8           58.2           59.4
+##  4 2013-11-15 03:00:00           59.0           58.8           59.2
+##  5 2013-11-15 04:00:00           58.8           58.7           58.9
+##  6 2013-11-15 05:00:00           59.6           59.2           59.8
+##  7 2013-11-15 06:00:00           59.8           59.4           60.1
+##  8 2013-11-15 07:00:00           61.4           60.3           62.6
+##  9 2013-11-15 08:00:00           66.6           64.3           68.8
+## 10 2013-11-15 09:00:00           72.9           70.6           74.7
+## # ... with 7 more variables: `RelHum avg 2m (pct)` &amp;lt;dbl&amp;gt;, `2m Rain tot
+## #   (in)` &amp;lt;dbl&amp;gt;, `2m Rain max over 15min(in)` &amp;lt;dbl&amp;gt;, `10m Wind avg
+## #   (mph)` &amp;lt;dbl&amp;gt;, `10m Wind min (mph)` &amp;lt;dbl&amp;gt;, `10m Wind max (mph)` &amp;lt;dbl&amp;gt;, `N (#
+## #   obs)` &amp;lt;dbl&amp;gt;
+str(Wdata)
+## tibble [9,888 x 11] (S3: tbl_df/tbl/data.frame)
+##  $ Period                    : POSIXct[1:9888], format: &amp;quot;2013-11-15 00:00:00&amp;quot; &amp;quot;2013-11-15 01:00:00&amp;quot; ...
+##  $ 2m T avg (F)              : num [1:9888] 57.9 57.9 58.8 59 58.8 ...
+##  $ 2m T min (F)              : num [1:9888] 57.5 57.2 58.1 58.8 58.7 ...
+##  $ 2m T max (F)              : num [1:9888] 58.1 58.6 59.4 59.2 58.9 ...
+##  $ RelHum avg 2m (pct)       : num [1:9888] 93 93 92 92 93 94 94 95 92 82 ...
+##  $ 2m Rain tot (in)          : num [1:9888] 0 0 0 0 0 0 0 0 0 0 ...
+##  $ 2m Rain max over 15min(in): num [1:9888] 0 0 0 0 0 0 0 0 0 0 ...
+##  $ 10m Wind avg (mph)        : num [1:9888] 4.49 4.29 4.78 4.77 4.43 4.98 4.46 3.62 4.23 9.29 ...
+##  $ 10m Wind min (mph)        : num [1:9888] 2.43 1.8 2.57 2.8 2.57 3.07 2.53 1.87 1.57 3.33 ...
+##  $ 10m Wind max (mph)        : num [1:9888] 6.63 6.73 6.9 7.23 6.5 7.57 7.9 5.97 6.6 22.8 ...
+##  $ N (# obs)                 : num [1:9888] 4 4 4 4 4 4 4 4 4 4 ...
+Wdata$Period &amp;lt;- as.POSIXct(Wdata$Period, format = &amp;quot;%m/%d/%Y %H: %M: %S&amp;quot;)
+str(Wdata)
+## tibble [9,888 x 11] (S3: tbl_df/tbl/data.frame)
+##  $ Period                    : POSIXct[1:9888], format: &amp;quot;2013-11-15 00:00:00&amp;quot; &amp;quot;2013-11-15 01:00:00&amp;quot; ...
+##  $ 2m T avg (F)              : num [1:9888] 57.9 57.9 58.8 59 58.8 ...
+##  $ 2m T min (F)              : num [1:9888] 57.5 57.2 58.1 58.8 58.7 ...
+##  $ 2m T max (F)              : num [1:9888] 58.1 58.6 59.4 59.2 58.9 ...
+##  $ RelHum avg 2m (pct)       : num [1:9888] 93 93 92 92 93 94 94 95 92 82 ...
+##  $ 2m Rain tot (in)          : num [1:9888] 0 0 0 0 0 0 0 0 0 0 ...
+##  $ 2m Rain max over 15min(in): num [1:9888] 0 0 0 0 0 0 0 0 0 0 ...
+##  $ 10m Wind avg (mph)        : num [1:9888] 4.49 4.29 4.78 4.77 4.43 4.98 4.46 3.62 4.23 9.29 ...
+##  $ 10m Wind min (mph)        : num [1:9888] 2.43 1.8 2.57 2.8 2.57 3.07 2.53 1.87 1.57 3.33 ...
+##  $ 10m Wind max (mph)        : num [1:9888] 6.63 6.73 6.9 7.23 6.5 7.57 7.9 5.97 6.6 22.8 ...
+##  $ N (# obs)                 : num [1:9888] 4 4 4 4 4 4 4 4 4 4 ...
+
+#Create Multiple groups to split the data into Days, Weeks and Month
+
+Wdata$days &amp;lt;- floor_date(Wdata$Period, &amp;quot;day&amp;quot;)
+Wdata$weeks &amp;lt;- floor_date(Wdata$Period, &amp;#39;week&amp;#39;)
+Wdata$month &amp;lt;- floor_date(Wdata$Period, &amp;#39;month&amp;#39;)
+Wdata$hours &amp;lt;- floor_date(Wdata$Period, &amp;#39;hours&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Lets calculate the weekly average of the temperature. You can use same process for other weather variables just by changing the column name and sums by changing the function name.&lt;/p&gt;
+&lt;p&gt;Weekly average of temperature!&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;WeeklyAvg_temp &amp;lt;- aggregate(Wdata$`2m T avg (F)`, by = list(Wdata$weeks), FUN = mean)
+
+WeeklyAvg_temp
+##       Group.1        x
+## 1  2013-11-10 69.47396
+## 2  2013-11-17 73.15399
+## 3  2013-11-24 67.51911
+## 4  2013-12-01 67.79571
+## 5  2013-12-08 69.79107
+## 6  2013-12-15 65.81786
+## 7  2013-12-22 70.21244
+## 8  2013-12-29 67.44357
+## 9  2014-01-05 65.80673
+## 10 2014-01-12 58.73036
+## 11 2014-01-19 55.52095
+## 12 2014-01-26 65.00202
+## 13 2014-02-02 71.07030
+## 14 2014-02-09 63.95810
+## 15 2014-02-16 66.72917
+## 16 2014-02-23 68.80214
+## 17 2014-03-02 67.49810
+## 18 2014-03-09 66.84065
+## 19 2014-03-16 71.14958
+## 20 2014-03-23 67.81946
+## 21 2014-03-30 68.41476
+## 22 2014-04-06 70.89054
+## 23 2014-04-13 74.03732
+## 24 2014-04-20 71.31018
+## 25 2014-04-27 76.57851
+## 26 2014-05-04 74.32536
+## 27 2014-05-11 74.98089
+## 28 2014-05-18 74.17655
+## 29 2014-05-25 76.97202
+## 30 2014-06-01 76.78679
+## 31 2014-06-08 76.08429
+## 32 2014-06-15 75.66089
+## 33 2014-06-22 80.04083
+## 34 2014-06-29 79.54649
+## 35 2014-07-06 77.83143
+## 36 2014-07-13 78.92655
+## 37 2014-07-20 80.19125
+## 38 2014-07-27 81.04583
+## 39 2014-08-03 79.61185
+## 40 2014-08-10 79.95744
+## 41 2014-08-17 81.61702
+## 42 2014-08-24 80.66464
+## 43 2014-08-31 78.17417
+## 44 2014-09-07 77.50595
+## 45 2014-09-14 77.10208
+## 46 2014-09-21 76.86661
+## 47 2014-09-28 79.28756
+## 48 2014-10-05 75.39542
+## 49 2014-10-12 74.09589
+## 50 2014-10-19 72.61161
+## 51 2014-10-26 69.34804
+## 52 2014-11-02 66.65696
+## 53 2014-11-09 66.46226
+## 54 2014-11-16 67.26988
+## 55 2014-11-23 67.53137
+## 56 2014-11-30 69.39036
+## 57 2014-12-07 58.09333
+## 58 2014-12-14 60.08720
+## 59 2014-12-21 70.62952
+## 60 2014-12-28 71.70760&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Lets calculate the weekly average of the temperature from(6 AM-9 PM) of each day.&lt;/p&gt;
+&lt;p&gt;Use lubridate package for subsetting the data which contains the values from 6 AM to 9 PM.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;T6AMTo9PM &amp;lt;- subset(Wdata, hour(hours) &amp;gt;= 6 &amp;amp; hour(hours) &amp;lt;= 21 &amp;amp; days &amp;gt;= &amp;#39;2014-01-01&amp;#39; &amp;amp; days &amp;lt;= &amp;#39;2014-12-31&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After subsetting, lets calculate for temperature variable!&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;T6AMTo9PM_WeeklyAvg_temp &amp;lt;- aggregate(T6AMTo9PM$`2m T avg (F)`, by = list(T6AMTo9PM$weeks), FUN = mean)
+T6AMTo9PM_WeeklyAvg_temp
+##       Group.1        x
+## 1  2013-12-29 64.83667
+## 2  2014-01-05 67.94321
+## 3  2014-01-12 60.91509
+## 4  2014-01-19 59.00554
+## 5  2014-01-26 67.92598
+## 6  2014-02-02 73.42321
+## 7  2014-02-09 67.48607
+## 8  2014-02-16 71.45955
+## 9  2014-02-23 71.54554
+## 10 2014-03-02 70.96393
+## 11 2014-03-09 70.59089
+## 12 2014-03-16 74.68250
+## 13 2014-03-23 70.24589
+## 14 2014-03-30 72.48982
+## 15 2014-04-06 74.66982
+## 16 2014-04-13 76.28152
+## 17 2014-04-20 74.86929
+## 18 2014-04-27 79.91045
+## 19 2014-05-04 78.54688
+## 20 2014-05-11 77.67696
+## 21 2014-05-18 78.65795
+## 22 2014-05-25 80.31634
+## 23 2014-06-01 80.14795
+## 24 2014-06-08 79.31384
+## 25 2014-06-15 78.04286
+## 26 2014-06-22 83.38902
+## 27 2014-06-29 82.04607
+## 28 2014-07-06 80.34714
+## 29 2014-07-13 81.29125
+## 30 2014-07-20 82.94768
+## 31 2014-07-27 83.83795
+## 32 2014-08-03 81.99170
+## 33 2014-08-10 82.77527
+## 34 2014-08-17 84.94571
+## 35 2014-08-24 83.89491
+## 36 2014-08-31 80.63357
+## 37 2014-09-07 79.72955
+## 38 2014-09-14 79.52652
+## 39 2014-09-21 78.80696
+## 40 2014-09-28 82.26545
+## 41 2014-10-05 78.44259
+## 42 2014-10-12 77.62929
+## 43 2014-10-19 75.41018
+## 44 2014-10-26 73.29625
+## 45 2014-11-02 70.26107
+## 46 2014-11-09 69.15714
+## 47 2014-11-16 69.24893
+## 48 2014-11-23 69.61714
+## 49 2014-11-30 72.46089
+## 50 2014-12-07 60.26027
+## 51 2014-12-14 64.50598
+## 52 2014-12-21 73.04393
+## 53 2014-12-28 74.35500&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

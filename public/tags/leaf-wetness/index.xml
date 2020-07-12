@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Leaf Wetness on Bhim Chaulagain</title>
+    <link>/tags/leaf-wetness/</link>
+    <description>Recent content in Leaf Wetness on Bhim Chaulagain</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>B. Chaulagain {year}</copyright>
+    <lastBuildDate>Tue, 08 Jan 2019 21:13:14 -0500</lastBuildDate>
+    
+	    <atom:link href="/tags/leaf-wetness/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Leaf wetness duration (LWD) estimation using CART method</title>
+      <link>/post/2019-01-23-r-rmarkdown/</link>
+      <pubDate>Tue, 08 Jan 2019 21:13:14 -0500</pubDate>
+      
+      <guid>/post/2019-01-23-r-rmarkdown/</guid>
+      <description>
+
+
+&lt;p&gt;Are you a plant disease epidemiologist? If yes, you probably need to calculate leaf wetness duration using empirical methods. One way to estimate leaf wetness duration is with classification and regression tree method (CART). Learn how to calculate in R!&lt;/p&gt;
+&lt;p&gt;Let’s generate the dummy weather data and work through it. You can find the equation and procedure of CART method of leaf wetness estimation in this link: &lt;a href=&#34;https://doi.org/10.1094/PDIS.2002.86.2.179&#34; class=&#34;uri&#34;&gt;https://doi.org/10.1094/PDIS.2002.86.2.179&lt;/a&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Average_temperature &amp;lt;- sample(2:25, 20, replace=TRUE)
+Dew_Point_Depression &amp;lt;- sample(0.5:5, 20, replace=TRUE)
+Relative_Humidity &amp;lt;- sample(55:99, 20, replace=TRUE)
+Windspeed &amp;lt;- sample(1.5:6, 20, replace=TRUE)
+
+data &amp;lt;- data.frame(Average_temperature, Dew_Point_Depression, Relative_Humidity, Windspeed)
+
+names(data)[1:4] &amp;lt;- c(&amp;#39;tair&amp;#39;, &amp;#39;dpd&amp;#39;, &amp;#39;rh&amp;#39;, &amp;#39;wspeed&amp;#39;) 
+
+head(data, 10)
+##    tair dpd rh wspeed
+## 1    24 2.5 58    1.5
+## 2     6 1.5 96    5.5
+## 3    13 3.5 67    3.5
+## 4    23 0.5 64    3.5
+## 5     2 2.5 61    5.5
+## 6    15 3.5 55    5.5
+## 7    11 2.5 98    5.5
+## 8    24 1.5 65    2.5
+## 9     3 4.5 81    2.5
+## 10    4 1.5 58    5.5
+
+#Use equations for CART method of leaf wetness estimation
+wetdry &amp;lt;- numeric(dim(data)[1])
+for (i in 1:length(wetdry)) {
+  c1 &amp;lt;- 1.6064 * sqrt(data$tair[i]) + 0.0036 * data$tair[i]^2 + 
+    0.1531 * data$rh[i] - 0.4599 * data$wspeed[i] * data$dpd[i] - 0.0035 * data$tair[i] * data$rh[i]
+  c2 &amp;lt;- 0.7921 * sqrt(data$tair[i]) + 0.0046 * data$rh[i] - 2.3889 * data$wspeed[i] - 
+    0.0390 * data$tair[i] * data$wspeed[i] + 1.0613 * data$wspeed[i] * data$dpd[i]
+  
+  if (data$dpd[i] &amp;gt;= 3.7) {
+    wetdry[i] &amp;lt;- &amp;#39;D&amp;#39;
+  } else if (data$wspeed[i] &amp;lt; 2.5 &amp;amp; c1 &amp;gt; 14.4674) {
+    wetdry[i] &amp;lt;- &amp;#39;W&amp;#39;
+  } else if (data$wspeed[i] &amp;lt; 2.5 &amp;amp; c1 &amp;lt;= 14.4674) {
+    wetdry[i] &amp;lt;- &amp;#39;D&amp;#39;
+  } else if (data$rh[i] &amp;gt;= 87.8 &amp;amp; c2 &amp;gt; 37.0) {
+    wetdry[i] &amp;lt;- &amp;#39;W&amp;#39;
+  } else {
+    wetdry[i] &amp;lt;- &amp;#39;D&amp;#39;
+  }
+}
+
+wetdry
+##  [1] &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;W&amp;quot; &amp;quot;W&amp;quot;
+## [20] &amp;quot;D&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

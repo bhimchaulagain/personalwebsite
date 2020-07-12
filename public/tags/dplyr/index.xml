@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dplyr on Bhim Chaulagain</title>
+    <link>/tags/dplyr/</link>
+    <description>Recent content in dplyr on Bhim Chaulagain</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>B. Chaulagain {year}</copyright>
+    <lastBuildDate>Wed, 08 Jul 2020 21:13:14 -0500</lastBuildDate>
+    
+	    <atom:link href="/tags/dplyr/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Area Under Disease Gradient (AUDG) Calculation</title>
+      <link>/post/2015-07-23-r-rmarkdown/</link>
+      <pubDate>Wed, 08 Jul 2020 21:13:14 -0500</pubDate>
+      
+      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <description>
+
+
+&lt;p&gt;Disease gradient information provides the spatial distribution of the epidemics at distance from the focus. If you are interested in learning how to calculate the area under the disease gradient curve to make comparison of several scenarios or treatments, this would be a good resource.&lt;/p&gt;
+&lt;p&gt;I am using &lt;a href=&#34;https://gist.github.com/stevenworthington/&#34;&gt;Steven Worthington&lt;/a&gt;’s ipak function to install and load several packages in R.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ipak &amp;lt;- function(pkg){
+    new.pkg &amp;lt;- pkg[!(pkg %in% installed.packages()[, &amp;quot;Package&amp;quot;])]
+    if (length(new.pkg)) 
+        install.packages(new.pkg, dependencies = TRUE)
+    sapply(pkg, require, character.only = TRUE)
+}
+
+# usage
+packages &amp;lt;- c(&amp;quot;tidyverse&amp;quot;, &amp;quot;readxl&amp;quot;, &amp;quot;agricolae&amp;quot;, &amp;quot;ggpubr&amp;quot;, &amp;quot;ggpubr&amp;quot;, &amp;quot;magrittr&amp;quot;, &amp;quot;reshape&amp;quot;, &amp;quot;knitr&amp;quot;)
+ipak(packages)
+## Loading required package: tidyverse
+## Warning: package &amp;#39;tidyverse&amp;#39; was built under R version 3.6.3
+## -- Attaching packages ----------------------------------------------------- tidyverse 1.3.0 --
+## v ggplot2 3.3.2     v purrr   0.3.4
+## v tibble  3.0.1     v dplyr   1.0.0
+## v tidyr   1.1.0     v stringr 1.4.0
+## v readr   1.3.1     v forcats 0.5.0
+## Warning: package &amp;#39;ggplot2&amp;#39; was built under R version 3.6.3
+## Warning: package &amp;#39;tibble&amp;#39; was built under R version 3.6.3
+## Warning: package &amp;#39;tidyr&amp;#39; was built under R version 3.6.3
+## Warning: package &amp;#39;readr&amp;#39; was built under R version 3.6.3
+## Warning: package &amp;#39;purrr&amp;#39; was built under R version 3.6.3
+## Warning: package &amp;#39;dplyr&amp;#39; was built under R version 3.6.3
+## Warning: package &amp;#39;stringr&amp;#39; was built under R version 3.6.3
+## Warning: package &amp;#39;forcats&amp;#39; was built under R version 3.6.3
+## -- Conflicts -------------------------------------------------------- tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+## Loading required package: readxl
+## Warning: package &amp;#39;readxl&amp;#39; was built under R version 3.6.3
+## Loading required package: agricolae
+## Warning: package &amp;#39;agricolae&amp;#39; was built under R version 3.6.3
+## Loading required package: ggpubr
+## Warning: package &amp;#39;ggpubr&amp;#39; was built under R version 3.6.3
+## Loading required package: magrittr
+## Warning: package &amp;#39;magrittr&amp;#39; was built under R version 3.6.3
+## 
+## Attaching package: &amp;#39;magrittr&amp;#39;
+## The following object is masked from &amp;#39;package:purrr&amp;#39;:
+## 
+##     set_names
+## The following object is masked from &amp;#39;package:tidyr&amp;#39;:
+## 
+##     extract
+## Loading required package: reshape
+## Warning: package &amp;#39;reshape&amp;#39; was built under R version 3.6.3
+## 
+## Attaching package: &amp;#39;reshape&amp;#39;
+## The following object is masked from &amp;#39;package:dplyr&amp;#39;:
+## 
+##     rename
+## The following objects are masked from &amp;#39;package:tidyr&amp;#39;:
+## 
+##     expand, smiths
+## Loading required package: knitr
+## Warning: package &amp;#39;knitr&amp;#39; was built under R version 3.6.3
+## tidyverse    readxl agricolae    ggpubr    ggpubr  magrittr   reshape     knitr 
+##      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE
+
+data &amp;lt;- read_excel(&amp;quot;field observation.xlsx&amp;quot;) %&amp;gt;% 
+        as.data.frame()
+head(data, 10)
+##    Distance Treatments     R1      R2    R3    R4
+## 1        10         T4  0.375  0.0125  1.75  1.75
+## 2        15         T4  0.750  0.0175  1.25  2.50
+## 3        20         T4  2.500  1.2500  2.50  3.75
+## 4        25         T4  2.750  2.5000  3.75  6.25
+## 5        30         T4  2.500  5.0000  3.50 12.50
+## 6        35         T4  3.500  6.2500  4.25 15.00
+## 7        40         T4  3.000 12.5000  7.50 17.50
+## 8        45         T4  5.500 17.5000  6.25 27.50
+## 9        50         T4 10.000 27.5000 12.50 30.00
+## 10       55         T4 10.000 30.0000 14.00 18.00
+audpc_data &amp;lt;- data %&amp;gt;% 
+  melt(id=c(&amp;quot;Distance&amp;quot;, &amp;quot;Treatments&amp;quot;)) %&amp;gt;%
+  group_by(Treatments, variable) %&amp;gt;% 
+  summarize(AUDPC = audpc(value, Distance))
+## `summarise()` regrouping output by &amp;#39;Treatments&amp;#39; (override with `.groups` argument)
+
+audpc_data %&amp;gt;% 
+  spread(variable, AUDPC) %&amp;gt;% 
+  arrange(Treatments) %&amp;gt;%       
+  kable() &lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;Treatments&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;R1&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;R2&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;R3&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;R4&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;T1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;526.39750&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1200.5000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;870.7500&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2288.125&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;T2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;24.03125&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;526.2663&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;31.0325&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1110.938&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;T3&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;69.95000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;486.1637&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;247.7063&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1790.225&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;T4&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;363.34375&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;894.3062&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;388.7125&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1078.750&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;T6&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0100&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;T7&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00250&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
+plot_graph &amp;lt;- ggplot(audpc_data, aes(Treatments, AUDPC))+
+  geom_boxplot(aes(fill=factor(Treatments))) +
+  ggtitle(&amp;quot;AUDPC&amp;quot;)+
+  xlab(&amp;quot;Treatment Applied&amp;quot;)+
+  ylab(&amp;quot;Area Under Disease Gradient&amp;quot;)+
+  theme_bw(base_size = 14)+
+  theme(aspect.ratio=1.25,plot.title = element_text(hjust = 0.5), 
+        panel.grid=element_blank())+
+  scale_fill_manual(name=&amp;quot;Treatments&amp;quot;, 
+                    breaks = c(&amp;quot;T1&amp;quot;, &amp;quot;T2&amp;quot;, 
+                               &amp;quot;T3&amp;quot;, &amp;quot;T4&amp;quot;, &amp;quot;T5&amp;quot;,
+                               &amp;quot;T6&amp;quot;, &amp;quot;T7&amp;quot;),
+                    labels=c(&amp;quot;T1=Inoculated control&amp;quot;, &amp;quot;T2=CP culling at 3 days&amp;quot;, &amp;quot;T3=CP cull &amp;#39;ring&amp;#39; x 3&amp;quot;,&amp;quot;T4=CP cull at 1 day&amp;quot;,&amp;quot;T5=FP of CP at 3 days&amp;quot;,&amp;quot;T6=CP cull + FP of non-CP&amp;quot;,&amp;quot;T7=FP of entire plot at 3 days&amp;quot;),
+                    values=c(&amp;quot;#999999&amp;quot;,&amp;quot;#E69F00&amp;quot;,&amp;quot;#56B4E9&amp;quot;, &amp;quot;#009E73&amp;quot;, &amp;quot;#F0E442&amp;quot;, &amp;quot;#0072B2&amp;quot;, &amp;quot;#D55E00&amp;quot;))
+
+
+plot_graph&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
+ggsave(filename = &amp;quot;Boxplot.png&amp;quot;, width = , height = , units = &amp;quot;in&amp;quot;,
+       dpi = 600, limitsize = TRUE)
+## Saving 7 x 5 in image&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Weather based predictors for predictive modeling</title>
+      <link>/post/2020-08-23-r-rmarkdown/</link>
+      <pubDate>Wed, 08 Jul 2020 21:13:14 -0500</pubDate>
+      
+      <guid>/post/2020-08-23-r-rmarkdown/</guid>
+      <description>
+
+
+&lt;p&gt;I would like to share some of the weather predictors that I calculated for predictive modeling of sugarcane rusts from weather data. I have also created several complex weather variables during my research work but I am going to share some with averages/sums of hourly, weekly, monthly, and also specific time in a day. I will share the ways to calculate more complex weather variables in separate posts.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(readxl)
+## Warning: package &amp;#39;readxl&amp;#39; was built under R version 3.6.3
+library(lubridate)
+## Warning: package &amp;#39;lubridate&amp;#39; was built under R version 3.6.3
+## 
+## Attaching package: &amp;#39;lubridate&amp;#39;
+## The following objects are masked from &amp;#39;package:base&amp;#39;:
+## 
+##     date, intersect, setdiff, union
+library(plyr)
+## Warning: package &amp;#39;plyr&amp;#39; was built under R version 3.6.3
+
+Wdata &amp;lt;- read_excel(&amp;quot;weatherdata.xlsx&amp;quot;)
+head (Wdata, 10)
+## # A tibble: 10 x 11
+##    Period              `2m T avg (F)` `2m T min (F)` `2m T max (F)`
+##    &amp;lt;dttm&amp;gt;                       &amp;lt;dbl&amp;gt;          &amp;lt;dbl&amp;gt;          &amp;lt;dbl&amp;gt;
+##  1 2013-11-15 00:00:00           57.9           57.5           58.1
+##  2 2013-11-15 01:00:00           57.9           57.2           58.6
+##  3 2013-11-15 02:00:00           58.8           58.2           59.4
+##  4 2013-11-15 03:00:00           59.0           58.8           59.2
+##  5 2013-11-15 04:00:00           58.8           58.7           58.9
+##  6 2013-11-15 05:00:00           59.6           59.2           59.8
+##  7 2013-11-15 06:00:00           59.8           59.4           60.1
+##  8 2013-11-15 07:00:00           61.4           60.3           62.6
+##  9 2013-11-15 08:00:00           66.6           64.3           68.8
+## 10 2013-11-15 09:00:00           72.9           70.6           74.7
+## # ... with 7 more variables: `RelHum avg 2m (pct)` &amp;lt;dbl&amp;gt;, `2m Rain tot
+## #   (in)` &amp;lt;dbl&amp;gt;, `2m Rain max over 15min(in)` &amp;lt;dbl&amp;gt;, `10m Wind avg
+## #   (mph)` &amp;lt;dbl&amp;gt;, `10m Wind min (mph)` &amp;lt;dbl&amp;gt;, `10m Wind max (mph)` &amp;lt;dbl&amp;gt;, `N (#
+## #   obs)` &amp;lt;dbl&amp;gt;
+str(Wdata)
+## tibble [9,888 x 11] (S3: tbl_df/tbl/data.frame)
+##  $ Period                    : POSIXct[1:9888], format: &amp;quot;2013-11-15 00:00:00&amp;quot; &amp;quot;2013-11-15 01:00:00&amp;quot; ...
+##  $ 2m T avg (F)              : num [1:9888] 57.9 57.9 58.8 59 58.8 ...
+##  $ 2m T min (F)              : num [1:9888] 57.5 57.2 58.1 58.8 58.7 ...
+##  $ 2m T max (F)              : num [1:9888] 58.1 58.6 59.4 59.2 58.9 ...
+##  $ RelHum avg 2m (pct)       : num [1:9888] 93 93 92 92 93 94 94 95 92 82 ...
+##  $ 2m Rain tot (in)          : num [1:9888] 0 0 0 0 0 0 0 0 0 0 ...
+##  $ 2m Rain max over 15min(in): num [1:9888] 0 0 0 0 0 0 0 0 0 0 ...
+##  $ 10m Wind avg (mph)        : num [1:9888] 4.49 4.29 4.78 4.77 4.43 4.98 4.46 3.62 4.23 9.29 ...
+##  $ 10m Wind min (mph)        : num [1:9888] 2.43 1.8 2.57 2.8 2.57 3.07 2.53 1.87 1.57 3.33 ...
+##  $ 10m Wind max (mph)        : num [1:9888] 6.63 6.73 6.9 7.23 6.5 7.57 7.9 5.97 6.6 22.8 ...
+##  $ N (# obs)                 : num [1:9888] 4 4 4 4 4 4 4 4 4 4 ...
+Wdata$Period &amp;lt;- as.POSIXct(Wdata$Period, format = &amp;quot;%m/%d/%Y %H: %M: %S&amp;quot;)
+str(Wdata)
+## tibble [9,888 x 11] (S3: tbl_df/tbl/data.frame)
+##  $ Period                    : POSIXct[1:9888], format: &amp;quot;2013-11-15 00:00:00&amp;quot; &amp;quot;2013-11-15 01:00:00&amp;quot; ...
+##  $ 2m T avg (F)              : num [1:9888] 57.9 57.9 58.8 59 58.8 ...
+##  $ 2m T min (F)              : num [1:9888] 57.5 57.2 58.1 58.8 58.7 ...
+##  $ 2m T max (F)              : num [1:9888] 58.1 58.6 59.4 59.2 58.9 ...
+##  $ RelHum avg 2m (pct)       : num [1:9888] 93 93 92 92 93 94 94 95 92 82 ...
+##  $ 2m Rain tot (in)          : num [1:9888] 0 0 0 0 0 0 0 0 0 0 ...
+##  $ 2m Rain max over 15min(in): num [1:9888] 0 0 0 0 0 0 0 0 0 0 ...
+##  $ 10m Wind avg (mph)        : num [1:9888] 4.49 4.29 4.78 4.77 4.43 4.98 4.46 3.62 4.23 9.29 ...
+##  $ 10m Wind min (mph)        : num [1:9888] 2.43 1.8 2.57 2.8 2.57 3.07 2.53 1.87 1.57 3.33 ...
+##  $ 10m Wind max (mph)        : num [1:9888] 6.63 6.73 6.9 7.23 6.5 7.57 7.9 5.97 6.6 22.8 ...
+##  $ N (# obs)                 : num [1:9888] 4 4 4 4 4 4 4 4 4 4 ...
+
+#Create Multiple groups to split the data into Days, Weeks and Month
+
+Wdata$days &amp;lt;- floor_date(Wdata$Period, &amp;quot;day&amp;quot;)
+Wdata$weeks &amp;lt;- floor_date(Wdata$Period, &amp;#39;week&amp;#39;)
+Wdata$month &amp;lt;- floor_date(Wdata$Period, &amp;#39;month&amp;#39;)
+Wdata$hours &amp;lt;- floor_date(Wdata$Period, &amp;#39;hours&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Lets calculate the weekly average of the temperature. You can use same process for other weather variables just by changing the column name and sums by changing the function name.&lt;/p&gt;
+&lt;p&gt;Weekly average of temperature!&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;WeeklyAvg_temp &amp;lt;- aggregate(Wdata$`2m T avg (F)`, by = list(Wdata$weeks), FUN = mean)
+
+WeeklyAvg_temp
+##       Group.1        x
+## 1  2013-11-10 69.47396
+## 2  2013-11-17 73.15399
+## 3  2013-11-24 67.51911
+## 4  2013-12-01 67.79571
+## 5  2013-12-08 69.79107
+## 6  2013-12-15 65.81786
+## 7  2013-12-22 70.21244
+## 8  2013-12-29 67.44357
+## 9  2014-01-05 65.80673
+## 10 2014-01-12 58.73036
+## 11 2014-01-19 55.52095
+## 12 2014-01-26 65.00202
+## 13 2014-02-02 71.07030
+## 14 2014-02-09 63.95810
+## 15 2014-02-16 66.72917
+## 16 2014-02-23 68.80214
+## 17 2014-03-02 67.49810
+## 18 2014-03-09 66.84065
+## 19 2014-03-16 71.14958
+## 20 2014-03-23 67.81946
+## 21 2014-03-30 68.41476
+## 22 2014-04-06 70.89054
+## 23 2014-04-13 74.03732
+## 24 2014-04-20 71.31018
+## 25 2014-04-27 76.57851
+## 26 2014-05-04 74.32536
+## 27 2014-05-11 74.98089
+## 28 2014-05-18 74.17655
+## 29 2014-05-25 76.97202
+## 30 2014-06-01 76.78679
+## 31 2014-06-08 76.08429
+## 32 2014-06-15 75.66089
+## 33 2014-06-22 80.04083
+## 34 2014-06-29 79.54649
+## 35 2014-07-06 77.83143
+## 36 2014-07-13 78.92655
+## 37 2014-07-20 80.19125
+## 38 2014-07-27 81.04583
+## 39 2014-08-03 79.61185
+## 40 2014-08-10 79.95744
+## 41 2014-08-17 81.61702
+## 42 2014-08-24 80.66464
+## 43 2014-08-31 78.17417
+## 44 2014-09-07 77.50595
+## 45 2014-09-14 77.10208
+## 46 2014-09-21 76.86661
+## 47 2014-09-28 79.28756
+## 48 2014-10-05 75.39542
+## 49 2014-10-12 74.09589
+## 50 2014-10-19 72.61161
+## 51 2014-10-26 69.34804
+## 52 2014-11-02 66.65696
+## 53 2014-11-09 66.46226
+## 54 2014-11-16 67.26988
+## 55 2014-11-23 67.53137
+## 56 2014-11-30 69.39036
+## 57 2014-12-07 58.09333
+## 58 2014-12-14 60.08720
+## 59 2014-12-21 70.62952
+## 60 2014-12-28 71.70760&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Lets calculate the weekly average of the temperature from(6 AM-9 PM) of each day.&lt;/p&gt;
+&lt;p&gt;Use lubridate package for subsetting the data which contains the values from 6 AM to 9 PM.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;T6AMTo9PM &amp;lt;- subset(Wdata, hour(hours) &amp;gt;= 6 &amp;amp; hour(hours) &amp;lt;= 21 &amp;amp; days &amp;gt;= &amp;#39;2014-01-01&amp;#39; &amp;amp; days &amp;lt;= &amp;#39;2014-12-31&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After subsetting, lets calculate for temperature variable!&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;T6AMTo9PM_WeeklyAvg_temp &amp;lt;- aggregate(T6AMTo9PM$`2m T avg (F)`, by = list(T6AMTo9PM$weeks), FUN = mean)
+T6AMTo9PM_WeeklyAvg_temp
+##       Group.1        x
+## 1  2013-12-29 64.83667
+## 2  2014-01-05 67.94321
+## 3  2014-01-12 60.91509
+## 4  2014-01-19 59.00554
+## 5  2014-01-26 67.92598
+## 6  2014-02-02 73.42321
+## 7  2014-02-09 67.48607
+## 8  2014-02-16 71.45955
+## 9  2014-02-23 71.54554
+## 10 2014-03-02 70.96393
+## 11 2014-03-09 70.59089
+## 12 2014-03-16 74.68250
+## 13 2014-03-23 70.24589
+## 14 2014-03-30 72.48982
+## 15 2014-04-06 74.66982
+## 16 2014-04-13 76.28152
+## 17 2014-04-20 74.86929
+## 18 2014-04-27 79.91045
+## 19 2014-05-04 78.54688
+## 20 2014-05-11 77.67696
+## 21 2014-05-18 78.65795
+## 22 2014-05-25 80.31634
+## 23 2014-06-01 80.14795
+## 24 2014-06-08 79.31384
+## 25 2014-06-15 78.04286
+## 26 2014-06-22 83.38902
+## 27 2014-06-29 82.04607
+## 28 2014-07-06 80.34714
+## 29 2014-07-13 81.29125
+## 30 2014-07-20 82.94768
+## 31 2014-07-27 83.83795
+## 32 2014-08-03 81.99170
+## 33 2014-08-10 82.77527
+## 34 2014-08-17 84.94571
+## 35 2014-08-24 83.89491
+## 36 2014-08-31 80.63357
+## 37 2014-09-07 79.72955
+## 38 2014-09-14 79.52652
+## 39 2014-09-21 78.80696
+## 40 2014-09-28 82.26545
+## 41 2014-10-05 78.44259
+## 42 2014-10-12 77.62929
+## 43 2014-10-19 75.41018
+## 44 2014-10-26 73.29625
+## 45 2014-11-02 70.26107
+## 46 2014-11-09 69.15714
+## 47 2014-11-16 69.24893
+## 48 2014-11-23 69.61714
+## 49 2014-11-30 72.46089
+## 50 2014-12-07 60.26027
+## 51 2014-12-14 64.50598
+## 52 2014-12-21 73.04393
+## 53 2014-12-28 74.35500&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tidyverse on Bhim Chaulagain</title>
+    <link>/tags/tidyverse/</link>
+    <description>Recent content in tidyverse on Bhim Chaulagain</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>B. Chaulagain {year}</copyright>
+    <lastBuildDate>Wed, 08 Jul 2020 21:13:14 -0500</lastBuildDate>
+    
+	    <atom:link href="/tags/tidyverse/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Area Under Disease Gradient (AUDG) Calculation</title>
+      <link>/post/2015-07-23-r-rmarkdown/</link>
+      <pubDate>Wed, 08 Jul 2020 21:13:14 -0500</pubDate>
+      
+      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <description>
+
+
+&lt;p&gt;Disease gradient information provides the spatial distribution of the epidemics at distance from the focus. If you are interested in learning how to calculate the area under the disease gradient curve to make comparison of several scenarios or treatments, this would be a good resource.&lt;/p&gt;
+&lt;p&gt;I am using &lt;a href=&#34;https://gist.github.com/stevenworthington/&#34;&gt;Steven Worthington&lt;/a&gt;’s ipak function to install and load several packages in R.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ipak &amp;lt;- function(pkg){
+    new.pkg &amp;lt;- pkg[!(pkg %in% installed.packages()[, &amp;quot;Package&amp;quot;])]
+    if (length(new.pkg)) 
+        install.packages(new.pkg, dependencies = TRUE)
+    sapply(pkg, require, character.only = TRUE)
+}
+
+# usage
+packages &amp;lt;- c(&amp;quot;tidyverse&amp;quot;, &amp;quot;readxl&amp;quot;, &amp;quot;agricolae&amp;quot;, &amp;quot;ggpubr&amp;quot;, &amp;quot;ggpubr&amp;quot;, &amp;quot;magrittr&amp;quot;, &amp;quot;reshape&amp;quot;, &amp;quot;knitr&amp;quot;)
+ipak(packages)
+## Loading required package: tidyverse
+## Warning: package &amp;#39;tidyverse&amp;#39; was built under R version 3.6.3
+## -- Attaching packages ----------------------------------------------------- tidyverse 1.3.0 --
+## v ggplot2 3.3.2     v purrr   0.3.4
+## v tibble  3.0.1     v dplyr   1.0.0
+## v tidyr   1.1.0     v stringr 1.4.0
+## v readr   1.3.1     v forcats 0.5.0
+## Warning: package &amp;#39;ggplot2&amp;#39; was built under R version 3.6.3
+## Warning: package &amp;#39;tibble&amp;#39; was built under R version 3.6.3
+## Warning: package &amp;#39;tidyr&amp;#39; was built under R version 3.6.3
+## Warning: package &amp;#39;readr&amp;#39; was built under R version 3.6.3
+## Warning: package &amp;#39;purrr&amp;#39; was built under R version 3.6.3
+## Warning: package &amp;#39;dplyr&amp;#39; was built under R version 3.6.3
+## Warning: package &amp;#39;stringr&amp;#39; was built under R version 3.6.3
+## Warning: package &amp;#39;forcats&amp;#39; was built under R version 3.6.3
+## -- Conflicts -------------------------------------------------------- tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+## Loading required package: readxl
+## Warning: package &amp;#39;readxl&amp;#39; was built under R version 3.6.3
+## Loading required package: agricolae
+## Warning: package &amp;#39;agricolae&amp;#39; was built under R version 3.6.3
+## Loading required package: ggpubr
+## Warning: package &amp;#39;ggpubr&amp;#39; was built under R version 3.6.3
+## Loading required package: magrittr
+## Warning: package &amp;#39;magrittr&amp;#39; was built under R version 3.6.3
+## 
+## Attaching package: &amp;#39;magrittr&amp;#39;
+## The following object is masked from &amp;#39;package:purrr&amp;#39;:
+## 
+##     set_names
+## The following object is masked from &amp;#39;package:tidyr&amp;#39;:
+## 
+##     extract
+## Loading required package: reshape
+## Warning: package &amp;#39;reshape&amp;#39; was built under R version 3.6.3
+## 
+## Attaching package: &amp;#39;reshape&amp;#39;
+## The following object is masked from &amp;#39;package:dplyr&amp;#39;:
+## 
+##     rename
+## The following objects are masked from &amp;#39;package:tidyr&amp;#39;:
+## 
+##     expand, smiths
+## Loading required package: knitr
+## Warning: package &amp;#39;knitr&amp;#39; was built under R version 3.6.3
+## tidyverse    readxl agricolae    ggpubr    ggpubr  magrittr   reshape     knitr 
+##      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE
+
+data &amp;lt;- read_excel(&amp;quot;field observation.xlsx&amp;quot;) %&amp;gt;% 
+        as.data.frame()
+head(data, 10)
+##    Distance Treatments     R1      R2    R3    R4
+## 1        10         T4  0.375  0.0125  1.75  1.75
+## 2        15         T4  0.750  0.0175  1.25  2.50
+## 3        20         T4  2.500  1.2500  2.50  3.75
+## 4        25         T4  2.750  2.5000  3.75  6.25
+## 5        30         T4  2.500  5.0000  3.50 12.50
+## 6        35         T4  3.500  6.2500  4.25 15.00
+## 7        40         T4  3.000 12.5000  7.50 17.50
+## 8        45         T4  5.500 17.5000  6.25 27.50
+## 9        50         T4 10.000 27.5000 12.50 30.00
+## 10       55         T4 10.000 30.0000 14.00 18.00
+audpc_data &amp;lt;- data %&amp;gt;% 
+  melt(id=c(&amp;quot;Distance&amp;quot;, &amp;quot;Treatments&amp;quot;)) %&amp;gt;%
+  group_by(Treatments, variable) %&amp;gt;% 
+  summarize(AUDPC = audpc(value, Distance))
+## `summarise()` regrouping output by &amp;#39;Treatments&amp;#39; (override with `.groups` argument)
+
+audpc_data %&amp;gt;% 
+  spread(variable, AUDPC) %&amp;gt;% 
+  arrange(Treatments) %&amp;gt;%       
+  kable() &lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;Treatments&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;R1&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;R2&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;R3&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;R4&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;T1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;526.39750&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1200.5000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;870.7500&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2288.125&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;T2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;24.03125&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;526.2663&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;31.0325&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1110.938&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;T3&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;69.95000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;486.1637&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;247.7063&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1790.225&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;T4&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;363.34375&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;894.3062&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;388.7125&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1078.750&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;T6&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0100&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;T7&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00250&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
+plot_graph &amp;lt;- ggplot(audpc_data, aes(Treatments, AUDPC))+
+  geom_boxplot(aes(fill=factor(Treatments))) +
+  ggtitle(&amp;quot;AUDPC&amp;quot;)+
+  xlab(&amp;quot;Treatment Applied&amp;quot;)+
+  ylab(&amp;quot;Area Under Disease Gradient&amp;quot;)+
+  theme_bw(base_size = 14)+
+  theme(aspect.ratio=1.25,plot.title = element_text(hjust = 0.5), 
+        panel.grid=element_blank())+
+  scale_fill_manual(name=&amp;quot;Treatments&amp;quot;, 
+                    breaks = c(&amp;quot;T1&amp;quot;, &amp;quot;T2&amp;quot;, 
+                               &amp;quot;T3&amp;quot;, &amp;quot;T4&amp;quot;, &amp;quot;T5&amp;quot;,
+                               &amp;quot;T6&amp;quot;, &amp;quot;T7&amp;quot;),
+                    labels=c(&amp;quot;T1=Inoculated control&amp;quot;, &amp;quot;T2=CP culling at 3 days&amp;quot;, &amp;quot;T3=CP cull &amp;#39;ring&amp;#39; x 3&amp;quot;,&amp;quot;T4=CP cull at 1 day&amp;quot;,&amp;quot;T5=FP of CP at 3 days&amp;quot;,&amp;quot;T6=CP cull + FP of non-CP&amp;quot;,&amp;quot;T7=FP of entire plot at 3 days&amp;quot;),
+                    values=c(&amp;quot;#999999&amp;quot;,&amp;quot;#E69F00&amp;quot;,&amp;quot;#56B4E9&amp;quot;, &amp;quot;#009E73&amp;quot;, &amp;quot;#F0E442&amp;quot;, &amp;quot;#0072B2&amp;quot;, &amp;quot;#D55E00&amp;quot;))
+
+
+plot_graph&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
+ggsave(filename = &amp;quot;Boxplot.png&amp;quot;, width = , height = , units = &amp;quot;in&amp;quot;,
+       dpi = 600, limitsize = TRUE)
+## Saving 7 x 5 in image&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

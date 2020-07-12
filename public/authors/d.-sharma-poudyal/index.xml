@@ -6,10 +6,20 @@
     <description>Recent content in D. Sharma-Poudyal on Bhim Chaulagain</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <copyright>B. Chaulagain {year}</copyright>
+    <lastBuildDate>Tue, 07 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/authors/d.-sharma-poudyal/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Evaluation of fungicides to control potato late blight (Phytophthora infestans) in the plains of Nepal</title>
+      <link>/publication/journal-article-7/</link>
+      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/journal-article-7/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Effect of two-component cultivar mixtures on development of wheat yellow rust disease in the field and greenhouse in the Nepal Himalayas</title>
@@ -17,12 +27,7 @@
       <pubDate>Fri, 07 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>/publication/journal-article-4/</guid>
-      <description>&lt;p&gt;#&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;#&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;#Supplementary notes can be added here, including &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description></description>
     </item>
     
   </channel>

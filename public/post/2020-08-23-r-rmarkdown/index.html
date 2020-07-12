@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.3.1">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Bhim Chaulagain">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="I would like to share some of the weather predictors that I calculated for predictive modeling of sugarcane rusts from weather data. I have also created several complex weather variables during my research work but I am going to share some with averages/sums of hourly, weekly, monthly, and also specific time in a day. I will share the ways to calculate more complex weather variables in separate posts.
+library(readxl)## Warning: package &#39;readxl&#39; was built under R version 3.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/2020-08-23-r-rmarkdown/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#3f51b5">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.f3b1949004aa5f8f26f501a5f0766319.css">
+
+  
+
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/post/2020-08-23-r-rmarkdown/">
+
+  
+  
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Bhim Chaulagain">
+  <meta property="og:url" content="/post/2020-08-23-r-rmarkdown/">
+  <meta property="og:title" content="Weather based predictors for predictive modeling | Bhim Chaulagain">
+  <meta property="og:description" content="I would like to share some of the weather predictors that I calculated for predictive modeling of sugarcane rusts from weather data. I have also created several complex weather variables during my research work but I am going to share some with averages/sums of hourly, weekly, monthly, and also specific time in a day. I will share the ways to calculate more complex weather variables in separate posts.
+library(readxl)## Warning: package &#39;readxl&#39; was built under R version 3."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2020-07-08T21:13:14-05:00">
+  
+  <meta property="article:modified_time" content="2020-07-08T21:13:14-05:00">
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title>Weather based predictors for predictive modeling | Bhim Chaulagain</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Bhim Chaulagain</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/files/cv.pdf"><span>Resume</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">Weather based predictors for predictive modeling</h1>
+
+  
+
+  
+    
+
+
+
+<meta content="2020-07-08 21:13:14 -0500 -0500" itemprop="datePublished">
+<meta content="2020-07-08 21:13:14 -0500 -0500" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Jul 8, 2020</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    7 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder"></i>
+    <a href="/categories/r/">R</a></span>
+  
+
+  
+    
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+
+<p>I would like to share some of the weather predictors that I calculated for predictive modeling of sugarcane rusts from weather data. I have also created several complex weather variables during my research work but I am going to share some with averages/sums of hourly, weekly, monthly, and also specific time in a day. I will share the ways to calculate more complex weather variables in separate posts.</p>
+<pre class="r"><code>library(readxl)
+## Warning: package &#39;readxl&#39; was built under R version 3.6.3
+library(lubridate)
+## Warning: package &#39;lubridate&#39; was built under R version 3.6.3
+## 
+## Attaching package: &#39;lubridate&#39;
+## The following objects are masked from &#39;package:base&#39;:
+## 
+##     date, intersect, setdiff, union
+library(plyr)
+## Warning: package &#39;plyr&#39; was built under R version 3.6.3
+
+Wdata &lt;- read_excel(&quot;weatherdata.xlsx&quot;)
+head (Wdata, 10)
+## # A tibble: 10 x 11
+##    Period              `2m T avg (F)` `2m T min (F)` `2m T max (F)`
+##    &lt;dttm&gt;                       &lt;dbl&gt;          &lt;dbl&gt;          &lt;dbl&gt;
+##  1 2013-11-15 00:00:00           57.9           57.5           58.1
+##  2 2013-11-15 01:00:00           57.9           57.2           58.6
+##  3 2013-11-15 02:00:00           58.8           58.2           59.4
+##  4 2013-11-15 03:00:00           59.0           58.8           59.2
+##  5 2013-11-15 04:00:00           58.8           58.7           58.9
+##  6 2013-11-15 05:00:00           59.6           59.2           59.8
+##  7 2013-11-15 06:00:00           59.8           59.4           60.1
+##  8 2013-11-15 07:00:00           61.4           60.3           62.6
+##  9 2013-11-15 08:00:00           66.6           64.3           68.8
+## 10 2013-11-15 09:00:00           72.9           70.6           74.7
+## # ... with 7 more variables: `RelHum avg 2m (pct)` &lt;dbl&gt;, `2m Rain tot
+## #   (in)` &lt;dbl&gt;, `2m Rain max over 15min(in)` &lt;dbl&gt;, `10m Wind avg
+## #   (mph)` &lt;dbl&gt;, `10m Wind min (mph)` &lt;dbl&gt;, `10m Wind max (mph)` &lt;dbl&gt;, `N (#
+## #   obs)` &lt;dbl&gt;
+str(Wdata)
+## tibble [9,888 x 11] (S3: tbl_df/tbl/data.frame)
+##  $ Period                    : POSIXct[1:9888], format: &quot;2013-11-15 00:00:00&quot; &quot;2013-11-15 01:00:00&quot; ...
+##  $ 2m T avg (F)              : num [1:9888] 57.9 57.9 58.8 59 58.8 ...
+##  $ 2m T min (F)              : num [1:9888] 57.5 57.2 58.1 58.8 58.7 ...
+##  $ 2m T max (F)              : num [1:9888] 58.1 58.6 59.4 59.2 58.9 ...
+##  $ RelHum avg 2m (pct)       : num [1:9888] 93 93 92 92 93 94 94 95 92 82 ...
+##  $ 2m Rain tot (in)          : num [1:9888] 0 0 0 0 0 0 0 0 0 0 ...
+##  $ 2m Rain max over 15min(in): num [1:9888] 0 0 0 0 0 0 0 0 0 0 ...
+##  $ 10m Wind avg (mph)        : num [1:9888] 4.49 4.29 4.78 4.77 4.43 4.98 4.46 3.62 4.23 9.29 ...
+##  $ 10m Wind min (mph)        : num [1:9888] 2.43 1.8 2.57 2.8 2.57 3.07 2.53 1.87 1.57 3.33 ...
+##  $ 10m Wind max (mph)        : num [1:9888] 6.63 6.73 6.9 7.23 6.5 7.57 7.9 5.97 6.6 22.8 ...
+##  $ N (# obs)                 : num [1:9888] 4 4 4 4 4 4 4 4 4 4 ...
+Wdata$Period &lt;- as.POSIXct(Wdata$Period, format = &quot;%m/%d/%Y %H: %M: %S&quot;)
+str(Wdata)
+## tibble [9,888 x 11] (S3: tbl_df/tbl/data.frame)
+##  $ Period                    : POSIXct[1:9888], format: &quot;2013-11-15 00:00:00&quot; &quot;2013-11-15 01:00:00&quot; ...
+##  $ 2m T avg (F)              : num [1:9888] 57.9 57.9 58.8 59 58.8 ...
+##  $ 2m T min (F)              : num [1:9888] 57.5 57.2 58.1 58.8 58.7 ...
+##  $ 2m T max (F)              : num [1:9888] 58.1 58.6 59.4 59.2 58.9 ...
+##  $ RelHum avg 2m (pct)       : num [1:9888] 93 93 92 92 93 94 94 95 92 82 ...
+##  $ 2m Rain tot (in)          : num [1:9888] 0 0 0 0 0 0 0 0 0 0 ...
+##  $ 2m Rain max over 15min(in): num [1:9888] 0 0 0 0 0 0 0 0 0 0 ...
+##  $ 10m Wind avg (mph)        : num [1:9888] 4.49 4.29 4.78 4.77 4.43 4.98 4.46 3.62 4.23 9.29 ...
+##  $ 10m Wind min (mph)        : num [1:9888] 2.43 1.8 2.57 2.8 2.57 3.07 2.53 1.87 1.57 3.33 ...
+##  $ 10m Wind max (mph)        : num [1:9888] 6.63 6.73 6.9 7.23 6.5 7.57 7.9 5.97 6.6 22.8 ...
+##  $ N (# obs)                 : num [1:9888] 4 4 4 4 4 4 4 4 4 4 ...
+
+#Create Multiple groups to split the data into Days, Weeks and Month
+
+Wdata$days &lt;- floor_date(Wdata$Period, &quot;day&quot;)
+Wdata$weeks &lt;- floor_date(Wdata$Period, &#39;week&#39;)
+Wdata$month &lt;- floor_date(Wdata$Period, &#39;month&#39;)
+Wdata$hours &lt;- floor_date(Wdata$Period, &#39;hours&#39;)</code></pre>
+<p>Lets calculate the weekly average of the temperature. You can use same process for other weather variables just by changing the column name and sums by changing the function name.</p>
+<p>Weekly average of temperature!</p>
+<pre class="r"><code>WeeklyAvg_temp &lt;- aggregate(Wdata$`2m T avg (F)`, by = list(Wdata$weeks), FUN = mean)
+
+WeeklyAvg_temp
+##       Group.1        x
+## 1  2013-11-10 69.47396
+## 2  2013-11-17 73.15399
+## 3  2013-11-24 67.51911
+## 4  2013-12-01 67.79571
+## 5  2013-12-08 69.79107
+## 6  2013-12-15 65.81786
+## 7  2013-12-22 70.21244
+## 8  2013-12-29 67.44357
+## 9  2014-01-05 65.80673
+## 10 2014-01-12 58.73036
+## 11 2014-01-19 55.52095
+## 12 2014-01-26 65.00202
+## 13 2014-02-02 71.07030
+## 14 2014-02-09 63.95810
+## 15 2014-02-16 66.72917
+## 16 2014-02-23 68.80214
+## 17 2014-03-02 67.49810
+## 18 2014-03-09 66.84065
+## 19 2014-03-16 71.14958
+## 20 2014-03-23 67.81946
+## 21 2014-03-30 68.41476
+## 22 2014-04-06 70.89054
+## 23 2014-04-13 74.03732
+## 24 2014-04-20 71.31018
+## 25 2014-04-27 76.57851
+## 26 2014-05-04 74.32536
+## 27 2014-05-11 74.98089
+## 28 2014-05-18 74.17655
+## 29 2014-05-25 76.97202
+## 30 2014-06-01 76.78679
+## 31 2014-06-08 76.08429
+## 32 2014-06-15 75.66089
+## 33 2014-06-22 80.04083
+## 34 2014-06-29 79.54649
+## 35 2014-07-06 77.83143
+## 36 2014-07-13 78.92655
+## 37 2014-07-20 80.19125
+## 38 2014-07-27 81.04583
+## 39 2014-08-03 79.61185
+## 40 2014-08-10 79.95744
+## 41 2014-08-17 81.61702
+## 42 2014-08-24 80.66464
+## 43 2014-08-31 78.17417
+## 44 2014-09-07 77.50595
+## 45 2014-09-14 77.10208
+## 46 2014-09-21 76.86661
+## 47 2014-09-28 79.28756
+## 48 2014-10-05 75.39542
+## 49 2014-10-12 74.09589
+## 50 2014-10-19 72.61161
+## 51 2014-10-26 69.34804
+## 52 2014-11-02 66.65696
+## 53 2014-11-09 66.46226
+## 54 2014-11-16 67.26988
+## 55 2014-11-23 67.53137
+## 56 2014-11-30 69.39036
+## 57 2014-12-07 58.09333
+## 58 2014-12-14 60.08720
+## 59 2014-12-21 70.62952
+## 60 2014-12-28 71.70760</code></pre>
+<p>Lets calculate the weekly average of the temperature from(6 AM-9 PM) of each day.</p>
+<p>Use lubridate package for subsetting the data which contains the values from 6 AM to 9 PM.</p>
+<pre class="r"><code>T6AMTo9PM &lt;- subset(Wdata, hour(hours) &gt;= 6 &amp; hour(hours) &lt;= 21 &amp; days &gt;= &#39;2014-01-01&#39; &amp; days &lt;= &#39;2014-12-31&#39;)</code></pre>
+<p>After subsetting, lets calculate for temperature variable!</p>
+<pre class="r"><code>T6AMTo9PM_WeeklyAvg_temp &lt;- aggregate(T6AMTo9PM$`2m T avg (F)`, by = list(T6AMTo9PM$weeks), FUN = mean)
+T6AMTo9PM_WeeklyAvg_temp
+##       Group.1        x
+## 1  2013-12-29 64.83667
+## 2  2014-01-05 67.94321
+## 3  2014-01-12 60.91509
+## 4  2014-01-19 59.00554
+## 5  2014-01-26 67.92598
+## 6  2014-02-02 73.42321
+## 7  2014-02-09 67.48607
+## 8  2014-02-16 71.45955
+## 9  2014-02-23 71.54554
+## 10 2014-03-02 70.96393
+## 11 2014-03-09 70.59089
+## 12 2014-03-16 74.68250
+## 13 2014-03-23 70.24589
+## 14 2014-03-30 72.48982
+## 15 2014-04-06 74.66982
+## 16 2014-04-13 76.28152
+## 17 2014-04-20 74.86929
+## 18 2014-04-27 79.91045
+## 19 2014-05-04 78.54688
+## 20 2014-05-11 77.67696
+## 21 2014-05-18 78.65795
+## 22 2014-05-25 80.31634
+## 23 2014-06-01 80.14795
+## 24 2014-06-08 79.31384
+## 25 2014-06-15 78.04286
+## 26 2014-06-22 83.38902
+## 27 2014-06-29 82.04607
+## 28 2014-07-06 80.34714
+## 29 2014-07-13 81.29125
+## 30 2014-07-20 82.94768
+## 31 2014-07-27 83.83795
+## 32 2014-08-03 81.99170
+## 33 2014-08-10 82.77527
+## 34 2014-08-17 84.94571
+## 35 2014-08-24 83.89491
+## 36 2014-08-31 80.63357
+## 37 2014-09-07 79.72955
+## 38 2014-09-14 79.52652
+## 39 2014-09-21 78.80696
+## 40 2014-09-28 82.26545
+## 41 2014-10-05 78.44259
+## 42 2014-10-12 77.62929
+## 43 2014-10-19 75.41018
+## 44 2014-10-26 73.29625
+## 45 2014-11-02 70.26107
+## 46 2014-11-09 69.15714
+## 47 2014-11-16 69.24893
+## 48 2014-11-23 69.61714
+## 49 2014-11-30 72.46089
+## 50 2014-12-07 60.26027
+## 51 2014-12-14 64.50598
+## 52 2014-12-21 73.04393
+## 53 2014-12-28 74.35500</code></pre>
+
+    </div>
+
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/weather-variables/">weather variables</a>
+  
+  <a class="badge badge-light" href="/tags/lubridate/">lubridate</a>
+  
+  <a class="badge badge-light" href="/tags/dplyr/">dplyr</a>
+  
+</div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu40ee79500d1f70be77d03d5664911273_282698_250x250_fill_lanczos_center_2.png" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="/">Bhim Chaulagain</a></h5>
+      <h6 class="card-subtitle">Post Doctoral Scholar</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="/#contact" >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://twitter.com/bhim_chaulagain" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://scholar.google.com/citations?user=b0wc4b4AAAAJ&amp;hl=en" target="_blank" rel="noopener">
+              <i class="ai ai-google-scholar"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.linkedin.com/in/bhimchaulagain/" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.researchgate.net/profile/Bhim_Chaulagain2" target="_blank" rel="noopener">
+              <i class="ai ai-researchgate"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/bhimchaulagain" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+      <div class="article-widget">
+        <div class="hr-light"></div>
+        <h3>Related</h3>
+        <ul>
+          
+          <li><a href="/post/2015-07-23-r-rmarkdown/">Area Under Disease Gradient (AUDG) Calculation</a></li>
+          
+        </ul>
+      </div>
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.23e2fabfaf271b1b075bb9e0280085b7.js"></script>
+
+    
+
+
+
+
+
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+  <p class="powered-by">
+    <a href="/privacy/">Privacy Policy</a>
+  </p>
+  
+
+  <p class="powered-by">
+    B. Chaulagain 2020 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

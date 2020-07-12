@@ -6,71 +6,126 @@
     <description>Recent content in Tags on Bhim Chaulagain</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <copyright>B. Chaulagain {year}</copyright>
+    <lastBuildDate>Wed, 08 Jul 2020 21:13:14 -0500</lastBuildDate>
     
 	    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Source Themes</title>
-      <link>/tags/source-themes/</link>
-      <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
+      <title>dplyr</title>
+      <link>/tags/dplyr/</link>
+      <pubDate>Wed, 08 Jul 2020 21:13:14 -0500</pubDate>
       
-      <guid>/tags/source-themes/</guid>
+      <guid>/tags/dplyr/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Deep Learning</title>
-      <link>/tags/deep-learning/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <title>ggplot</title>
+      <link>/tags/ggplot/</link>
+      <pubDate>Wed, 08 Jul 2020 21:13:14 -0500</pubDate>
       
-      <guid>/tags/deep-learning/</guid>
+      <guid>/tags/ggplot/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Demo</title>
-      <link>/tags/demo/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <title>lubridate</title>
+      <link>/tags/lubridate/</link>
+      <pubDate>Wed, 08 Jul 2020 21:13:14 -0500</pubDate>
       
-      <guid>/tags/demo/</guid>
+      <guid>/tags/lubridate/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Academic</title>
-      <link>/tags/academic/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      <title>tidyverse</title>
+      <link>/tags/tidyverse/</link>
+      <pubDate>Wed, 08 Jul 2020 21:13:14 -0500</pubDate>
       
-      <guid>/tags/academic/</guid>
+      <guid>/tags/tidyverse/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>plot</title>
-      <link>/tags/plot/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <title>weather variables</title>
+      <link>/tags/weather-variables/</link>
+      <pubDate>Wed, 08 Jul 2020 21:13:14 -0500</pubDate>
       
-      <guid>/tags/plot/</guid>
+      <guid>/tags/weather-variables/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>R Markdown</title>
-      <link>/tags/r-markdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <title>cultivar mixtures</title>
+      <link>/tags/cultivar-mixtures/</link>
+      <pubDate>Wed, 08 Jul 2020 00:00:00 -0700</pubDate>
       
-      <guid>/tags/r-markdown/</guid>
+      <guid>/tags/cultivar-mixtures/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>regression</title>
-      <link>/tags/regression/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <title>fungicide</title>
+      <link>/tags/fungicide/</link>
+      <pubDate>Wed, 08 Jul 2020 00:00:00 -0700</pubDate>
       
-      <guid>/tags/regression/</guid>
+      <guid>/tags/fungicide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>predictive modeling</title>
+      <link>/tags/predictive-modeling/</link>
+      <pubDate>Wed, 08 Jul 2020 00:00:00 -0700</pubDate>
+      
+      <guid>/tags/predictive-modeling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sugarcane rust</title>
+      <link>/tags/sugarcane-rust/</link>
+      <pubDate>Wed, 08 Jul 2020 00:00:00 -0700</pubDate>
+      
+      <guid>/tags/sugarcane-rust/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wheat stripe rust</title>
+      <link>/tags/wheat-stripe-rust/</link>
+      <pubDate>Wed, 08 Jul 2020 00:00:00 -0700</pubDate>
+      
+      <guid>/tags/wheat-stripe-rust/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CART</title>
+      <link>/tags/cart/</link>
+      <pubDate>Tue, 08 Jan 2019 21:13:14 -0500</pubDate>
+      
+      <guid>/tags/cart/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Leaf Wetness</title>
+      <link>/tags/leaf-wetness/</link>
+      <pubDate>Tue, 08 Jan 2019 21:13:14 -0500</pubDate>
+      
+      <guid>/tags/leaf-wetness/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>/tags/r/</link>
+      <pubDate>Tue, 08 Jan 2019 21:13:14 -0500</pubDate>
+      
+      <guid>/tags/r/</guid>
       <description></description>
     </item>
     

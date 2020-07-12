@@ -21,7 +21,7 @@ publishDate: "2019"
 #slides: example
 #summary: 
 tags:
-- Source Themes
+#- Source Themes
 title: Sensitivity of sugarcane rust fungi to fungicides in uredospore germination and detached leaf bioassays
 #url_code: ""
 #url_dataset: ""
@@ -33,12 +33,3 @@ title: Sensitivity of sugarcane rust fungi to fungicides in uredospore germinati
 #url_video: ""
 ---
 
-#{{% alert note %}}
-#Click the *Cite* button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-#{{% /alert %}}
-
-#{{% alert note %}}
-#Click the *Slides* button above to demo Academic's Markdown slides feature.
-#{{% /alert %}}
-
-#Supplementary notes can be added here, including [code and math](https://sourcethemes.com/academic/docs/writing-markdown-latex/).

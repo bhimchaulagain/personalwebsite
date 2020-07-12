@@ -6,31 +6,100 @@
     <description>Recent content in Projects on Bhim Chaulagain</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <copyright>B. Chaulagain {year}</copyright>
+    <lastBuildDate>Wed, 08 Jul 2020 00:00:00 -0700</lastBuildDate>
     
 	    <atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>External Project</title>
-      <link>/project/external-project/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <title>Ecology and Evolution of Infectious Diseases</title>
+      <link>/project/eeid/</link>
+      <pubDate>Wed, 08 Jul 2020 00:00:00 -0700</pubDate>
       
-      <guid>/project/external-project/</guid>
-      <description></description>
+      <guid>/project/eeid/</guid>
+      <description>
+
+
+  
+
+
+
+
+&lt;figure&gt;
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/img/day84_log.png&#34; &gt;
+
+&lt;img src=&#34;/img/day84_log.png&#34; &gt;
+&lt;/a&gt;
+
+&lt;/figure&gt;
+
+&lt;p&gt;Epidemic invasion by newly introduced insects’ pests and pathogens pose serious threat to biodiversity, ecosystem function and human health worldwide, with socio-economic burden extensively larger than from natural disasters. Pathogens demonstrating long distance dispersal (LDD) are of more concern because of their ability to spread fast and remain cryptic (ability to stay asymptomatic for a certain period of time) as distant foci may have developed through surprisingly small concentrations of inoculum dispersed at larger spatial scales. I am conducting series of field studies to unlock the spatio-temporal spread and the efficacy of mitigation practices (e.g. timing and extent of fungicide applications and other broad-scale population protection) on epidemics caused by pathogens exhibiting long distance dispersal using wheat stripe rust as an experimental model. Results are validated using spatailly explicit SIR models with model parameteres relevant to wheat stripe rust.&lt;/p&gt;
+&lt;p&gt;Publication (Coming soon 😄, Please check back later)&lt;/p&gt;
+</description>
     </item>
     
     <item>
-      <title>Internal Project</title>
-      <link>/project/internal-project/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <title>Prediction Modelling and Management of Sugarcane Rust</title>
+      <link>/project/sr/</link>
+      <pubDate>Wed, 08 Jul 2020 00:00:00 -0700</pubDate>
       
-      <guid>/project/internal-project/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+      <guid>/project/sr/</guid>
+      <description>&lt;p&gt;
+
+
+  
+
+
+
+
+&lt;figure&gt;
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/img/SR.jpg&#34; &gt;
+
+&lt;img src=&#34;/img/SR.jpg&#34; &gt;
+&lt;/a&gt;
+
+&lt;/figure&gt;
+
+Breeding for sugarcane rust resistance is challenging as sugarcane has a complex genome and sugarcane breeding is a long process. This limits the frequent release of resistant cultivars for commercial production. Management of sugarcane rusts in Florida primarily relies on the use of fungicides and application schedules are typically based on information from disease scouting. Better knowledge of rust epidemiology is required to assist in optimizing the timing of fungicide application.&lt;/p&gt;
+&lt;p&gt;Therefore, the objective of this study was to characterize the progress of both brown rust and orange rust of sugarcane in the field across multiple years and develop the predictive models based on weather variables to help growers in timing the fungicide application. I also evaluated biological activity and physical modes of action of several fungicides in vitro and in situ for their efficacy to control sugarcane brown and orange rust diseases.&lt;/p&gt;
+&lt;p&gt;Publications:&lt;/p&gt;
+&lt;p&gt;•	&lt;strong&gt;Chaulagain, B.&lt;/strong&gt;, Small, I., Shine, J., Clyde, F., Raid, R. N., and Rott, P. 2020. Weather based predictive modeling of sugarcane orange rust in Florida. Phytopathology, 110:626-632. &lt;a href=&#34;https://doi.org/10.1094/PHYTO-06-19-0211-R&#34;&gt;https://doi.org/10.1094/PHYTO-06-19-0211-R&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;•	Sanjel, S., &lt;strong&gt;Chaulagain, B.&lt;/strong&gt;, Small, I. M., Comstock, J. C., Hincapie, M., Raid, R. N., and Rott, P. 2019. Comparison of progress of brown rust and orange rust and conditions conducive for severe epidemic development during the sugarcane crop season in Florida. Plant Disease, 103:825-831. &lt;a href=&#34;https://doi.org/10.1094/PDIS-05-18-0862-RE&#34;&gt;https://doi.org/10.1094/PDIS-05-18-0862-RE&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;•	&lt;strong&gt;Chaulagain, B.&lt;/strong&gt;, Dufault, N., Raid, R. N., and Rott, P. 2019. Sensitivity of sugarcane rust fungi to fungicides in uredospore germination and detached leaf bioassays. Crop Protection, 117:86-93. &lt;a href=&#34;https://doi.org/10.1016/j.cropro.2018.11.014&#34;&gt;https://doi.org/10.1016/j.cropro.2018.11.014&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;•	&lt;strong&gt;Chaulagain, B.&lt;/strong&gt;, Raid, R. N., Dufault, N., Santen, E. V., and Rott, P. 2019. Application timing of fungicides for the management of sugarcane orange rust. Crop Protection, 119:141-146. &lt;a href=&#34;https://doi.org/10.1016/j.cropro.2019.01.007&#34;&gt;https://doi.org/10.1016/j.cropro.2019.01.007&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;•	&lt;strong&gt;Chaulagain, B.&lt;/strong&gt;, Raid, R. N., and Rott, P. 2019. Timing and frequency of fungicide applications for the management of sugarcane brown rust. Crop Protection, 124:104826. &lt;a href=&#34;https://doi.org/10.1016/j.cropro.2019.05.020&#34;&gt;https://doi.org/10.1016/j.cropro.2019.05.020&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Epidemiolgy and Management of Wheat Stripe Rust</title>
+      <link>/project/wsr/</link>
+      <pubDate>Mon, 08 Jul 2019 00:00:00 -0700</pubDate>
+      
+      <guid>/project/wsr/</guid>
+      <description>&lt;p&gt;
+
+
+  
+
+
+
+
+&lt;figure&gt;
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/img/WSR.jpg&#34; &gt;
+
+&lt;img src=&#34;/img/WSR.jpg&#34; &gt;
+&lt;/a&gt;
+
+&lt;/figure&gt;
+
+Wheat culitvar mixtures (resistant and suceptible) can be used as a low cost method for suppressing many foliar diseases including wheat stripe rust. Series of field experiments conducted in Nepal suggested that there is positive correlation between the disease suppression and increased proportion of resistant cultivar in the mixture (My MS research project 😄). Mechanism of disease suppression involves dilution effect, barrier effect, induced resistance and microclimate modification. Additionally, this approach can be integrated with chemical (strobilurin and triazoles) applications for better managment of the wheat stripe rust epidemics. More information on this can be found in one of our publication and several other literatures as well. Please follow this publication if you are interested in our research regarding the effect of wheat cultivar mixtures on wheat stripe ruust severity&lt;/p&gt;
+&lt;p&gt;Publication:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Chaulagain, B.&lt;/strong&gt;, Khatri Chhetri, G. B., Shrestha, S. M., Sharma, S., Sharma-Poudyal, D., and Lamichhane, J. R. 2017. Effect of two-component cultivar mixtures on development of wheat yellow rust disease in the field and greenhouse in the Nepal Himalayas. Journal of General Plant Pathology, 83:131-139. &lt;a href=&#34;https://doi.org/10.1007/s10327-017-0705-z&#34;&gt;https://doi.org/10.1007/s10327-017-0705-z&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

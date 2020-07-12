@@ -8,28 +8,26 @@ education:
   
   - course: PhD in Plant Pathology with focus on Prediction System Development and Chemical Management 
     institution: University of Florida, US
-    year: Aug 2014-May 2019
+    year: 2019
   - course: MS in Plant pathology with focus on Epidemiology and Chemical Management 
     institution: Tribhuvan University, Nepal
-    year: Aug 2009-Dec 2011
-  - course: BS in Agricultural Economics
-    institution: Tribhuvan University, Nepal
-    year: Jan 2005-July 2009
+    year: 2011
+  
     
 email: "chaulagb@oregonstate.edu"
 email: "bhimchaulagain1986@gmail.com"
 
 interests:
-- Ecology and Epidemiology of Plant diseases
-- Mathematical Modeling and Quantitative Analysis
-- Integrated Plant Disease Management
-- Smart Crop Protection
-- Sustainable Agriculture
+- Ecology and Epidemiology 
+- Spatial Analysis
+- Plant Disease Management
+- Disease Resistance Breeding
+
 
 name: Bhim Chaulagain
 organizations:
 - name: Oregon State University
-  url: ""
+  url: "https://bpp.oregonstate.edu/"
 role: Post Doctoral Scholar
 social:
 - icon: envelope
@@ -56,6 +54,4 @@ user_groups:
 - Visitors
 ---
 
-I am currently working on spatio-temporal spread of wheat stripe rust. I have experiences and skills in small plot trial research, green house and growth chamber studies to test the efficacy, optimum frequency, and application timing of fungicides for the management of plant diseases. Additionally, I have experiences in plant disease modeling, and baseline simulations of plant disease epidemics and ecology. My postdoctoral research focuses on field studies of wheat stripe rust as an experimental model for testing effects of mitigation practices (e.g, reactive ring culling, chemotherapeutic applications, timing and extent of reactive ring treatments, and broad-scale population protection). This also involves the validation with a spatially explicit simulation model developed for wheat stripe rust.
-  
-  During my PhD, I developed sugarcane rust (brown rust and orange rust) prediction models using weather variables which could be used in predicting epidemics of sugarcane rust in Florida. I also evaluated biological activity and physical modes of action of several fungicides (strobilurin, carboxamide and triazole) in vitro and in situ for their efficacy to control sugarcane rust diseases.
+I am currently working on spatio-temporal spread and control strategies of infectious disease caused by long distance inoculum dispersal using wheat stripe rust as an experimental model. I have experiences and skills in small plot trial research, green house and growth chamber studies to characterize the efficacy, optimum frequency, and application timing of crop protection technologies (including fungicides) for the management of plant diseases. I am interested in plant disease epidemics modeling and ecology, characterization of crop protection technologies, disease resistance breeding and development of control strategies for plant disease epidemics management. 

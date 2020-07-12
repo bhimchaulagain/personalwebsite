@@ -3,7 +3,7 @@
 baseurl = "/"
 title = "Bhim Chaulagain"
 
-copyright = ""
+copyright = "B. Chaulagain {year}"
 
 googleAnalytics = ""
 
@@ -41,6 +41,7 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
 	angledQuotes = false
 	latexDashes = true
   extensions = ["backslashLineBreak"]
+
 
 [imaging]
   resampleFilter = "lanczos"
