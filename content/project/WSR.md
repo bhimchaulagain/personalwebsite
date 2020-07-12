@@ -3,7 +3,7 @@
 date = 2019-07-08T00:00:00
 
 # Project title.
-title = "Epidemiolgy and Management of Wheat Stripe Rust"
+title = "Epidemiology and Management of Wheat Stripe Rust"
 
 # Project summary to display on homepage.
 summary = "Wheat cultivar mixtures supress the wheat stripe rust epidemics!"

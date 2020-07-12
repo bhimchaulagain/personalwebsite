@@ -6,7 +6,7 @@ categories: ["R"]
 tags: ["weather variables", "lubridate", "dplyr"]
 ---
 
-I would like to share some of the weather predictors that I calculated for predictive modeling of sugarcane rusts from weather data. I have also created several complex weather variables during my research work but I am going to share some with averages/sums of hourly, weekly, monthly, and also specific time in a day. I will share the ways to calculate more complex weather variables in separate posts. 
+I would like to share some R codes that I wrote for creating weather predictors which I used in predictive modeling of sugarcane rusts. I have also created several complex weather variables during my research work but I am going to share some with averages/sums of hourly, weekly, monthly, and also specific time in a day. I will also share the R codes to calculate more complex weather variables in separate posts. 
 
 
 ```{r setup, include=FALSE}

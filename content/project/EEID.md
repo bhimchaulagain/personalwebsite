@@ -3,7 +3,7 @@
 date = 2020-07-08T00:00:00
 
 # Project title.
-title = "Ecology and Evolution of Infectious Diseases"
+title = "Ecology and Evolution of Infectious Diseases (EEID)"
 
 # Project summary to display on homepage.
 summary = "Investigating the spatial and temporal spread of infectious disease including control strategies"
