@@ -57,7 +57,7 @@ date_format = "Jan 2006"
 [[experience]]
   title = "Adjunct lecturer"
   company = "Himalayan College of Agricultural Sciences & Technology (HICAST)"
-  company_url = "https://www.iastate.edu/"
+  company_url = "http://www.hicast.edu.np/"
   location = "Kathmandu, Nepal"
   date_start = "2011-11-01"
   date_end = "2013-01-30"
