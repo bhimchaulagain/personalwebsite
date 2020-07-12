@@ -3,7 +3,7 @@
 date = 2020-07-08T00:00:00
 
 # Project title.
-title = "Prediction Modelling and Management of Sugarcane Rust"
+title = "Prediction Modeling and Management of Sugarcane Rust"
 
 # Project summary to display on homepage.
 summary = "Development of weather based predictive model and management using fungicides"

@@ -42,7 +42,7 @@ date_format = "Jan 2006"
   location = "Kathmandu, Nepal"
   date_start = "2013-04-01"
   date_end = "2014-08-04"
-  description = """Improved Seeds for Farmers Project (ISFP): Improved seed production of vegetables and cereals, and development of formal seed marketing and distribution system in collaborations with commercial seed companies.
+  description = """Improved Seeds for Farmers Project (ISFP): Improved seed production of vegetables and cereals, and development of formal seed marketing and distribution system in collaboration with commercial seed companies.
   """
   [[experience]]
   title = "Plant Protection Officer"
