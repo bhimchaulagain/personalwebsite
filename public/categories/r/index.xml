@@ -196,7 +196,7 @@ ggsave(filename = &amp;quot;Boxplot.png&amp;quot;, width = , height = , units = 
       <description>
 
 
-&lt;p&gt;I would like to share some of the weather predictors that I calculated for predictive modeling of sugarcane rusts from weather data. I have also created several complex weather variables during my research work but I am going to share some with averages/sums of hourly, weekly, monthly, and also specific time in a day. I will share the ways to calculate more complex weather variables in separate posts.&lt;/p&gt;
+&lt;p&gt;I would like to share some R codes that I wrote for creating weather predictors which I used in predictive modeling of sugarcane rusts. I have also created several complex weather variables during my research work but I am going to share some with averages/sums of hourly, weekly, monthly, and also specific time in a day. I will also share the R codes to calculate more complex weather variables in separate posts.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(readxl)
 ## Warning: package &amp;#39;readxl&amp;#39; was built under R version 3.6.3
 library(lubridate)
@@ -392,7 +392,7 @@ T6AMTo9PM_WeeklyAvg_temp
     </item>
     
     <item>
-      <title>Leaf wetness duration (LWD) estimation using CART method</title>
+      <title>Leaf Wetness Duration (LWD) estimation using CART method</title>
       <link>/post/2019-01-23-r-rmarkdown/</link>
       <pubDate>Tue, 08 Jan 2019 21:13:14 -0500</pubDate>
       
@@ -413,16 +413,16 @@ names(data)[1:4] &amp;lt;- c(&amp;#39;tair&amp;#39;, &amp;#39;dpd&amp;#39;, &amp
 
 head(data, 10)
 ##    tair dpd rh wspeed
-## 1    24 2.5 58    1.5
-## 2     6 1.5 96    5.5
-## 3    13 3.5 67    3.5
-## 4    23 0.5 64    3.5
-## 5     2 2.5 61    5.5
-## 6    15 3.5 55    5.5
-## 7    11 2.5 98    5.5
-## 8    24 1.5 65    2.5
-## 9     3 4.5 81    2.5
-## 10    4 1.5 58    5.5
+## 1    19 4.5 77    2.5
+## 2    10 0.5 62    3.5
+## 3     9 0.5 81    2.5
+## 4     4 2.5 77    4.5
+## 5    14 4.5 98    3.5
+## 6    13 4.5 69    5.5
+## 7    20 1.5 63    3.5
+## 8     8 3.5 81    3.5
+## 9     4 0.5 64    5.5
+## 10    5 1.5 97    4.5
 
 #Use equations for CART method of leaf wetness estimation
 wetdry &amp;lt;- numeric(dim(data)[1])
@@ -446,7 +446,7 @@ for (i in 1:length(wetdry)) {
 }
 
 wetdry
-##  [1] &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;W&amp;quot; &amp;quot;W&amp;quot;
+##  [1] &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot; &amp;quot;D&amp;quot;
 ## [20] &amp;quot;D&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
