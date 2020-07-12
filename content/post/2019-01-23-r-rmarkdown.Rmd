@@ -1,5 +1,5 @@
 ---
-title: "Leaf wetness duration (LWD) estimation using CART method"
+title: "Leaf Wetness Duration (LWD) estimation using CART method"
 author: "Bhim Chaulagain"
 date: 2019-01-08T21:13:14-05:00
 categories: ["R"]
