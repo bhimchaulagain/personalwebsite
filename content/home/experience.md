@@ -17,6 +17,17 @@ date_format = "Jan 2006"
 #   Required fields are `title`, `company`, and `date_start`.
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
+
+[[experience]]
+  title = "Assistant Editor"
+  company = "Tropical Plant Pathology"
+  company_url = "https://www.springer.com/journal/40858/editors"
+  location = ""
+  date_start = "2020-04-01"
+  date_end = ""
+  description = """Assist in screening, handling and copy editing of the manuscripts.
+  """
+
 [[experience]]
   title = "Postdoctoral Associate - Plant Pathology"
   company = "Oregon State University"
