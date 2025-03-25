@@ -20,7 +20,7 @@ publication: 'Emerging Microbes & Infections'
 publication_short: ""
 publication_types:
 - "2"
-publishDate: "2020"
+publishdate: "2020-04-07"
 #slides: example
 #summary: 
 tags:

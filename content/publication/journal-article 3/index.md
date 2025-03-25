@@ -16,7 +16,7 @@ publication: 'Crop Protection'
 publication_short: ""
 publication_types:
 - "2"
-publishDate: "2019"
+publishdate: "2019-04-07"
 #slides: example
 #summary: 
 tags:

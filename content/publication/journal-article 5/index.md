@@ -17,7 +17,7 @@ publication: 'World Journal of Science, Technology and Sustainable Development'
 publication_short: ""
 publication_types:
 - "2"
-publishDate: "2019"
+publishdate: "2012-04-07"
 #slides: example
 #summary: 
 tags:

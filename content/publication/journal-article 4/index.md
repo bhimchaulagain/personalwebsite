@@ -19,7 +19,7 @@ publication: 'Journal of General Plant Pathology'
 publication_short: ""
 publication_types:
 - "2"
-publishDate: "2017"
+publishdate: "2017-04-07"
 #slides: example
 #summary: 
 tags:

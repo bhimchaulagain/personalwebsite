@@ -20,7 +20,7 @@ publication: 'Plant Disease'
 publication_short: ""
 publication_types:
 - "2"
-publishDate: "2019"
+publishdate: "2019-02-07"
 #slides: example
 #summary: 
 tags:

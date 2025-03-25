@@ -21,7 +21,7 @@ publication: 'Phytopathology'
 publication_short: ""
 publication_types:
 - "2"
-publishDate: "2020"
+publishdate: "2020-03-04"
 #slides: example
 #summary: 
 tags:

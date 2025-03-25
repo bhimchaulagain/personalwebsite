@@ -116,7 +116,7 @@
     <link rel="stylesheet" href="{{ $css_bundle.RelPermalink }}">
   {{ end }}
 
-  {{ if not site.IsServer }}
+  {{ if site.IsServer | default false }}
   {{ if site.GoogleAnalytics }}
     <script>
       window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
