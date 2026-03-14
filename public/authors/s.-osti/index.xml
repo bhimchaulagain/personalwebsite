@@ -2,22 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>S. Osti on Bhim Chaulagain</title>
-    <link>/authors/s.-osti/</link>
+    <link>//localhost:1313/authors/s.-osti/</link>
     <description>Recent content in S. Osti on Bhim Chaulagain</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>B. Chaulagain {year}</copyright>
     <lastBuildDate>Sat, 07 Apr 2012 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/authors/s.-osti/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="//localhost:1313/authors/s.-osti/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Availability and use status of plant genetic diversities from forests for food, nutrition and livelihood security:A case from Chepang tribal communities of Nepal</title>
-      <link>/publication/journal-article-5/</link>
+      <link>//localhost:1313/publication/journal-article-5/</link>
       <pubDate>Sat, 07 Apr 2012 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/journal-article-5/</guid>
+      <guid>//localhost:1313/publication/journal-article-5/</guid>
       <description></description>
     </item>
     

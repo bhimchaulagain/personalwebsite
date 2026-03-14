@@ -2,302 +2,375 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on Bhim Chaulagain</title>
-    <link>/authors/</link>
+    <link>//localhost:1313/authors/</link>
     <description>Recent content in Authors on Bhim Chaulagain</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>B. Chaulagain {year}</copyright>
-    <lastBuildDate>Tue, 07 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Dec 2024 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="//localhost:1313/authors/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>B. B. Khatri</title>
-      <link>/authors/b.-b.-khatri/</link>
-      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/b.-b.-khatri/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>B. Chaulagain</title>
-      <link>/authors/b.-chaulagain/</link>
-      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/b.-chaulagain/</guid>
+      <link>//localhost:1313/authors/b.-chaulagain/</link>
+      <pubDate>Wed, 25 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/b.-chaulagain/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>D. Sharma-Poudyal</title>
-      <link>/authors/d.-sharma-poudyal/</link>
-      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/d.-sharma-poudyal/</guid>
+      <title>C. C. Mundt</title>
+      <link>//localhost:1313/authors/c.-c.-mundt/</link>
+      <pubDate>Wed, 25 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/c.-c.-mundt/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>I. P. Gautam</title>
-      <link>/authors/i.-p.-gautam/</link>
-      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/i.-p.-gautam/</guid>
+      <title>J. B. Contina</title>
+      <link>//localhost:1313/authors/j.-b.-contina/</link>
+      <pubDate>Wed, 25 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/j.-b.-contina/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>K. P. Acharya</title>
-      <link>/authors/k.-p.-acharya/</link>
-      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/k.-p.-acharya/</guid>
+      <title>K. Mills</title>
+      <link>//localhost:1313/authors/k.-mills/</link>
+      <pubDate>Wed, 25 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/k.-mills/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>K. Shrestha</title>
-      <link>/authors/k.-shrestha/</link>
-      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/k.-shrestha/</guid>
+      <title>M. J. Tildesley</title>
+      <link>//localhost:1313/authors/m.-j.-tildesley/</link>
+      <pubDate>Wed, 25 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/m.-j.-tildesley/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>M. Marasini</title>
-      <link>/authors/m.-marasini/</link>
-      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/m.-marasini/</guid>
+      <title>R. B. Seibel</title>
+      <link>//localhost:1313/authors/r.-b.-seibel/</link>
+      <pubDate>Wed, 25 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/r.-b.-seibel/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>N. Acharya</title>
-      <link>/authors/n.-acharya/</link>
-      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/n.-acharya/</guid>
+      <title>B. P. Khatiwada</title>
+      <link>//localhost:1313/authors/b.-p.-khatiwada/</link>
+      <pubDate>Wed, 02 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/b.-p.-khatiwada/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>N. Pathak</title>
-      <link>/authors/n.-pathak/</link>
-      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/n.-pathak/</guid>
+      <title>Y. P. Timilsena</title>
+      <link>//localhost:1313/authors/y.-p.-timilsena/</link>
+      <pubDate>Wed, 02 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/y.-p.-timilsena/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>R. B. Khadka</title>
-      <link>/authors/r.-b.-khadka/</link>
-      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/r.-b.-khadka/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R. Rawal</title>
-      <link>/authors/r.-rawal/</link>
-      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/r.-rawal/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>S. H. Subramanyam</title>
-      <link>/authors/s.-h.-subramanyam/</link>
-      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/s.-h.-subramanyam/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>S. Subedi</title>
-      <link>/authors/s.-subedi/</link>
-      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/s.-subedi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>T. R. Chapagain</title>
-      <link>/authors/t.-r.-chapagain/</link>
-      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/t.-r.-chapagain/</guid>
+      <title>R. L. Seibel</title>
+      <link>//localhost:1313/authors/r.-l.-seibel/</link>
+      <pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/r.-l.-seibel/</guid>
       <description></description>
     </item>
     
     <item>
       <title>F. Clyde</title>
-      <link>/authors/f.-clyde/</link>
-      <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/f.-clyde/</guid>
+      <link>//localhost:1313/authors/f.-clyde/</link>
+      <pubDate>Wed, 22 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/f.-clyde/</guid>
       <description></description>
     </item>
     
     <item>
       <title>I. Small</title>
-      <link>/authors/i.-small/</link>
-      <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/i.-small/</guid>
+      <link>//localhost:1313/authors/i.-small/</link>
+      <pubDate>Wed, 22 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/i.-small/</guid>
       <description></description>
     </item>
     
     <item>
       <title>J. Shine</title>
-      <link>/authors/j.-shine/</link>
-      <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/j.-shine/</guid>
+      <link>//localhost:1313/authors/j.-shine/</link>
+      <pubDate>Wed, 22 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/j.-shine/</guid>
       <description></description>
     </item>
     
     <item>
       <title>P. Rott</title>
-      <link>/authors/p.-rott/</link>
-      <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/p.-rott/</guid>
+      <link>//localhost:1313/authors/p.-rott/</link>
+      <pubDate>Wed, 22 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/p.-rott/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>R.N. Raid</title>
-      <link>/authors/r.n.-raid/</link>
-      <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/r.n.-raid/</guid>
+      <title>R. N. Raid</title>
+      <link>//localhost:1313/authors/r.-n.-raid/</link>
+      <pubDate>Wed, 22 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/r.-n.-raid/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>E.V. Santen</title>
-      <link>/authors/e.v.-santen/</link>
-      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/e.v.-santen/</guid>
+      <title>J. C. Comstock</title>
+      <link>//localhost:1313/authors/j.-c.-comstock/</link>
+      <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/j.-c.-comstock/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>N. Dufault</title>
-      <link>/authors/n.-dufault/</link>
-      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/n.-dufault/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>I.M. Small</title>
-      <link>/authors/i.m.-small/</link>
-      <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/i.m.-small/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>J.C. Comstock</title>
-      <link>/authors/j.c.-comstock/</link>
-      <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/j.c.-comstock/</guid>
+      <title>J. Todd</title>
+      <link>//localhost:1313/authors/j.-todd/</link>
+      <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/j.-todd/</guid>
       <description></description>
     </item>
     
     <item>
       <title>M. Hincapie</title>
-      <link>/authors/m.-hincapie/</link>
-      <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/m.-hincapie/</guid>
+      <link>//localhost:1313/authors/m.-hincapie/</link>
+      <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/m.-hincapie/</guid>
       <description></description>
     </item>
     
     <item>
       <title>S. Sanjel</title>
-      <link>/authors/s.-sanjel/</link>
+      <link>//localhost:1313/authors/s.-sanjel/</link>
+      <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/s.-sanjel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>S. Sood</title>
+      <link>//localhost:1313/authors/s.-sood/</link>
+      <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/s.-sood/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Y. Wang</title>
+      <link>//localhost:1313/authors/y.-wang/</link>
+      <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/y.-wang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>B. B. Khatri</title>
+      <link>//localhost:1313/authors/b.-b.-khatri/</link>
+      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/b.-b.-khatri/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>D. Sharma-Poudyal</title>
+      <link>//localhost:1313/authors/d.-sharma-poudyal/</link>
+      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/d.-sharma-poudyal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>I. P. Gautam</title>
+      <link>//localhost:1313/authors/i.-p.-gautam/</link>
+      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/i.-p.-gautam/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>K. P. Acharya</title>
+      <link>//localhost:1313/authors/k.-p.-acharya/</link>
+      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/k.-p.-acharya/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>K. Shrestha</title>
+      <link>//localhost:1313/authors/k.-shrestha/</link>
+      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/k.-shrestha/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>M. Marasini</title>
+      <link>//localhost:1313/authors/m.-marasini/</link>
+      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/m.-marasini/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>N. Acharya</title>
+      <link>//localhost:1313/authors/n.-acharya/</link>
+      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/n.-acharya/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>N. Pathak</title>
+      <link>//localhost:1313/authors/n.-pathak/</link>
+      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/n.-pathak/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R. B. Khadka</title>
+      <link>//localhost:1313/authors/r.-b.-khadka/</link>
+      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/r.-b.-khadka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R. Rawal</title>
+      <link>//localhost:1313/authors/r.-rawal/</link>
+      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/r.-rawal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>S. H. Subramanyam</title>
+      <link>//localhost:1313/authors/s.-h.-subramanyam/</link>
+      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/s.-h.-subramanyam/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>S. Subedi</title>
+      <link>//localhost:1313/authors/s.-subedi/</link>
+      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/s.-subedi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>T. R. Chapagain</title>
+      <link>//localhost:1313/authors/t.-r.-chapagain/</link>
+      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/t.-r.-chapagain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R.N. Raid</title>
+      <link>//localhost:1313/authors/r.n.-raid/</link>
+      <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/r.n.-raid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>E.V. Santen</title>
+      <link>//localhost:1313/authors/e.v.-santen/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/e.v.-santen/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>N. Dufault</title>
+      <link>//localhost:1313/authors/n.-dufault/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/n.-dufault/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>I.M. Small</title>
+      <link>//localhost:1313/authors/i.m.-small/</link>
       <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/s.-sanjel/</guid>
+      <guid>//localhost:1313/authors/i.m.-small/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>J.C. Comstock</title>
+      <link>//localhost:1313/authors/j.c.-comstock/</link>
+      <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/authors/j.c.-comstock/</guid>
       <description></description>
     </item>
     
     <item>
       <title>G.B. Khatri Chhetri</title>
-      <link>/authors/g.b.-khatri-chhetri/</link>
+      <link>//localhost:1313/authors/g.b.-khatri-chhetri/</link>
       <pubDate>Fri, 07 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/g.b.-khatri-chhetri/</guid>
+      <guid>//localhost:1313/authors/g.b.-khatri-chhetri/</guid>
       <description></description>
     </item>
     
     <item>
       <title>J.R. Lamichhane</title>
-      <link>/authors/j.r.-lamichhane/</link>
+      <link>//localhost:1313/authors/j.r.-lamichhane/</link>
       <pubDate>Fri, 07 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/j.r.-lamichhane/</guid>
+      <guid>//localhost:1313/authors/j.r.-lamichhane/</guid>
       <description></description>
     </item>
     
     <item>
       <title>S. Sharma</title>
-      <link>/authors/s.-sharma/</link>
+      <link>//localhost:1313/authors/s.-sharma/</link>
       <pubDate>Fri, 07 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/s.-sharma/</guid>
+      <guid>//localhost:1313/authors/s.-sharma/</guid>
       <description></description>
     </item>
     
     <item>
       <title>S.M. Shrestha</title>
-      <link>/authors/s.m.-shrestha/</link>
+      <link>//localhost:1313/authors/s.m.-shrestha/</link>
       <pubDate>Fri, 07 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/s.m.-shrestha/</guid>
+      <guid>//localhost:1313/authors/s.m.-shrestha/</guid>
       <description></description>
     </item>
     
     <item>
       <title>B.P. Khatiwada</title>
-      <link>/authors/b.p.-khatiwada/</link>
+      <link>//localhost:1313/authors/b.p.-khatiwada/</link>
       <pubDate>Sat, 07 Apr 2012 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/b.p.-khatiwada/</guid>
+      <guid>//localhost:1313/authors/b.p.-khatiwada/</guid>
       <description></description>
     </item>
     
     <item>
       <title>S. Osti</title>
-      <link>/authors/s.-osti/</link>
+      <link>//localhost:1313/authors/s.-osti/</link>
       <pubDate>Sat, 07 Apr 2012 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/s.-osti/</guid>
+      <guid>//localhost:1313/authors/s.-osti/</guid>
       <description></description>
     </item>
     
     <item>
-      <title></title>
-      <link>/authors/admin/</link>
+      <title>Bhim Chaulagain</title>
+      <link>//localhost:1313/authors/admin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/admin/</guid>
-      <description>&lt;p&gt;I am currently working on spatio-temporal spread and control strategies of infectious disease caused by long distance inoculum dispersal using wheat stripe rust as an experimental model. I have experiences and skills in small plot trial research, green house and growth chamber studies to characterize the efficacy, optimum frequency, and application timing of crop protection technologies (including fungicides) for the management of plant diseases. I am interested in plant disease epidemics modeling and ecology, characterization of crop protection technologies, disease resistance breeding and development of control strategies for plant disease epidemics management.&lt;/p&gt;
+      <guid>//localhost:1313/authors/admin/</guid>
+      <description>&lt;p&gt;I am driven by a simple idea - that intelligent systems can transform how we understand and manage biological and environmental complexity. My work combines agronomy, machine learning, and scalable data engineering to build next-generation decision tools for agriculture. From disease forecasting to harvest prediction and nutrient management, I focus on translating uncertainty into actionable insight.&lt;/p&gt;
+&lt;p&gt;As AI continues reshaping industries, I am motivated to expand my impact beyond agriculture - building data-driven solutions that operate at scale and create measurable value.&lt;/p&gt;
 </description>
     </item>
     

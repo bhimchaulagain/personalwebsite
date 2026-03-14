@@ -11,29 +11,34 @@
 [[main]]
   name = "Projects"
   url = "#projects"
-  weight = 3
+  weight = 2
 
 [[main]]
   name = "Publications"
   url = "#publications"
-  weight = 4
+  weight = 5
 
 
 [[main]]
   name = "Blog"
   url = "#posts"
-  weight = 5
-  
-  
+  weight = 4
+
 [[main]]
-  name = "Resume"
-  url = "files/cv.pdf"
-  weight = 6
+  name = "Agronomic Intelligence Lab"
+  url = "#agronomic-lab"
+  weight = 3
+  
+  
+# [[main]]
+#   name = "Resume"
+#   url = "files/cv.pdf"
+#   weight = 6
 
 [[main]]
   name = "Contact"
   url = "#contact"
-  weight = 7
+  weight = 6
 
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.

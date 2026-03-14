@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R. N. Raid on Bhim Chaulagain</title>
+    <link>//localhost:1313/authors/r.-n.-raid/</link>
+    <description>Recent content in R. N. Raid on Bhim Chaulagain</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>B. Chaulagain {year}</copyright>
+    <lastBuildDate>Wed, 22 Sep 2021 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="//localhost:1313/authors/r.-n.-raid/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Predictive modeling of brown rust of sugarcane based on temperature and relative humidity in Florida</title>
+      <link>//localhost:1313/publication/journal-article-9/</link>
+      <pubDate>Wed, 22 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/publication/journal-article-9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Occurrences of two races of Puccinia kuehnii causing orange rust of sugarcane in Florida</title>
+      <link>//localhost:1313/publication/journal-article-10/</link>
+      <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/publication/journal-article-10/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

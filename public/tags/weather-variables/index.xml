@@ -1,42 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>weather variables on Bhim Chaulagain</title>
-    <link>/tags/weather-variables/</link>
-    <description>Recent content in weather variables on Bhim Chaulagain</description>
+    <title>Weather Variables on Bhim Chaulagain</title>
+    <link>//localhost:1313/tags/weather-variables/</link>
+    <description>Recent content in Weather Variables on Bhim Chaulagain</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>B. Chaulagain {year}</copyright>
-    <lastBuildDate>Wed, 08 Jul 2020 21:13:14 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 10 Mar 2020 21:13:14 -0500</lastBuildDate>
     
-	    <atom:link href="/tags/weather-variables/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="//localhost:1313/tags/weather-variables/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Weather based predictors for predictive modeling</title>
-      <link>/post/2020-08-23-r-rmarkdown/</link>
-      <pubDate>Wed, 08 Jul 2020 21:13:14 -0500</pubDate>
-      
-      <guid>/post/2020-08-23-r-rmarkdown/</guid>
+      <link>//localhost:1313/post/2020-08-23-weather_predictors/</link>
+      <pubDate>Tue, 10 Mar 2020 21:13:14 -0500</pubDate>
+      <guid>//localhost:1313/post/2020-08-23-weather_predictors/</guid>
       <description>
 
 
 &lt;p&gt;I would like to share some R codes that I wrote for creating weather predictors which I used in predictive modeling of sugarcane rusts. I have also created several complex weather variables during my research work but I am going to share some with averages/sums of hourly, weekly, monthly, and also specific time in a day. I will also share the R codes to calculate more complex weather variables in separate posts.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(readxl)
-## Warning: package &amp;#39;readxl&amp;#39; was built under R version 3.6.3
+## Warning: package &amp;#39;readxl&amp;#39; was built under R version 4.3.3
 library(lubridate)
-## Warning: package &amp;#39;lubridate&amp;#39; was built under R version 3.6.3
 ## 
 ## Attaching package: &amp;#39;lubridate&amp;#39;
 ## The following objects are masked from &amp;#39;package:base&amp;#39;:
 ## 
 ##     date, intersect, setdiff, union
 library(plyr)
-## Warning: package &amp;#39;plyr&amp;#39; was built under R version 3.6.3
+## Warning: package &amp;#39;plyr&amp;#39; was built under R version 4.3.3
 
 Wdata &amp;lt;- read_excel(&amp;quot;weatherdata.xlsx&amp;quot;)
 head (Wdata, 10)
-## # A tibble: 10 x 11
+## # A tibble: 10 × 11
 ##    Period              `2m T avg (F)` `2m T min (F)` `2m T max (F)`
 ##    &amp;lt;dttm&amp;gt;                       &amp;lt;dbl&amp;gt;          &amp;lt;dbl&amp;gt;          &amp;lt;dbl&amp;gt;
 ##  1 2013-11-15 00:00:00           57.9           57.5           58.1
@@ -49,12 +47,11 @@ head (Wdata, 10)
 ##  8 2013-11-15 07:00:00           61.4           60.3           62.6
 ##  9 2013-11-15 08:00:00           66.6           64.3           68.8
 ## 10 2013-11-15 09:00:00           72.9           70.6           74.7
-## # ... with 7 more variables: `RelHum avg 2m (pct)` &amp;lt;dbl&amp;gt;, `2m Rain tot
-## #   (in)` &amp;lt;dbl&amp;gt;, `2m Rain max over 15min(in)` &amp;lt;dbl&amp;gt;, `10m Wind avg
-## #   (mph)` &amp;lt;dbl&amp;gt;, `10m Wind min (mph)` &amp;lt;dbl&amp;gt;, `10m Wind max (mph)` &amp;lt;dbl&amp;gt;, `N (#
-## #   obs)` &amp;lt;dbl&amp;gt;
+## # ℹ 7 more variables: `RelHum avg 2m (pct)` &amp;lt;dbl&amp;gt;, `2m Rain tot (in)` &amp;lt;dbl&amp;gt;,
+## #   `2m Rain max over 15min(in)` &amp;lt;dbl&amp;gt;, `10m Wind avg (mph)` &amp;lt;dbl&amp;gt;,
+## #   `10m Wind min (mph)` &amp;lt;dbl&amp;gt;, `10m Wind max (mph)` &amp;lt;dbl&amp;gt;, `N (# obs)` &amp;lt;dbl&amp;gt;
 str(Wdata)
-## tibble [9,888 x 11] (S3: tbl_df/tbl/data.frame)
+## tibble [9,888 × 11] (S3: tbl_df/tbl/data.frame)
 ##  $ Period                    : POSIXct[1:9888], format: &amp;quot;2013-11-15 00:00:00&amp;quot; &amp;quot;2013-11-15 01:00:00&amp;quot; ...
 ##  $ 2m T avg (F)              : num [1:9888] 57.9 57.9 58.8 59 58.8 ...
 ##  $ 2m T min (F)              : num [1:9888] 57.5 57.2 58.1 58.8 58.7 ...
@@ -68,7 +65,7 @@ str(Wdata)
 ##  $ N (# obs)                 : num [1:9888] 4 4 4 4 4 4 4 4 4 4 ...
 Wdata$Period &amp;lt;- as.POSIXct(Wdata$Period, format = &amp;quot;%m/%d/%Y %H: %M: %S&amp;quot;)
 str(Wdata)
-## tibble [9,888 x 11] (S3: tbl_df/tbl/data.frame)
+## tibble [9,888 × 11] (S3: tbl_df/tbl/data.frame)
 ##  $ Period                    : POSIXct[1:9888], format: &amp;quot;2013-11-15 00:00:00&amp;quot; &amp;quot;2013-11-15 01:00:00&amp;quot; ...
 ##  $ 2m T avg (F)              : num [1:9888] 57.9 57.9 58.8 59 58.8 ...
 ##  $ 2m T min (F)              : num [1:9888] 57.5 57.2 58.1 58.8 58.7 ...
@@ -155,7 +152,8 @@ WeeklyAvg_temp
 ## 60 2014-12-28 71.70760&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Lets calculate the weekly average of the temperature from(6 AM-9 PM) of each day.&lt;/p&gt;
 &lt;p&gt;Use lubridate package for subsetting the data which contains the values from 6 AM to 9 PM.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;T6AMTo9PM &amp;lt;- subset(Wdata, hour(hours) &amp;gt;= 6 &amp;amp; hour(hours) &amp;lt;= 21 &amp;amp; days &amp;gt;= &amp;#39;2014-01-01&amp;#39; &amp;amp; days &amp;lt;= &amp;#39;2014-12-31&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;T6AMTo9PM &amp;lt;- subset(Wdata, hour(hours) &amp;gt;= 6 &amp;amp; hour(hours) &amp;lt;= 21 &amp;amp; days &amp;gt;= &amp;#39;2014-01-01&amp;#39; &amp;amp; days &amp;lt;= &amp;#39;2014-12-31&amp;#39;)
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;After subsetting, lets calculate for temperature variable!&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;T6AMTo9PM_WeeklyAvg_temp &amp;lt;- aggregate(T6AMTo9PM$`2m T avg (F)`, by = list(T6AMTo9PM$weeks), FUN = mean)
 T6AMTo9PM_WeeklyAvg_temp

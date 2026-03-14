@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tidyverse on Bhim Chaulagain</title>
-    <link>/tags/tidyverse/</link>
-    <description>Recent content in tidyverse on Bhim Chaulagain</description>
+    <title>Tidyverse on Bhim Chaulagain</title>
+    <link>//localhost:1313/tags/tidyverse/</link>
+    <description>Recent content in Tidyverse on Bhim Chaulagain</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>B. Chaulagain {year}</copyright>
-    <lastBuildDate>Wed, 08 Jul 2020 21:13:14 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jul 2019 21:13:14 -0500</lastBuildDate>
     
-	    <atom:link href="/tags/tidyverse/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="//localhost:1313/tags/tidyverse/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Area Under Disease Gradient (AUDG) Calculation</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Wed, 08 Jul 2020 21:13:14 -0500</pubDate>
-      
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <link>//localhost:1313/post/2015-07-23-audg_calculation/</link>
+      <pubDate>Mon, 08 Jul 2019 21:13:14 -0500</pubDate>
+      <guid>//localhost:1313/post/2015-07-23-audg_calculation/</guid>
       <description>
 
 
@@ -34,51 +33,52 @@
 packages &amp;lt;- c(&amp;quot;tidyverse&amp;quot;, &amp;quot;readxl&amp;quot;, &amp;quot;agricolae&amp;quot;, &amp;quot;ggpubr&amp;quot;, &amp;quot;ggpubr&amp;quot;, &amp;quot;magrittr&amp;quot;, &amp;quot;reshape&amp;quot;, &amp;quot;knitr&amp;quot;)
 ipak(packages)
 ## Loading required package: tidyverse
-## Warning: package &amp;#39;tidyverse&amp;#39; was built under R version 3.6.3
-## -- Attaching packages ----------------------------------------------------- tidyverse 1.3.0 --
-## v ggplot2 3.3.2     v purrr   0.3.4
-## v tibble  3.0.1     v dplyr   1.0.0
-## v tidyr   1.1.0     v stringr 1.4.0
-## v readr   1.3.1     v forcats 0.5.0
-## Warning: package &amp;#39;ggplot2&amp;#39; was built under R version 3.6.3
-## Warning: package &amp;#39;tibble&amp;#39; was built under R version 3.6.3
-## Warning: package &amp;#39;tidyr&amp;#39; was built under R version 3.6.3
-## Warning: package &amp;#39;readr&amp;#39; was built under R version 3.6.3
-## Warning: package &amp;#39;purrr&amp;#39; was built under R version 3.6.3
-## Warning: package &amp;#39;dplyr&amp;#39; was built under R version 3.6.3
-## Warning: package &amp;#39;stringr&amp;#39; was built under R version 3.6.3
-## Warning: package &amp;#39;forcats&amp;#39; was built under R version 3.6.3
-## -- Conflicts -------------------------------------------------------- tidyverse_conflicts() --
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()
+## Warning: package &amp;#39;tidyverse&amp;#39; was built under R version 4.3.3
+## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+## ✔ dplyr     1.1.4     ✔ readr     2.1.5
+## ✔ forcats   1.0.0     ✔ stringr   1.5.1
+## ✔ ggplot2   4.0.2     ✔ tibble    3.2.1
+## ✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+## ✔ purrr     1.0.2
+## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()
+## ℹ Use the conflicted package (&amp;lt;http://conflicted.r-lib.org/&amp;gt;) to force all conflicts to become errors
 ## Loading required package: readxl
-## Warning: package &amp;#39;readxl&amp;#39; was built under R version 3.6.3
+## Warning: package &amp;#39;readxl&amp;#39; was built under R version 4.3.3
 ## Loading required package: agricolae
-## Warning: package &amp;#39;agricolae&amp;#39; was built under R version 3.6.3
+## Warning: package &amp;#39;agricolae&amp;#39; was built under R version 4.3.3
 ## Loading required package: ggpubr
-## Warning: package &amp;#39;ggpubr&amp;#39; was built under R version 3.6.3
+## Warning: package &amp;#39;ggpubr&amp;#39; was built under R version 4.3.3
 ## Loading required package: magrittr
-## Warning: package &amp;#39;magrittr&amp;#39; was built under R version 3.6.3
 ## 
 ## Attaching package: &amp;#39;magrittr&amp;#39;
+## 
 ## The following object is masked from &amp;#39;package:purrr&amp;#39;:
 ## 
 ##     set_names
+## 
 ## The following object is masked from &amp;#39;package:tidyr&amp;#39;:
 ## 
 ##     extract
+## 
 ## Loading required package: reshape
-## Warning: package &amp;#39;reshape&amp;#39; was built under R version 3.6.3
 ## 
 ## Attaching package: &amp;#39;reshape&amp;#39;
+## 
+## The following object is masked from &amp;#39;package:lubridate&amp;#39;:
+## 
+##     stamp
+## 
 ## The following object is masked from &amp;#39;package:dplyr&amp;#39;:
 ## 
 ##     rename
+## 
 ## The following objects are masked from &amp;#39;package:tidyr&amp;#39;:
 ## 
 ##     expand, smiths
+## 
 ## Loading required package: knitr
-## Warning: package &amp;#39;knitr&amp;#39; was built under R version 3.6.3
 ## tidyverse    readxl agricolae    ggpubr    ggpubr  magrittr   reshape     knitr 
 ##      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE
 
@@ -100,7 +100,8 @@ audpc_data &amp;lt;- data %&amp;gt;%
   melt(id=c(&amp;quot;Distance&amp;quot;, &amp;quot;Treatments&amp;quot;)) %&amp;gt;%
   group_by(Treatments, variable) %&amp;gt;% 
   summarize(AUDPC = audpc(value, Distance))
-## `summarise()` regrouping output by &amp;#39;Treatments&amp;#39; (override with `.groups` argument)
+## `summarise()` has grouped output by &amp;#39;Treatments&amp;#39;. You can override using the
+## `.groups` argument.
 
 audpc_data %&amp;gt;% 
   spread(variable, AUDPC) %&amp;gt;% 
@@ -179,7 +180,7 @@ plot_graph &amp;lt;- ggplot(audpc_data, aes(Treatments, AUDPC))+
 
 
 plot_graph&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2015-07-23-audg_calculation/index_files/figure-html/unnamed-chunk-1-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
 ggsave(filename = &amp;quot;Boxplot.png&amp;quot;, width = , height = , units = &amp;quot;in&amp;quot;,
        dpi = 600, limitsize = TRUE)

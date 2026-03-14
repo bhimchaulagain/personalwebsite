@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>fungicide on Bhim Chaulagain</title>
-    <link>/tags/fungicide/</link>
-    <description>Recent content in fungicide on Bhim Chaulagain</description>
+    <title>Fungicide on Bhim Chaulagain</title>
+    <link>//localhost:1313/tags/fungicide/</link>
+    <description>Recent content in Fungicide on Bhim Chaulagain</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>B. Chaulagain {year}</copyright>
-    <lastBuildDate>Wed, 08 Jul 2020 00:00:00 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2020 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/tags/fungicide/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="//localhost:1313/tags/fungicide/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Prediction Modeling and Management of Sugarcane Rust</title>
-      <link>/project/sr/</link>
-      <pubDate>Wed, 08 Jul 2020 00:00:00 -0700</pubDate>
-      
-      <guid>/project/sr/</guid>
+      <link>//localhost:1313/project/sr/</link>
+      <pubDate>Wed, 08 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/project/sr/</guid>
       <description>&lt;p&gt;
 
 
@@ -28,9 +27,9 @@
 
 &lt;figure&gt;
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;/img/SR.jpg&#34; &gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/img/SR.jpg&#34; &gt;
 
-&lt;img src=&#34;/img/SR.jpg&#34; &gt;
+&lt;img src=&#34;//localhost:1313/img/SR.jpg&#34; &gt;
 &lt;/a&gt;
 
 &lt;/figure&gt;

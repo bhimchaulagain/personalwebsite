@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C. C. Mundt on Bhim Chaulagain</title>
+    <link>//localhost:1313/authors/c.-c.-mundt/</link>
+    <description>Recent content in C. C. Mundt on Bhim Chaulagain</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>B. Chaulagain {year}</copyright>
+    <lastBuildDate>Wed, 25 Dec 2024 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="//localhost:1313/authors/c.-c.-mundt/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The influence of farm connectedness on foot-and-mouth disease outbreaks in livestock</title>
+      <link>//localhost:1313/publication/journal-article-12/</link>
+      <pubDate>Wed, 25 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/publication/journal-article-12/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Comparing the efficacy of control strategies for infectious disease outbreaks using field and simulation studies</title>
+      <link>//localhost:1313/publication/journal-article-11/</link>
+      <pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/publication/journal-article-11/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

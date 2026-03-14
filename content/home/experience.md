@@ -18,27 +18,46 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
+# [[experience]]
+#   title = "Editor"
+#   company = "Tropical Plant Pathology"
+#   company_url = "https://www.springer.com/journal/40858/editors"
+#   location = ""
+#   date_start = "2020-04-01"
+#   date_end = "2025-05-30"
+#   description = """Assist in screening, handling and copy editing of the manuscripts.
+#   """
 [[experience]]
-  title = "Assistant Editor"
-  company = "Tropical Plant Pathology"
-  company_url = "https://www.springer.com/journal/40858/editors"
-  location = ""
-  date_start = "2020-04-01"
+  title = "Data Scientist"
+  company = "Corvian"
+  company_url = "https://www.corvian.com/"
+  location = "Research Triangle Park, NC"
+  date_start = "2025-06-20"
   date_end = ""
-  description = """Assist in screening, handling and copy editing of the manuscripts.
+  description = """Development of agronomic models to support digital agriculture solutions.
+  """
+
+  [[experience]]
+  title = "Digital Agronomist"
+  company = "Xarvio Digital Farming Solutions, BASF"
+  company_url = "https://www.xarvio.com/us/en.html"
+  location = "Research Triangle Park, NC"
+  date_start = "2020-11-01"
+  date_end = "2025-05-30"
+  description = """Designed and deployed scalable ML-based agronomic decision systems using satellite data, field trials, and cloud infrastructure to improve disease forecasting and precision crop management.
   """
 
 [[experience]]
-  title = "Postdoctoral Associate - Plant Pathology"
+  title = "Research Associate"
   company = "Oregon State University"
   company_url = "https://bpp.oregonstate.edu/"
   location = "Corvallis, Oregon"
   date_start = "2019-06-01"
-  date_end = ""
-  description = """Spatio-temporal spread of infectious diseases and control strategies using wheat stripe rust as an experimental model.
+  date_end = "2020-10-31"
+  description = """Spatio-temporal spread of infectious diseases and control strategies using wheat stripe rust as an experimental model and SIR based simulation model.
   """
 [[experience]]
-  title = "Graduate Research Assistant - Plant Pathology"
+  title = "Graduate Research Assistant"
   company = "University of Florida"
   company_url = "https://plantpath.ifas.ufl.edu/"
   location = "Gainesville, Florida"
@@ -51,27 +70,9 @@ date_format = "Jan 2006"
   company = "Ministry of Agriculture and Livestock Development"
   company_url = "https://www.moald.gov.np/"
   location = "Kathmandu, Nepal"
-  date_start = "2013-04-01"
-  date_end = "2014-08-04"
-  description = """Improved Seeds for Farmers Project (ISFP): Improved seed production of vegetables and cereals, and development of formal seed marketing and distribution system in collaboration with commercial seed companies.
+  date_start = "2012-01-01"
+  date_end = "2014-08-10"
+  description = """Provided technical leadership in plant disease diagnostics and field trial design by evaluating varietal performance, crop safety, and disease management strategies while coordinating with R&D and product assessment teams to deliver reliable agronomic insights.
   """
-  [[experience]]
-  title = "Plant Protection Officer"
-  company = "Ministry of Agriculture and Livestock Development"
-  company_url = "https://www.moald.gov.np/"
-  location = "Kathmandu, Nepal"
-  date_start = "2010-10-01"
-  date_end = "2013-03-30"
-  description = """Technical and logistic support to growers in plant health issues.
-  """
-
-[[experience]]
-  title = "Adjunct lecturer"
-  company = "Himalayan College of Agricultural Sciences & Technology (HICAST)"
-  company_url = "http://www.hicast.edu.np/"
-  location = "Kathmandu, Nepal"
-  date_start = "2011-11-01"
-  date_end = "2013-01-30"
-  description = """Teach courses in plant pathology to undergraduates and provide trainings on basic laboratory techniques. """
-
+  
 +++

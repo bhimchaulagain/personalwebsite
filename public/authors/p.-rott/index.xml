@@ -2,58 +2,69 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>P. Rott on Bhim Chaulagain</title>
-    <link>/authors/p.-rott/</link>
+    <link>//localhost:1313/authors/p.-rott/</link>
     <description>Recent content in P. Rott on Bhim Chaulagain</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>B. Chaulagain {year}</copyright>
-    <lastBuildDate>Thu, 07 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Sep 2021 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/authors/p.-rott/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="//localhost:1313/authors/p.-rott/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Predictive modeling of brown rust of sugarcane based on temperature and relative humidity in Florida</title>
+      <link>//localhost:1313/publication/journal-article-9/</link>
+      <pubDate>Wed, 22 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/publication/journal-article-9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Occurrences of two races of Puccinia kuehnii causing orange rust of sugarcane in Florida</title>
+      <link>//localhost:1313/publication/journal-article-10/</link>
+      <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/publication/journal-article-10/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Weather based predictive modeling of sugarcane orange rust in Florida</title>
-      <link>/publication/journal-article-6/</link>
+      <link>//localhost:1313/publication/journal-article-6/</link>
       <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/journal-article-6/</guid>
+      <guid>//localhost:1313/publication/journal-article-6/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Application timing of fungicides for the management of sugarcane orange rust</title>
-      <link>/publication/journal-article-2/</link>
+      <link>//localhost:1313/publication/journal-article-2/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/journal-article-2/</guid>
+      <guid>//localhost:1313/publication/journal-article-2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sensitivity of sugarcane rust fungi to fungicides in uredospore germination and detached leaf bioassays</title>
-      <link>/publication/journal-article-1/</link>
+      <link>//localhost:1313/publication/journal-article-1/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/journal-article-1/</guid>
+      <guid>//localhost:1313/publication/journal-article-1/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Timing and frequency of fungicide applications for the management of sugarcane brown rust</title>
-      <link>/publication/journal-article-3/</link>
+      <link>//localhost:1313/publication/journal-article-3/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/journal-article-3/</guid>
+      <guid>//localhost:1313/publication/journal-article-3/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Comparison of progress of brown rust and orange rust and conditions conducive for severe epidemic development during the sugarcane crop season in Florida</title>
-      <link>/publication/journal-article/</link>
+      <link>//localhost:1313/publication/journal-article/</link>
       <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/journal-article/</guid>
+      <guid>//localhost:1313/publication/journal-article/</guid>
       <description></description>
     </item>
     

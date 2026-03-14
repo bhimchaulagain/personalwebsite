@@ -2,94 +2,125 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publications on Bhim Chaulagain</title>
-    <link>/publication/</link>
+    <link>//localhost:1313/publication/</link>
     <description>Recent content in Publications on Bhim Chaulagain</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>B. Chaulagain {year}</copyright>
-    <lastBuildDate>Tue, 07 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Dec 2024 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="//localhost:1313/publication/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>The influence of farm connectedness on foot-and-mouth disease outbreaks in livestock</title>
+      <link>//localhost:1313/publication/journal-article-12/</link>
+      <pubDate>Wed, 25 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/publication/journal-article-12/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Toxins, Contaminants, and Adulteration in Food: Current Policies and Practices, and Future Strategies for Nepal. In Agriculture, Natural Resources and Food Security: Lessons from Nepal, eds. J. Timsina, T. Maraseni, J. Adhikari, D. Gauchan, and H. Ojha</title>
+      <link>//localhost:1313/publication/journal-article-13/</link>
+      <pubDate>Wed, 02 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/publication/journal-article-13/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Comparing the efficacy of control strategies for infectious disease outbreaks using field and simulation studies</title>
+      <link>//localhost:1313/publication/journal-article-11/</link>
+      <pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/publication/journal-article-11/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Predictive modeling of brown rust of sugarcane based on temperature and relative humidity in Florida</title>
+      <link>//localhost:1313/publication/journal-article-9/</link>
+      <pubDate>Wed, 22 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/publication/journal-article-9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Occurrences of two races of Puccinia kuehnii causing orange rust of sugarcane in Florida</title>
+      <link>//localhost:1313/publication/journal-article-10/</link>
+      <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/publication/journal-article-10/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Establishment and recent surge in spatio-temporal spread of Dengue in Nepal</title>
-      <link>/publication/journal-article-8/</link>
+      <link>//localhost:1313/publication/journal-article-8/</link>
       <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/journal-article-8/</guid>
+      <guid>//localhost:1313/publication/journal-article-8/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Evaluation of fungicides to control potato late blight (Phytophthora infestans) in the plains of Nepal</title>
-      <link>/publication/journal-article-7/</link>
+      <link>//localhost:1313/publication/journal-article-7/</link>
       <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/journal-article-7/</guid>
+      <guid>//localhost:1313/publication/journal-article-7/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Weather based predictive modeling of sugarcane orange rust in Florida</title>
-      <link>/publication/journal-article-6/</link>
+      <link>//localhost:1313/publication/journal-article-6/</link>
       <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/journal-article-6/</guid>
+      <guid>//localhost:1313/publication/journal-article-6/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Application timing of fungicides for the management of sugarcane orange rust</title>
-      <link>/publication/journal-article-2/</link>
+      <link>//localhost:1313/publication/journal-article-2/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/journal-article-2/</guid>
+      <guid>//localhost:1313/publication/journal-article-2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sensitivity of sugarcane rust fungi to fungicides in uredospore germination and detached leaf bioassays</title>
-      <link>/publication/journal-article-1/</link>
+      <link>//localhost:1313/publication/journal-article-1/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/journal-article-1/</guid>
+      <guid>//localhost:1313/publication/journal-article-1/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Timing and frequency of fungicide applications for the management of sugarcane brown rust</title>
-      <link>/publication/journal-article-3/</link>
+      <link>//localhost:1313/publication/journal-article-3/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/journal-article-3/</guid>
+      <guid>//localhost:1313/publication/journal-article-3/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Comparison of progress of brown rust and orange rust and conditions conducive for severe epidemic development during the sugarcane crop season in Florida</title>
-      <link>/publication/journal-article/</link>
+      <link>//localhost:1313/publication/journal-article/</link>
       <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/journal-article/</guid>
+      <guid>//localhost:1313/publication/journal-article/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Effect of two-component cultivar mixtures on development of wheat yellow rust disease in the field and greenhouse in the Nepal Himalayas</title>
-      <link>/publication/journal-article-4/</link>
+      <link>//localhost:1313/publication/journal-article-4/</link>
       <pubDate>Fri, 07 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/journal-article-4/</guid>
+      <guid>//localhost:1313/publication/journal-article-4/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Availability and use status of plant genetic diversities from forests for food, nutrition and livelihood security:A case from Chepang tribal communities of Nepal</title>
-      <link>/publication/journal-article-5/</link>
+      <link>//localhost:1313/publication/journal-article-5/</link>
       <pubDate>Sat, 07 Apr 2012 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/journal-article-5/</guid>
+      <guid>//localhost:1313/publication/journal-article-5/</guid>
       <description></description>
     </item>
     

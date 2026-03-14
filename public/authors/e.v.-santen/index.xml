@@ -2,22 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>E.V. Santen on Bhim Chaulagain</title>
-    <link>/authors/e.v.-santen/</link>
+    <link>//localhost:1313/authors/e.v.-santen/</link>
     <description>Recent content in E.V. Santen on Bhim Chaulagain</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>B. Chaulagain {year}</copyright>
     <lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/authors/e.v.-santen/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="//localhost:1313/authors/e.v.-santen/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Application timing of fungicides for the management of sugarcane orange rust</title>
-      <link>/publication/journal-article-2/</link>
+      <link>//localhost:1313/publication/journal-article-2/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/journal-article-2/</guid>
+      <guid>//localhost:1313/publication/journal-article-2/</guid>
       <description></description>
     </item>
     

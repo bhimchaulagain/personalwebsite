@@ -2,22 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>S. Sanjel on Bhim Chaulagain</title>
-    <link>/authors/s.-sanjel/</link>
+    <link>//localhost:1313/authors/s.-sanjel/</link>
     <description>Recent content in S. Sanjel on Bhim Chaulagain</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>B. Chaulagain {year}</copyright>
-    <lastBuildDate>Thu, 07 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 May 2021 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/authors/s.-sanjel/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="//localhost:1313/authors/s.-sanjel/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Occurrences of two races of Puccinia kuehnii causing orange rust of sugarcane in Florida</title>
+      <link>//localhost:1313/publication/journal-article-10/</link>
+      <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/publication/journal-article-10/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Comparison of progress of brown rust and orange rust and conditions conducive for severe epidemic development during the sugarcane crop season in Florida</title>
-      <link>/publication/journal-article/</link>
+      <link>//localhost:1313/publication/journal-article/</link>
       <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/journal-article/</guid>
+      <guid>//localhost:1313/publication/journal-article/</guid>
       <description></description>
     </item>
     

@@ -2,130 +2,117 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Bhim Chaulagain</title>
-    <link>/tags/</link>
+    <link>//localhost:1313/tags/</link>
     <description>Recent content in Tags on Bhim Chaulagain</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>B. Chaulagain {year}</copyright>
-    <lastBuildDate>Wed, 08 Jul 2020 21:13:14 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2020 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>dplyr</title>
-      <link>/tags/dplyr/</link>
-      <pubDate>Wed, 08 Jul 2020 21:13:14 -0500</pubDate>
-      
-      <guid>/tags/dplyr/</guid>
+      <title>Cultivar Mixtures</title>
+      <link>//localhost:1313/tags/cultivar-mixtures/</link>
+      <pubDate>Wed, 08 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/cultivar-mixtures/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>ggplot</title>
-      <link>/tags/ggplot/</link>
-      <pubDate>Wed, 08 Jul 2020 21:13:14 -0500</pubDate>
-      
-      <guid>/tags/ggplot/</guid>
+      <title>Fungicide</title>
+      <link>//localhost:1313/tags/fungicide/</link>
+      <pubDate>Wed, 08 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/fungicide/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>lubridate</title>
-      <link>/tags/lubridate/</link>
-      <pubDate>Wed, 08 Jul 2020 21:13:14 -0500</pubDate>
-      
-      <guid>/tags/lubridate/</guid>
+      <title>Predictive Modeling</title>
+      <link>//localhost:1313/tags/predictive-modeling/</link>
+      <pubDate>Wed, 08 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/predictive-modeling/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>tidyverse</title>
-      <link>/tags/tidyverse/</link>
-      <pubDate>Wed, 08 Jul 2020 21:13:14 -0500</pubDate>
-      
-      <guid>/tags/tidyverse/</guid>
+      <title>Sugarcane Rust</title>
+      <link>//localhost:1313/tags/sugarcane-rust/</link>
+      <pubDate>Wed, 08 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/sugarcane-rust/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>weather variables</title>
-      <link>/tags/weather-variables/</link>
-      <pubDate>Wed, 08 Jul 2020 21:13:14 -0500</pubDate>
-      
-      <guid>/tags/weather-variables/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cultivar mixtures</title>
-      <link>/tags/cultivar-mixtures/</link>
-      <pubDate>Wed, 08 Jul 2020 00:00:00 -0700</pubDate>
-      
-      <guid>/tags/cultivar-mixtures/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>fungicide</title>
-      <link>/tags/fungicide/</link>
-      <pubDate>Wed, 08 Jul 2020 00:00:00 -0700</pubDate>
-      
-      <guid>/tags/fungicide/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>predictive modeling</title>
-      <link>/tags/predictive-modeling/</link>
-      <pubDate>Wed, 08 Jul 2020 00:00:00 -0700</pubDate>
-      
-      <guid>/tags/predictive-modeling/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sugarcane rust</title>
-      <link>/tags/sugarcane-rust/</link>
-      <pubDate>Wed, 08 Jul 2020 00:00:00 -0700</pubDate>
-      
-      <guid>/tags/sugarcane-rust/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>wheat stripe rust</title>
-      <link>/tags/wheat-stripe-rust/</link>
-      <pubDate>Wed, 08 Jul 2020 00:00:00 -0700</pubDate>
-      
-      <guid>/tags/wheat-stripe-rust/</guid>
+      <title>Wheat Stripe Rust</title>
+      <link>//localhost:1313/tags/wheat-stripe-rust/</link>
+      <pubDate>Wed, 08 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/wheat-stripe-rust/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CART</title>
-      <link>/tags/cart/</link>
-      <pubDate>Tue, 08 Jan 2019 21:13:14 -0500</pubDate>
-      
-      <guid>/tags/cart/</guid>
+      <link>//localhost:1313/tags/cart/</link>
+      <pubDate>Mon, 08 Jun 2020 21:13:14 -0500</pubDate>
+      <guid>//localhost:1313/tags/cart/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Leaf Wetness</title>
-      <link>/tags/leaf-wetness/</link>
-      <pubDate>Tue, 08 Jan 2019 21:13:14 -0500</pubDate>
-      
-      <guid>/tags/leaf-wetness/</guid>
+      <link>//localhost:1313/tags/leaf-wetness/</link>
+      <pubDate>Mon, 08 Jun 2020 21:13:14 -0500</pubDate>
+      <guid>//localhost:1313/tags/leaf-wetness/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R</title>
-      <link>/tags/r/</link>
-      <pubDate>Tue, 08 Jan 2019 21:13:14 -0500</pubDate>
-      
-      <guid>/tags/r/</guid>
+      <link>//localhost:1313/tags/r/</link>
+      <pubDate>Mon, 08 Jun 2020 21:13:14 -0500</pubDate>
+      <guid>//localhost:1313/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dplyr</title>
+      <link>//localhost:1313/tags/dplyr/</link>
+      <pubDate>Tue, 10 Mar 2020 21:13:14 -0500</pubDate>
+      <guid>//localhost:1313/tags/dplyr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lubridate</title>
+      <link>//localhost:1313/tags/lubridate/</link>
+      <pubDate>Tue, 10 Mar 2020 21:13:14 -0500</pubDate>
+      <guid>//localhost:1313/tags/lubridate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Weather Variables</title>
+      <link>//localhost:1313/tags/weather-variables/</link>
+      <pubDate>Tue, 10 Mar 2020 21:13:14 -0500</pubDate>
+      <guid>//localhost:1313/tags/weather-variables/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ggplot</title>
+      <link>//localhost:1313/tags/ggplot/</link>
+      <pubDate>Mon, 08 Jul 2019 21:13:14 -0500</pubDate>
+      <guid>//localhost:1313/tags/ggplot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tidyverse</title>
+      <link>//localhost:1313/tags/tidyverse/</link>
+      <pubDate>Mon, 08 Jul 2019 21:13:14 -0500</pubDate>
+      <guid>//localhost:1313/tags/tidyverse/</guid>
       <description></description>
     </item>
     

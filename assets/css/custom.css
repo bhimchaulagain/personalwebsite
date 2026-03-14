@@ -1,0 +1,160 @@
+/* Compact and polished Experience section */
+.wg-experience.home-section {
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.wg-experience .section-heading h1 {
+  margin-bottom: 0.3rem;
+}
+
+.wg-experience .experience {
+  margin-bottom: 0.25rem;
+}
+
+.wg-experience .experience .card {
+  border: 1px solid #e8edf5;
+  border-left: 4px solid #4a67d6;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(36, 49, 66, 0.07);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.wg-experience .experience .card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(36, 49, 66, 0.12);
+}
+
+.wg-experience .experience .card-body {
+  padding: 0.55rem 0.75rem;
+}
+
+.wg-experience .exp-title {
+  font-size: 1.05rem;
+  line-height: 1.2;
+  color: #1f2d3d !important;
+}
+
+.wg-experience .exp-company {
+  font-size: 0.92rem;
+  color: #2f3f56 !important;
+}
+
+.wg-experience .exp-meta {
+  font-size: 0.82rem;
+  margin-top: 0.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.wg-experience .card-text {
+  font-size: 0.88rem;
+  line-height: 1.35;
+  margin-bottom: 0;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Slightly slimmer timeline marker/line */
+.wg-experience .badge.badge-pill {
+  width: 0.95rem;
+  height: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .wg-experience.home-section {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .wg-experience .experience .card-body {
+    padding: 0.52rem 0.7rem;
+  }
+
+  .wg-experience .exp-title {
+    font-size: 0.98rem;
+  }
+
+  .wg-experience .exp-company {
+    font-size: 0.88rem;
+  }
+}
+
+/* ===== Global compact homepage styling ===== */
+.home-section {
+  padding-top: 2.4rem;
+  padding-bottom: 2.1rem;
+}
+
+.home-section .section-heading h1 {
+  font-size: 2.25rem;
+  margin-bottom: 0.35rem;
+}
+
+.home-section .section-heading p {
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+/* Cleaner cards for posts/publications/projects */
+.wg-pages .card-simple,
+.wg-portfolio .card-simple {
+  border: 1px solid #e8edf5;
+  border-radius: 12px;
+  padding: 0.75rem 0.85rem;
+  box-shadow: 0 4px 14px rgba(36, 49, 66, 0.06);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.wg-pages .card-simple:hover,
+.wg-portfolio .card-simple:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(36, 49, 66, 0.1);
+}
+
+.wg-pages .card-simple .article-title,
+.wg-portfolio .card-simple .article-title {
+  font-size: 1.65rem;
+  line-height: 1.25;
+}
+
+.wg-pages .card-simple .article-style,
+.wg-portfolio .card-simple .article-style {
+  font-size: 0.95rem;
+  line-height: 1.45;
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.wg-pages .card-simple .article-metadata,
+.wg-portfolio .card-simple .article-metadata {
+  font-size: 0.9rem;
+  margin-bottom: 0.35rem;
+}
+
+@media (max-width: 768px) {
+  .home-section {
+    padding-top: 1.8rem;
+    padding-bottom: 1.6rem;
+  }
+
+  .home-section .section-heading h1 {
+    font-size: 1.9rem;
+  }
+
+  .wg-pages .card-simple,
+  .wg-portfolio .card-simple {
+    padding: 0.6rem 0.65rem;
+  }
+
+  .wg-pages .card-simple .article-title,
+  .wg-portfolio .card-simple .article-title {
+    font-size: 1.35rem;
+  }
+}
