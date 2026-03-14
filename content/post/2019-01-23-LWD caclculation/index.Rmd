@@ -5,6 +5,10 @@ date: 2020-06-08T21:13:14-05:00
 categories: ["Agronomic Intelligence Lab"]
 tags: ["R", "CART", "Leaf Wetness"]
 summary: "Estimate leaf wetness duration using a CART-based approach in R with a simple worked example."
+image:
+  caption: ""
+  focal_point: "Center"
+  preview_only: true
 ---
 
 ```{r setup, include=FALSE}

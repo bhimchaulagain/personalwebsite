@@ -5,6 +5,10 @@ date: 2020-03-10T21:13:14-05:00
 categories: ["Agronomic Intelligence Lab"]
 tags: ["weather variables", "lubridate", "dplyr"]
 summary: "Create weather predictors for Agronomic Intelligence using R"
+image:
+  caption: ""
+  focal_point: "Center"
+  preview_only: true
 ---
 
 I would like to share some R codes that I wrote for creating weather predictors which I used in predictive modeling of sugarcane rusts. I have also created several complex weather variables during my research work but I am going to share some with averages/sums of hourly, weekly, monthly, and also specific time in a day. I will also share the R codes to calculate more complex weather variables in separate posts. 
