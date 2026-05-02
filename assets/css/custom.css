@@ -138,6 +138,23 @@
   margin-bottom: 0.35rem;
 }
 
+/* Keep fenced code blocks visually unified after converting posts to Markdown. */
+pre code,
+.hljs {
+  background: transparent !important;
+  color: inherit;
+}
+
+pre code {
+  padding: 0;
+  border: 0;
+}
+
+pre code span,
+.hljs span {
+  background: transparent !important;
+}
+
 @media (max-width: 768px) {
   .home-section {
     padding-top: 1.8rem;
