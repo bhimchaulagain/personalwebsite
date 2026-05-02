@@ -11,7 +11,9 @@ image:
   preview_only: true
 ---
 
-I would like to share some R codes that I wrote for creating weather predictors which I used in predictive modeling of sugarcane rusts. I have also created several complex weather variables during my research work but I am going to share some with averages/sums of hourly, weekly, monthly, and also specific time in a day. I will also share the R codes to calculate more complex weather variables in separate posts. 
+Weather-derived predictors play a fundamental role in plant disease predictive modeling and epidemiological analyses. During my research on sugarcane rust diseases, I developed multiple weather-based variables from high-frequency meteorological data to support disease forecasting and model development.
+
+In this post, I share several R scripts for generating commonly used weather predictors, including hourly, daily, weekly, and monthly summaries, as well as variables derived from specific periods within the day. Future posts will cover more advanced and biologically relevant weather variables used in disease epidemiology and predictive modeling workflows.
 
 
 ```{r setup, include=FALSE}

@@ -15,7 +15,9 @@ image:
 knitr::opts_chunk$set(collapse = TRUE)
 ```
 
-Are you a plant disease epidemiologist? If yes, you probably need to calculate leaf wetness duration using empirical methods. One way to estimate leaf wetness duration is with classification and regression tree method (CART). Learn how to calculate in R!
+Leaf wetness duration (LWD) is a critical environmental variable in plant disease epidemiology and is widely used in disease forecasting and risk assessment models. Among the available empirical approaches, the Classification and Regression Tree (CART) method provides a practical framework for estimating LWD from standard weather observations.
+
+In this post, I demonstrate how to estimate leaf wetness duration in R using the CART approach, including data preparation, implementation steps, and interpretation of outputs for plant disease applications.
 
 Let's generate the dummy weather data and work through it. You can find the equation and procedure of CART method of leaf wetness estimation in this link: https://doi.org/10.1094/PDIS.2002.86.2.179
 

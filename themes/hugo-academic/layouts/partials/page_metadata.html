@@ -22,11 +22,6 @@
     {{ $date := $page.Date.Format site.Params.date_format }}
     {{ if eq $page.Type "publication" }}
       {{ $date = $page.Date.Format (site.Params.publications.date_format | default "January, 2006") }}
-    {{ else }}
-      {{ if and (isset $page.Params "lastmod") (ne $page.Params.Lastmod $page.Params.Date) }}
-          {{ i18n "last_updated" }}
-          {{ $date = $page.Lastmod.Format site.Params.date_format }}
-      {{ end }}
     {{ end }}
     <time>{{ $date }}</time>
   </span>
