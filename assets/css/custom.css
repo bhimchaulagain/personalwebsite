@@ -145,11 +145,12 @@ pre,
   border-color: #e1e4e8;
 }
 
-pre code,
+pre code.hljs,
 .hljs,
 .dark pre code,
 .dark .hljs {
-  background: transparent !important;
+  display: block;
+  background: #f6f8fa !important;
   color: #24292e !important;
 }
 
