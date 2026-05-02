@@ -26,7 +26,7 @@ subtitle = "Building predictive models, analytics workflows, and decision system
   # Filter posts by a taxonomy term.
   [content.filters]
     tag = ""
-    category = "Agronomic Intelligence Lab"
+    category = "agronomic-intelligence-lab"
     publication_type = ""
     exclude_featured = false
 

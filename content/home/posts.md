@@ -4,7 +4,7 @@
 
 widget = "pages"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
-active = true  # Activate this widget? true/false
+active = false  # Activate this widget? true/false
 weight = 68  # Order that this section will appear.
 
 title = "General Blog"
@@ -26,7 +26,7 @@ subtitle = ""
   # Filter posts by a taxonomy term.
   [content.filters]
     tag = ""
-    category = "General"
+    category = "general"
     publication_type = ""
     exclude_featured = false
   
