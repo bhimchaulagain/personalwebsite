@@ -4,6 +4,7 @@ author: "Bhim Chaulagain"
 date: 2023-02-01T21:13:14-05:00
 categories: ["Agronomic Intelligence Lab"]
 tags: ["plant pathology", "plant disease modeling", "precision agriculture", "weather predictors", "infection risk", "python"]
+math: true
 summary: "A practical walkthrough of turning the Magarey et al. (2004) generic infection model into Python code for foliar fungal disease risk modeling."
 image:
   caption: ""
@@ -117,18 +118,17 @@ The mathematical core of the paper is the Yin temperature response function. Thi
 
 Outside the valid temperature interval, the response is zero:
 
-```text
-f(T) = 0, if T < Tmin or T > Tmax
-```
+$$
+f(T) = 0, \text{ if } T < T_{min} \text{ or } T > T_{max}
+$$
 
 Within the interval, the paper uses:
 
-```text
+$$
 f(T) =
-((Tmax - T) / (Tmax - Topt))
-*
-((T - Tmin) / (Topt - Tmin)) ^ ((Topt - Tmin) / (Tmax - Topt))
-```
+\left(\frac{T_{max} - T}{T_{max} - T_{opt}}\right)
+\left(\frac{T - T_{min}}{T_{opt} - T_{min}}\right)^{\frac{T_{opt} - T_{min}}{T_{max} - T_{opt}}}
+$$
 
 In code:
 
@@ -154,9 +154,9 @@ def yin_response(T, Tmin, Topt, Tmax):
 
 Once temperature favorability is known, the wetness requirement is computed with Eq. 1:
 
-```text
-W(T) = min(Wmin / f(T), Wmax)
-```
+$$
+W(T) = \min\left(\frac{W_{min}}{f(T)}, W_{max}\right)
+$$
 
 In other words, favorable temperatures shorten the required wetness duration, while unfavorable temperatures lengthen it. `Wmax` prevents that requirement from becoming unrealistically large near the temperature limits.
 
@@ -180,9 +180,9 @@ def wetness_requirement(T, Tmin, Topt, Tmax, Wmin, Wmax=None):
 
 The `Wmax` fallback in that snippet is also from the paper. The authors report a regression relationship:
 
-```text
-Wmax = 3.8 + 3.0 * Wmin
-```
+$$
+W_{max} = 3.8 + 3.0 \times W_{min}
+$$
 
 when observed `Wmax` is unavailable. That is useful in operational settings where only partial parameter information is known.
 
