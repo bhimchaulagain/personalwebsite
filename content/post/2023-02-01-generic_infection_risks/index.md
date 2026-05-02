@@ -2,7 +2,7 @@
 title: "A Simple Generic Infection Model for Foliar Fungal Plant Pathogens"
 author: "Bhim Chaulagain"
 date: 2023-02-01T21:13:14-05:00
-categories: ["General", "Agronomic Intelligence Lab"]
+categories: ["Agronomic Intelligence Lab"]
 tags: ["plant pathology", "plant disease modeling", "precision agriculture", "weather predictors", "infection risk", "python"]
 summary: "A practical walkthrough of turning the Magarey et al. (2004) generic infection model into Python code for foliar fungal disease risk modeling."
 image:
