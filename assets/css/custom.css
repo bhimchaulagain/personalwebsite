@@ -142,6 +142,7 @@
 pre code,
 .hljs {
   background: transparent !important;
+  color: #f8f8f2 !important;
 }
 
 pre code {
