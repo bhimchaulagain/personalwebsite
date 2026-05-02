@@ -4,16 +4,12 @@ author: "Bhim Chaulagain"
 date: 2020-06-08T21:13:14-05:00
 categories: ["Agronomic Intelligence Lab"]
 tags: ["R", "CART", "Leaf Wetness"]
-summary: "Estimate leaf wetness duration using a CART-based approach in R with a simple worked example."
+summary: "Estimate leaf wetness duration using a CART-based approach in R with a simple worked example"
 image:
   caption: ""
   focal_point: "Center"
   preview_only: true
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(collapse = TRUE)
-```
 
 Leaf wetness duration (LWD) is a critical environmental variable in plant disease epidemiology and is widely used in disease forecasting and risk assessment models. Among the available empirical approaches, the Classification and Regression Tree (CART) method provides a practical framework for estimating LWD from standard weather observations.
 
@@ -21,7 +17,7 @@ In this post, I demonstrate how to estimate leaf wetness duration in R using the
 
 Let's generate the dummy weather data and work through it. You can find the equation and procedure of CART method of leaf wetness estimation in this link: https://doi.org/10.1094/PDIS.2002.86.2.179
 
-```{r}
+```r
 Average_temperature <- sample(2:25, 20, replace=TRUE)
 Dew_Point_Depression <- sample(0.5:5, 20, replace=TRUE)
 Relative_Humidity <- sample(55:99, 20, replace=TRUE)
@@ -56,4 +52,5 @@ for (i in 1:length(wetdry)) {
 
 wetdry
 ```
+
 

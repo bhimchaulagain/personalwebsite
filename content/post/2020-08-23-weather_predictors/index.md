@@ -16,11 +16,7 @@ Weather-derived predictors play a fundamental role in plant disease predictive m
 In this post, I share several R scripts for generating commonly used weather predictors, including hourly, daily, weekly, and monthly summaries, as well as variables derived from specific periods within the day. Future posts will cover more advanced and biologically relevant weather variables used in disease epidemiology and predictive modeling workflows.
 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(collapse = TRUE)
-```
-
-```{r}
+```r
 library(readxl)
 library(lubridate)
 library(plyr)
@@ -43,7 +39,7 @@ Lets calculate the weekly average of the temperature. You can use same process f
 
 Weekly average of temperature!
 
-```{r}
+```r
 WeeklyAvg_temp <- aggregate(Wdata$`2m T avg (F)`, by = list(Wdata$weeks), FUN = mean)
 
 WeeklyAvg_temp
@@ -51,13 +47,14 @@ WeeklyAvg_temp
 Lets calculate the weekly average of the temperature from(6 AM-9 PM) of each day.
 
 Use lubridate package for subsetting the data which contains the values from 6 AM to 9 PM. 
-```{r}
+```r
 T6AMTo9PM <- subset(Wdata, hour(hours) >= 6 & hour(hours) <= 21 & days >= '2014-01-01' & days <= '2014-12-31')
 
 ```
 After subsetting, lets calculate for temperature variable!
 
-```{r}
+```r
 T6AMTo9PM_WeeklyAvg_temp <- aggregate(T6AMTo9PM$`2m T avg (F)`, by = list(T6AMTo9PM$weeks), FUN = mean)
 T6AMTo9PM_WeeklyAvg_temp
 ```
+
