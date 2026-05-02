@@ -1,0 +1,11 @@
+{{/* Site-specific custom head content. */}}
+{{ $ga4_id := site.Params.ga4_measurement_id | default (getenv "GA4_MEASUREMENT_ID") }}
+{{ if $ga4_id }}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ $ga4_id }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ $ga4_id }}');
+  </script>
+{{ end }}

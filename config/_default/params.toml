@@ -39,6 +39,10 @@ math = false
 #   Anonymize IP in Google Analytics (if enabled)
 privacy_pack = false
 
+# Google Analytics 4 Measurement ID (optional)
+# You can set it here, or in Netlify environment variables as `GA4_MEASUREMENT_ID`.
+ga4_measurement_id = ""
+
 # Date and time format (refer to https://sourcethemes.com/academic/docs/customization/#date-format )
 #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
 date_format = "Jan 2, 2006"
