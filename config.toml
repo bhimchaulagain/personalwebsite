@@ -23,6 +23,8 @@ enableGitInfo = false
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+  [markup.highlight]
+    codeFences = false
 
 # Default language to use (if you setup multilingual support)
 defaultContentLanguage = "en"
