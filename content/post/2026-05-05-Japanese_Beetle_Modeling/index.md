@@ -171,7 +171,46 @@ def proportion_trap_catch_from_degree_days(
 
 For comparison, the script also includes a `calculate_daily_degree_days_half_day_sine` function so the second candidate method from the paper can be explored without replacing the selected simple model.
 
-That keeps the implementation aligned with the model I actually want to discuss in this post, while still preserving a place to compare the alternative method the paper evaluated.
+```python
+def calculate_daily_degree_days_half_day_sine(
+    tmin_today_c,
+    tmax_today_c,
+    tmin_tomorrow_c,
+    lower_threshold_c=15.0,
+    upper_threshold_c=21.7,
+):
+    tmin_today_c = float(tmin_today_c)
+    tmax_today_c = float(tmax_today_c)
+    tmin_tomorrow_c = float(tmin_tomorrow_c)
+    lower_threshold_c = float(lower_threshold_c)
+    upper_threshold_c = float(upper_threshold_c)
+
+    if tmin_today_c > tmax_today_c:
+        raise ValueError("tmin_today_c cannot be greater than tmax_today_c")
+
+    half_day_hours = 12
+    hourly_values = []
+
+    amplitude_1 = (tmax_today_c - tmin_today_c) / 2.0
+    midpoint_1 = (tmax_today_c + tmin_today_c) / 2.0
+    for hour in range(half_day_hours):
+        angle = math.pi * (18.0 + hour) / 12.0
+        hourly_values.append(amplitude_1 * math.sin(angle) + midpoint_1)
+
+    amplitude_2 = (tmax_today_c - tmin_tomorrow_c) / 2.0
+    midpoint_2 = (tmax_today_c + tmin_tomorrow_c) / 2.0
+    for hour in range(half_day_hours):
+        angle = math.pi * (6.0 + hour) / 12.0
+        hourly_values.append(amplitude_2 * math.sin(angle) + midpoint_2)
+
+    degree_day_sum = 0.0
+    for temp_c in hourly_values:
+        clipped_temp_c = min(temp_c, upper_threshold_c)
+        degree_day_sum += max(clipped_temp_c - lower_threshold_c, 0.0)
+
+    return degree_day_sum / 24.0
+```
+
 
 ## What This Model Can Tell Me For This Season
 
