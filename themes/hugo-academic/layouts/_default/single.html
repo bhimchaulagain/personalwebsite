@@ -5,6 +5,14 @@
   {{ partial "page_header.html" . }}
 
   <div class="article-container">
+    {{ $featured := (.Resources.ByType "image").GetMatch "*featured*" }}
+    {{ if and (eq .Type "post") $featured }}
+      {{ $image := $featured.Fit "920x520 q90" }}
+      <div class="article-featured-inline" style="max-width: 760px; margin: 0 auto 1.5rem;">
+        <img src="{{ $image.RelPermalink }}" itemprop="image" alt="{{ .Title }}" style="width: 100%; height: auto; border-radius: 0.5rem;">
+        {{ with .Params.image.caption }}<span class="article-header-caption">{{ . | markdownify | emojify }}</span>{{ end }}
+      </div>
+    {{ end }}
 
     <div class="article-style" itemprop="articleBody">
       {{ .Content }}
