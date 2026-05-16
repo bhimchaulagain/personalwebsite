@@ -15,6 +15,8 @@ Weather-derived predictors play a fundamental role in plant disease predictive m
 
 In this post, I share several R scripts for generating commonly used weather predictors, including hourly, daily, weekly, and monthly summaries, as well as variables derived from specific periods within the day. Future posts will cover more advanced and biologically relevant weather variables used in disease epidemiology and predictive modeling workflows.
 
+For a full example of how weather inputs feed into a practical infection-risk engine, see [How to Code the Magarey Generic Infection Model for Foliar Fungal Plant Pathogens in Python]({{< relref "/post/2023-02-01-generic_infection_risks/index.md" >}}).
+
 
 ```r
 library(readxl)

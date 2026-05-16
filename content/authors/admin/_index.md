@@ -5,27 +5,27 @@ authors:
 
 education:
   courses:
-  
-  - course: MS (Computational Analytics) 
+
+  - course: MS (Computational Analytics)
     institution: Georgia Institute of Technology, US
     year: started 2026
-  - course: PhD (Plant pathology), Prediction System Development and Chemical Management 
+  - course: PhD (Plant pathology), Prediction System Development and Chemical Management
     institution: University of Florida, US
     year: 2019
-  - course: MS (Plant pathology), Epidemiology and Chemical Management 
+  - course: MS (Plant pathology), Epidemiology and Chemical Management
     institution: Tribhuvan University, Nepal
     year: 2011
-  
-title: "Bhim Chaulagain"    
+
+title: "Bhim Chaulagain"
 #email: "chaulagb@oregonstate.edu"
 email: "bhimchaulagain86@gmail.com"
 
 interests:
-- Machine Learning & Predictive Modeling – Designing statistical and AI-driven models for decision support.
-- Advanced Data Analytics & Visualization – Converting complex datasets into clear, actionable insights.
-- Geospatial & Remote Sensing Analytics – Extracting value from satellite and drone imagery.
-- Scalable Data Engineering & Cloud Workflows – Developing robust pipelines for production-ready analytics.
-- Cross-Industry Data Science Applications – Applying analytical frameworks beyond agriculture.
+- Machine Learning & Predictive Modeling 
+- Advanced Data Analytics & Visualization 
+- Geospatial & Remote Sensing Analytics 
+- Scalable Data Engineering & Cloud Workflows 
+- Cross-Industry Data Science Applications 
 
 
 name: Bhim Chaulagain
@@ -58,9 +58,8 @@ user_groups:
 - Visitors
 ---
 
-I am driven by a simple idea - that intelligent systems can transform how we understand and manage biological and environmental complexity. My work combines agronomy, machine learning, and scalable data engineering to build next-generation decision tools for agriculture. From disease forecasting to harvest prediction and nutrient management, I focus on translating uncertainty into actionable insight.
+I am driven by a simple idea - intelligent systems can improve how we understand and manage biological and environmental complexity. My work combines agronomy, machine learning, and scalable data engineering to build decision tools for agriculture. Across applied science, predictive modeling, and data-driven decision systems, I focus on translating uncertainty into actionable insight.
 
-As AI continues reshaping industries, I am motivated to expand my impact beyond agriculture - building data-driven solutions that operate at scale and create measurable value.
+I share practical notes in the [Agronomic Intelligence Lab](/categories/agronomic-intelligence-lab/) on plant disease forecasting, agronomic modeling, and agricultural data science.
 
-
-
+As AI continues reshaping industries, I am motivated to expand my impact beyond agriculture while staying grounded in applied science - building data-driven solutions that operate at scale and create measurable value.

@@ -15,6 +15,8 @@ Leaf wetness duration (LWD) is a critical environmental variable in plant diseas
 
 In this post, I demonstrate how to estimate leaf wetness duration in R using the CART approach, including data preparation, implementation steps, and interpretation of outputs for plant disease applications.
 
+If you want to connect leaf wetness duration to a full infection-risk workflow, see [How to Code the Magarey Generic Infection Model for Foliar Fungal Plant Pathogens in Python]({{< relref "/post/2023-02-01-generic_infection_risks/index.md" >}}).
+
 Let's generate the dummy weather data and work through it. You can find the equation and procedure of CART method of leaf wetness estimation in this link: https://doi.org/10.1094/PDIS.2002.86.2.179
 
 ```r
