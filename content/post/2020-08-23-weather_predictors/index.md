@@ -1,10 +1,11 @@
 ---
-title: "Weather based predictors for predictive modeling"
+title: "How to Create Weather-Based Predictors for Plant Disease Modeling in R"
 author: "Bhim Chaulagain"
 date: 2020-03-10T21:13:14-05:00
 categories: ["Agronomic Intelligence Lab"]
-tags: ["weather variables", "lubridate", "dplyr"]
-summary: "Create weather predictors for Agronomic Intelligence using R"
+tags: ["weather predictors", "plant disease modeling", "weather data", "R", "disease forecasting"]
+summary: "A practical R guide to creating weather-based predictors for plant disease modeling, agronomic analytics, and disease forecasting workflows."
+description: "A practical R guide to creating weather-based predictors for plant disease modeling, agronomic analytics, and disease forecasting workflows."
 image:
   caption: ""
   focal_point: "Center"

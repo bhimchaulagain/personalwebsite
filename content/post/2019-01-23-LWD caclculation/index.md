@@ -1,10 +1,11 @@
 ---
-title: "Leaf Wetness Duration (LWD) estimation using CART method"
+title: "How to Estimate Leaf Wetness Duration (LWD) Using the CART Method in R"
 author: "Bhim Chaulagain"
 date: 2020-06-08T21:13:14-05:00
 categories: ["Agronomic Intelligence Lab"]
-tags: ["R", "CART", "Leaf Wetness"]
-summary: "Estimate leaf wetness duration using a CART-based approach in R with a simple worked example"
+tags: ["leaf wetness duration", "CART method", "plant disease forecasting", "R", "weather data"]
+summary: "A practical R walkthrough for estimating leaf wetness duration (LWD) with the CART method for plant disease forecasting and risk modeling."
+description: "A practical R walkthrough for estimating leaf wetness duration (LWD) with the CART method for plant disease forecasting and risk modeling."
 image:
   caption: ""
   focal_point: "Center"

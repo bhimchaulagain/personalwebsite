@@ -22,7 +22,9 @@
 
   {{/* Generate page description. */}}
   {{ $desc := "" }}
-  {{ if .Params.summary }}
+  {{ if .Params.description }}
+    {{ $desc = .Params.description }}
+  {{ else if .Params.summary }}
     {{ $desc = .Params.summary }}
   {{ else if .Params.abstract }}
     {{ $desc = .Params.abstract }}

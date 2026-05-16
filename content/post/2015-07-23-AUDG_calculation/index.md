@@ -1,10 +1,11 @@
 ---
-title: "Area Under Disease Gradient (AUDG) Calculation"
+title: "How to Calculate Area Under Disease Gradient (AUDG) in R"
 author: "Bhim Chaulagain"
 date: 2019-07-08T21:13:14-05:00
 categories: ["Agronomic Intelligence Lab"]
-tags: ["dplyr", "ggplot", "tidyverse"]
-summary: "How to calculate AUDG from field observations and compare treatments using R"
+tags: ["area under disease gradient", "plant disease epidemiology", "AUDG", "R", "field disease analysis"]
+summary: "A step-by-step R walkthrough for calculating area under disease gradient (AUDG) from field observations and comparing treatments in plant disease epidemiology."
+description: "A step-by-step R walkthrough for calculating area under disease gradient (AUDG) from field observations and comparing treatments in plant disease epidemiology."
 image:
   caption: ""
   focal_point: "Center"
