@@ -46,6 +46,4 @@ subtitle = "Building predictive models, analytics workflows, and decision system
  css_class = ""
 +++
 
-This section collects my technical posts on plant disease forecasting, leaf wetness duration, weather-derived predictors, and operational agronomic analytics.
-
-Start here if you want the most complete modeling walkthrough: [How to Code the Magarey Generic Infection Model for Foliar Fungal Plant Pathogens in Python]({{< relref "/post/2023-02-01-generic_infection_risks/index.md" >}}).
+This section features technical posts on crop modeling, remote sensing, and agronomic analytics.
