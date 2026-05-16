@@ -138,7 +138,7 @@ In the Python implementation, I can use `proportion_trap_catch_from_degree_days`
 
 ## Python Implementation
 
-The companion Python script follows that paper-facing structure directly:
+Below are the core Python functions that capture the main logic of the model discussed in this post:
 
 ```python
 def calculate_daily_degree_days_method1(
@@ -156,7 +156,7 @@ def calculate_daily_degree_days_method1(
     return tavg_c - lower_threshold_c
 ```
 
-and the fitted trap-catch curve is implemented as:
+The fitted trap-catch curve can be written as:
 
 ```python
 def proportion_trap_catch_from_degree_days(
@@ -169,7 +169,7 @@ def proportion_trap_catch_from_degree_days(
     return exp_term / (1.0 + exp_term)
 ```
 
-For comparison, the script also includes a `calculate_daily_degree_days_half_day_sine` function so the second candidate method from the paper can be explored without replacing the selected simple model.
+For comparison, here is a half-day sine-wave function that reflects the second candidate method evaluated in the paper:
 
 ```python
 def calculate_daily_degree_days_half_day_sine(
@@ -211,6 +211,7 @@ def calculate_daily_degree_days_half_day_sine(
     return degree_day_sum / 24.0
 ```
 
+This keeps the code examples aligned with the main model I want to discuss here, while still giving a visible comparison with the alternative method the paper evaluated.
 
 ## What This Model Can Tell Me For This Season
 
