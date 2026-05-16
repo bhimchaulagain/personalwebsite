@@ -233,15 +233,3 @@ Beyond the paper, a practical workflow is straightforward:
 6. optionally compute the whole fitted trap-catch proportion curve using Equation 1.
 
 That workflow is practical, but it is still important to remember that the paper was developed from Minnesota field data. In my case, the natural next step would be to use what I observed last season as a starting point, run this season's weather through the model, and then compare the predicted early-activity timing against what I actually see in the field this year. That season-to-season comparison is what would tell me whether the Minnesota-based benchmark is a good fit for my situation or whether I need to adjust my expectations.
-
-## Takeaway
-
-The strongest way to use this Japanese beetle lesson is not to say "here is a general beetle model." It is to say:
-
-1. Ebbenga et al. produced a field-based adult trap-catch forecasting model,
-2. the selected model was a simple average degree-day approach with `January 1`, `15.0 C`, and `21.7 C`,
-3. the fitted adult trap-catch curve used intercept `-43.34` and slope `7.41`,
-4. `257 C degree-days` corresponds to `10%` trap-catch and serves as the early-warning target,
-5. broader phenology or climate-suitability models are useful too, but they should be kept clearly separate unless they are being implemented and validated on their own terms.
-
-That framing fits what I am actually trying to do here: use the literature to build a useful, biologically grounded way to anticipate adult Japanese beetle activity.
