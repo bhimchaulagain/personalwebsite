@@ -8,3 +8,12 @@
 *.doc
 *.xlsx
 *.pptx
+
+# Local notes and runbooks
+RUNBOOK.md
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
