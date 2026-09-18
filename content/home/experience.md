@@ -28,7 +28,7 @@ date_format = "2006"
 #   description = """Assist in screening, handling and copy editing of the manuscripts.
 #   """
 [[experience]]
-  title = "Data Scientist"
+  title = "Data Scientist (AgTech)"
   company = "Corvian"
   company_url = "https://www.corvian.com/"
   location = "Research Triangle Park, NC"
@@ -38,7 +38,7 @@ date_format = "2006"
   """
 
   [[experience]]
-  title = "Digital Agronomist"
+  title = "Digital Agronomist (AgTech)"
   company = "Xarvio Digital Farming Solutions, BASF"
   company_url = "https://www.xarvio.com/us/en.html"
   location = "Research Triangle Park, NC"

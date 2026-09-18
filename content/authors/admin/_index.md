@@ -8,7 +8,7 @@ education:
 
   - course: MS (Computational Analytics)
     institution: Georgia Institute of Technology, US
-    year: 2026 Intake
+    year: 2026 - Present
   - course: PhD (Plant pathology), Prediction System Development and Chemical Management
     institution: University of Florida, US
     year: 2019
